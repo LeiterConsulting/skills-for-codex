@@ -41,7 +41,9 @@ The Zeepkist API research, source claim audit and Splunk estate assessment pilot
 
 No new executable helper is included in these three pilots. The existing 40 helper tests retain their prior scope. Live game/MCP research, consumer Splunk access/exports, real factual audits, trigger behavior and performance improvement have not been qualified by these structural checks. The collection does not provide missing runtime access.
 
-Windows/Linux CI for the five-skill catalog is pending publication. Each instruction pilot has seven observable agent cases prepared and not yet run:
+The [five-skill catalog CI run](https://github.com/LeiterConsulting/skills-for-codex/actions/runs/37142805565) passed all four Windows/Linux and Python 3.10/3.13 jobs for implementation commit `5dea6f3f611031046020002e0bd3ad81438dd0c7` on October 3, 2026. Collection checks passed for all five skills; Windows passed all 40 helper tests and Linux passed 38 with two Windows-only junction skips. This run does not include the local schema format fixtures or agent behavior evaluations.
+
+Each instruction pilot has seven observable agent cases prepared and not yet run:
 
 - [Zeepkist API research cases](../evals/zeepkist-api-research.cases.json)
 - [Source claim audit cases](../evals/source-claim-audit.cases.json)
