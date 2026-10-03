@@ -9,13 +9,16 @@ Version 0.1.0 is an initial skill pilot. Original helpers and resources are prep
 | Native helper tests on the maintainer's Windows Python 3.13 host | 23 discovered; 22 passed; symlink creation test skipped because the host lacks that privilege |
 | Structure and portability validation | Passed: catalog, skill resource links and host path guard |
 | Bundled skill frontmatter validation | Passed |
-| Windows/Linux CI | Workflow prepared; results recorded after publication |
+| Windows CI, Python 3.10 and 3.13 | Both jobs passed; 23 of 23 tests passed, including symlink and junction checks |
+| Linux CI, Python 3.10 and 3.13 | Both jobs passed; 22 tests passed and the Windows-only junction check was skipped |
 | Agent prompt behavior and trigger accuracy | Cases prepared; not yet measured |
 | Matched baseline versus skill performance | Not run |
 | Splunk AppInspect | Not run |
 | Installed or live Splunk behavior | Not run |
 
 Helper cases verify different app identities, authors, role choices and directories; Unicode/XML semantics; missing inputs and config injection; existing content preservation; exact archive membership; deterministic packaging; digest accuracy; portable filenames; and rejection of invalid release selection, Windows junctions and package destinations hidden by parent segments. A skipped OS-specific check is not a pass.
+
+The [initial CI run](https://github.com/LeiterConsulting/skills-for-codex/actions/runs/37133306517) passed all four jobs for implementation commit `abefc51decca0306fd7304b8e2f943b26a101dfd` on October 3, 2026. Each job also passed collection validation. The Windows CI hosts could exercise the symlink check that was unavailable on the local host.
 
 ## Agent evaluation cases
 
