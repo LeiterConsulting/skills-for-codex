@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 import re
 import sys
+from prepare_benchmark import load_pack
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +34,13 @@ def check():
                 errors.append("Missing catalog resource: " + skill[field])
     if len(set(names)) != len(names):
         errors.append("Duplicate skill names.")
+    pack, _ = load_pack()
+    for case in pack["cases"]:
+        if case["skill"] not in names:
+            errors.append("Benchmark references an unknown skill: " + case["skill"])
+        family = json.loads((ROOT / "evals" / (case["skill"] + ".cases.json")).read_text(encoding="utf-8"))
+        if case["source_case"] not in {item["id"] for item in family["cases"]}:
+            errors.append("Benchmark references an unknown source case: " + case["id"])
     for path in ROOT.rglob("*"):
         if any(part in (".git", "__pycache__", ".venv", "work", "dist", ".artifacts")
                for part in path.relative_to(ROOT).parts):
@@ -49,7 +57,7 @@ def check():
         for error in errors:
             print(error, file=sys.stderr)
         return 1
-    print(json.dumps({"skills": len(names), "catalog": "passed", "resource_links": "passed",
+    print(json.dumps({"skills": len(names), "benchmark_cases": len(pack["cases"]), "catalog": "passed", "resource_links": "passed",
                       "host_path_guard": "passed", "scope": "structure; not behavioral or secret validation"}))
     return 0
 

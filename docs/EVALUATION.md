@@ -51,6 +51,10 @@ Each instruction pilot has seven observable agent cases prepared and not yet run
 
 ## Agent evaluation method
 
+The [first matched benchmark wave](BENCHMARKS.md) now has ten fixed synthetic tasks, two per pilot, drawn from the case families below. Its preparer creates matched workspaces, copied-byte receipts and result records. Preparation and its unit tests exercise the evaluation assets, not agent behavior. The original 37 broad case requests and all matched agent results remain unrun. This wave tests explicit entrypoint instructions with identical supporting resources; implicit trigger accuracy and helper/template gains need separate comparisons.
+
+The local standard-library suite now discovers 54 tests: 51 passed and three symlink checks were skipped because the Windows host lacks that privilege. The benchmark preparer adds 14 checks, covering equal fixture/resource bytes, entrypoint-only treatment, fresh destination preservation, path/link rejection, reproducible receipts, unavailable metric defaults, a usable native packaging fixture and the deliberately incomplete release fixtures. Its junction check passed. No agent was launched by these tests.
+
 [Splunk cases](../evals/splunk-app-authoring.cases.json) include explicit/implicit invocation, existing app updates, React/CRUD requirements, unrelated requests, unknown targets and conflicting destinations. [Release qualification cases](../evals/release-qualification.cases.json) cover changed candidates, partial soaks, package-only scope, dirty sources, target differences, authorized repairs, source-only requests and ambiguous delivery. These are test requests with observable acceptance criteria, not evidence that an agent has passed them.
 
 Run future evaluations in fresh isolated workspaces with matched model/reasoning, tools, source snapshot, input brief and fixture. Preserve ordinary project instructions in both baseline and skill conditions. Distinguish instruction gains from new helper/template gains.

@@ -1,6 +1,6 @@
 # Asset provenance
 
-The skill instructions, input records, JSON schema, native app and release record helpers, tests and collection tools are original assets authored for this public collection and released under MIT.
+The skill instructions, input records, JSON schema, native app and release record helpers, tests, synthetic benchmark fixtures/rubrics and collection tools are original assets authored for this public collection and released under MIT.
 
 The workflows draw on experience with Splunk app authoring, release qualification, installed API research, scoped claim audits and estate assessment, plus linked official references. No private project source, installer/verifier/discovery-engine implementations, customer records, workstation configuration, credentials, private source inventory, React starter, Splunk SDK implementation, decompiled game source or proprietary game assets are included.
 

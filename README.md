@@ -51,6 +51,8 @@ python scripts/validate_collection.py
 
 CI runs these checks on Windows and Linux with Python 3.10 and 3.13. [Evaluation status and cases](docs/EVALUATION.md) distinguish helper tests from agent behavior, vendor validation and live acceptance. Passing a local helper is not an AppInspect approval, a runtime test or release authorization.
 
+The [first benchmark wave](docs/BENCHMARKS.md) supplies ten synthetic tasks, matched baseline/skill workspace preparation, hash receipts, review rubrics and unrun result templates. Supporting resources are identical in both conditions. The preparer does not launch agents or establish performance gains.
+
 ## Contributing and license
 
 Contributions should satisfy the portability contract, include observable acceptance cases and retain accurate evidence limits. Add only task-specific guidance that changes agent decisions.
