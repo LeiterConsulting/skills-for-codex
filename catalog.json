@@ -7,7 +7,7 @@
       "name": "splunk-app-authoring",
       "path": "skills/splunk-app-authoring",
       "status": "pilot",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "runtime_dependencies": [
         "Python 3.10+ for optional helper"
       ],

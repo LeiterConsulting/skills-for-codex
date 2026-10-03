@@ -6,6 +6,12 @@ The helper refuses an existing scaffold destination or package output. It never 
 
 Inspect archive members and selected file contents before distribution. Avoid copying local/, credentials, virtual environments, dependencies, caches or arbitrary workspace files. Include runtime assets and seed data only when intended and reviewed. Do not replace a project's release workflow with this helper if it has stronger checks.
 
+## Text values and verification records
+
+Compare JSON-decoded inputs with parsed XML text as Unicode strings. Raw JSON escapes, a string representation and escaped tool output are representations of a value; they do not establish literal backslashes in that value. Read and write text as UTF-8. If display encoding is ambiguous, inspect the parsed string's code points before reporting a defect or an unresolved user choice.
+
+Populate quoted report values and check descriptions from those same parsed values. A passed equality assertion does not support a different prose interpretation of the characters. Record a check as passed only after its assertion or maintained verifier ran; keep the actual result with the receipt.
+
 ## Acceptance levels
 
 | Level | Evidence |
