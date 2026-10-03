@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "product": "Example product; replace with agent/user-defined identity",
+    "version": "0.1.0",
+    "target": "Resolve intended environment and exact version",
+    "source_revision": null,
+    "working_tree": "unknown",
+    "source_snapshot_sha256": null
+  },
+  "artifacts": [
+    {"id": "candidate", "path": "candidate.bin", "sha256": null}
+  ],
+  "checks": [
+    {
+      "id": "package",
+      "tier": "package",
+      "required": true,
+      "status": "not_run",
+      "target": null,
+      "source_revision": null,
+      "source_snapshot_sha256": null,
+      "subjects": [],
+      "evidence": [],
+      "details": "Replace with the chosen acceptance criterion and observed result."
+    }
+  ]
+}

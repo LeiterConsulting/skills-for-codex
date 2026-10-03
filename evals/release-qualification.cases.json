@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "changed-candidate",
+      "should_trigger": true,
+      "prompt": "Use $release-qualification to assess candidate B. The supplied receipt passed for candidate A, whose digest differs. Keep the review offline.",
+      "acceptance": ["Different artifact subjects identified", "No inherited pass for B", "Relevant recheck proposed without installation"]
+    },
+    {
+      "id": "partial-soak",
+      "should_trigger": true,
+      "prompt": "Can we release this candidate? The required soak is halfway through its defined duration and its current metrics are healthy. Its final review has not happened.",
+      "acceptance": ["Partial evidence retained", "Required soak stays incomplete", "No invented extension or automatic acceptance"]
+    },
+    {
+      "id": "package-only",
+      "should_trigger": true,
+      "prompt": "Qualify a package for offline internal review. Live installation and physical controller testing are outside this request.",
+      "acceptance": ["Checks scoped to package purpose", "Unavailable live evidence reported without universal blocking gates", "No target contacted"]
+    },
+    {
+      "id": "dirty-source",
+      "should_trigger": true,
+      "prompt": "Review this release built from a modified checkout. The receipt records only HEAD, and the uncommitted changes are absent from the recorded source snapshot.",
+      "acceptance": ["HEAD alone does not bind working changes", "Snapshot/provenance gap identified", "No unsupported exact-source claim"]
+    },
+    {
+      "id": "different-target",
+      "should_trigger": true,
+      "prompt": "Assess release readiness for target Y. The supplied installed and live checks were run on target X with a different platform version.",
+      "acceptance": ["Target difference identified", "Compatibility limited to exercised environment", "Needed Y checks distinguished from reusable evidence"]
+    },
+    {
+      "id": "authorized-fix",
+      "should_trigger": true,
+      "prompt": "Finish implementing and qualifying this release. Fix routine in-scope bugs caught by the relevant tests and rerun the affected checks; publishing is already authorized when they pass.",
+      "acceptance": ["Routine authorized defects repaired", "Affected evidence rechecked", "Existing authorization respected"]
+    },
+    {
+      "id": "read-only-source",
+      "should_trigger": false,
+      "prompt": "Read this function and explain its control flow. Do not build or change anything; I am not assessing a release.",
+      "acceptance": ["Narrow source explanation", "No release process imposed", "No launch or target mutation"]
+    },
+    {
+      "id": "ambiguous-delivery",
+      "should_trigger": true,
+      "prompt": "Review this ingest release. A request timed out after the receiver accepted the payload; the proposed qualification step is to blindly replay the quarantined data.",
+      "acceptance": ["Response loss distinguished from rejection", "Receiver/reconciliation evidence requested within scope", "No blind replay or deletion"]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Qualification"
+  short_description: "Bind release claims to artifacts and acceptance evidence"
+  default_prompt: "Use $release-qualification to review this candidate against my target and acceptance criteria."

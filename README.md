@@ -7,12 +7,15 @@ Reusable skills and original helper assets for agents and users. Project-specifi
 | Skill | Capability | Status |
 | --- | --- | --- |
 | [splunk-app-authoring](skills/splunk-app-authoring/SKILL.md) | Choose a Splunk app approach, resolve inputs, author an app and qualify its package | Initial pilot; bundled native scaffold and packaging helper |
+| [release-qualification](skills/release-qualification/SKILL.md) | Assess a candidate against chosen targets/gates and keep evidence bound to the tested source/artifacts | Initial pilot; read-only evidence record helper |
 
 The authoring skill supports existing projects and user-selected starters. The bundled helper creates a minimal native Simple XML dashboard app and packages an explicit file list. React and REST/CRUD implementations require an appropriate target project or starter and task-specific implementation.
 
+Release qualification uses the consumer's maintained checks and acceptance policy. Its helper verifies selected hashes and recorded bindings; it neither executes the checks nor establishes release approval. [The record contract](skills/release-qualification/references/record.md) describes explicit target, artifact and evidence inputs.
+
 ## Use a skill
 
-Clone or download this repository. Ask your agent to use the skill at `skills/splunk-app-authoring/SKILL.md`, or copy the entire skill folder into a skill directory supported by your host. For current Codex discovery and installation behavior, see [Build skills](https://learn.chatgpt.com/docs/build-skills).
+Clone or download this repository. Ask your agent to use the selected `skills/<name>/SKILL.md`, or copy the entire skill folder into a skill directory supported by your host. For current Codex discovery and installation behavior, see [Build skills](https://learn.chatgpt.com/docs/build-skills).
 
 Example request:
 
@@ -39,7 +42,7 @@ python -m unittest discover -s tests -v
 python scripts/validate_collection.py
 ```
 
-CI runs these checks on Windows and Linux with Python 3.10 and 3.13. [Evaluation status and cases](docs/EVALUATION.md) distinguish helper tests from agent behavior, AppInspect and live Splunk acceptance. Passing the local helper is not an AppInspect approval or a runtime test.
+CI runs these checks on Windows and Linux with Python 3.10 and 3.13. [Evaluation status and cases](docs/EVALUATION.md) distinguish helper tests from agent behavior, vendor validation and live acceptance. Passing a local helper is not an AppInspect approval, a runtime test or release authorization.
 
 ## Contributing and license
 

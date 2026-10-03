@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collection_version": "0.1.0",
+  "collection_version": "0.2.0",
   "license": "MIT",
   "skills": [
     {
@@ -12,6 +12,19 @@
         "Python 3.10+ for optional helper"
       ],
       "inputs": "skills/splunk-app-authoring/references/inputs.md",
+      "acceptance": "docs/EVALUATION.md",
+      "performance_gain": "unmeasured"
+    },
+    {
+      "name": "release-qualification",
+      "path": "skills/release-qualification",
+      "status": "pilot",
+      "version": "0.1.0",
+      "runtime_dependencies": [
+        "Python 3.10+ for optional record helper",
+        "Consumer-selected project verifiers and authorized targets"
+      ],
+      "inputs": "skills/release-qualification/references/record.md",
       "acceptance": "docs/EVALUATION.md",
       "performance_gain": "unmeasured"
     }
