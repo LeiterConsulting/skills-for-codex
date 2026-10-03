@@ -27,11 +27,13 @@ The [initial CI run](https://github.com/LeiterConsulting/skills-for-codex/action
 | Record helper tests on the local Windows Python 3.13 host | 17 discovered; 16 passed; symlink creation skipped because the host lacks that privilege |
 | Full collection tests on the local host | 40 discovered; 38 passed; both symlink checks skipped |
 | Structure/resource/portability and skill frontmatter checks | Passed |
-| Windows/Linux CI, Python 3.10 and 3.13 | Pending publication of the second pilot |
+| Windows/Linux CI, Python 3.10 and 3.13 | All four jobs passed: Windows 40/40 tests; Linux 38 passed with two Windows-only junction checks skipped |
 | Agent behavior and matched performance evaluations | Cases prepared; not run |
 | Consumer release readiness or deployment | Not established by this collection's helper tests |
 
 Record helper cases exercise stale artifact subjects after a candidate change, mismatched source snapshots and targets, evidence digest/missing-file gaps, incomplete soak statuses, optional physical checks, Unicode identities/paths, output preservation, inert details, bounded hashing, case collisions and linked/reparse paths. A `consistent` record means declared bindings and file hashes agree; pass results remain caller-reported. No verifier, installer, customer connection or release action is executed by the helper.
+
+The [second pilot CI run](https://github.com/LeiterConsulting/skills-for-codex/actions/runs/37141382266) passed for implementation commit `167d29b32edab2a6e8f10c480693f4e891dfefe8` on October 3, 2026. It exercised both helpers and collection validation on all four platform/Python combinations. Symlink checks passed in both Windows and Linux CI.
 
 ## Agent evaluation cases
 

@@ -21,6 +21,8 @@ Example request:
 
 > Use $splunk-app-authoring to create a native service health dashboard in my chosen workspace. Resolve the app identity and target requirements from my brief; list any remaining decisions.
 
+> Use $release-qualification to review this candidate for my specified target and release purpose. Use my project's maintained checks, preserve existing artifacts, and report the required evidence gaps.
+
 Read [the portability contract](docs/PORTABILITY.md) for how values are supplied. Assets containing example values are demonstrations, not defaults for a user's app.
 
 ## Helper example
