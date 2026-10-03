@@ -1,0 +1,4 @@
+interface:
+  display_name: "Splunk App Authoring"
+  short_description: "Author portable Splunk apps and qualify packages"
+  default_prompt: "Use $splunk-app-authoring to build or update a Splunk app using inputs from my project."

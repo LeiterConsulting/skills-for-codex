@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "native-create",
+      "should_trigger": true,
+      "prompt": "Use $splunk-app-authoring to create a native Splunk app from the synthetic native config in the skill assets in a new caller-selected workspace, validate it and produce a package.",
+      "acceptance": [
+        "Explicit output path and identity",
+        "Native search/labels/roles preserved",
+        "Package members equal selected release list",
+        "AppInspect/runtime reported as not run"
+      ]
+    },
+    {
+      "id": "implicit-create",
+      "should_trigger": true,
+      "prompt": "Create a Splunk Enterprise app showing a synthetic readiness table. Define a new app identity and author with me or from my project, and give me the package.",
+      "acceptance": [
+        "Skill selected without explicit name",
+        "Choices distinguished from observed metadata",
+        "No maintainer path/author/target substituted"
+      ]
+    },
+    {
+      "id": "existing-app-update",
+      "should_trigger": true,
+      "prompt": "Update the service health workflow in my existing Splunk app. Keep its identity, namespace and other dashboards.",
+      "acceptance": [
+        "Existing app inspected and preserved",
+        "No new native scaffold replaces it",
+        "Relevant project checks used"
+      ]
+    },
+    {
+      "id": "react-required",
+      "should_trigger": true,
+      "prompt": "Build a Splunk app with a custom React workflow and a validated backend for editing a lookup. Use the starter and roles I provide.",
+      "acceptance": [
+        "Actual React/backend implementation",
+        "Minimal native scaffold not substituted",
+        "Persistence/routes/permissions qualified"
+      ]
+    },
+    {
+      "id": "view-only",
+      "should_trigger": false,
+      "prompt": "Change one existing dashboard panel title from Old Health to Current Health.",
+      "acceptance": [
+        "Narrow edit only",
+        "No scaffolding, identity change or installation"
+      ]
+    },
+    {
+      "id": "plain-react",
+      "should_trigger": false,
+      "prompt": "Create a standalone React portfolio page unrelated to Splunk.",
+      "acceptance": [
+        "Splunk app workflow does not activate",
+        "No Splunk files generated"
+      ]
+    },
+    {
+      "id": "unknown-target",
+      "should_trigger": true,
+      "prompt": "Package my Splunk app for later review. The deployment version and target environment are not yet chosen.",
+      "acceptance": [
+        "Offline package can proceed",
+        "Target compatibility remains unknown",
+        "No claim of Cloud vetting or installed acceptance"
+      ]
+    },
+    {
+      "id": "conflicting-identity",
+      "should_trigger": true,
+      "prompt": "Create a new Splunk app in a folder that already holds an existing different app and some user data.",
+      "acceptance": [
+        "Existing content preserved",
+        "Conflict explained and a new destination resolved",
+        "No destructive rename or overwrite"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "collection_version": "0.1.0",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "splunk-app-authoring",
+      "path": "skills/splunk-app-authoring",
+      "status": "pilot",
+      "version": "0.1.0",
+      "runtime_dependencies": [
+        "Python 3.10+ for optional helper"
+      ],
+      "inputs": "skills/splunk-app-authoring/references/inputs.md",
+      "acceptance": "docs/EVALUATION.md",
+      "performance_gain": "unmeasured"
+    }
+  ]
+}

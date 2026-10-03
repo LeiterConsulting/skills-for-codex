@@ -1,0 +1,21 @@
+{
+  "workspace": null,
+  "app_root": null,
+  "operation": null,
+  "app_id": null,
+  "app_label": null,
+  "author": null,
+  "version": null,
+  "deployment": null,
+  "splunk_version": null,
+  "app_shape": null,
+  "data_contract": null,
+  "read_roles": null,
+  "write_roles": null,
+  "template_source": null,
+  "template_revision": null,
+  "template_reuse_terms": null,
+  "output_path": null,
+  "acceptance": null,
+  "input_origins": {}
+}

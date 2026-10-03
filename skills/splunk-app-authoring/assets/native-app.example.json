@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "app_id": "example_health",
+  "app_label": "Example Health",
+  "author": "Example contributors",
+  "version": "0.1.0",
+  "description": "Synthetic native dashboard example for the portable authoring helper.",
+  "install_state": "enabled",
+  "read_roles": [
+    "*"
+  ],
+  "write_roles": [
+    "admin"
+  ],
+  "dashboard": {
+    "title": "Synthetic health",
+    "query": "| makeresults | eval status=\"ready\" | table status",
+    "earliest": "-24h",
+    "latest": "now"
+  }
+}

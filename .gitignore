@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+work/
+dist/
+.artifacts/
+.local/
+*.local.json
+.env
+.env.*
+!.env.example
