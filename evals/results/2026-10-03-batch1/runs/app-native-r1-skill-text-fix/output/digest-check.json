@@ -1,0 +1,11 @@
+{
+  "command": [
+    "sha256sum",
+    "-c",
+    "bench_delta-0.2.1.tar.gz.sha256"
+  ],
+  "cwd": "output",
+  "exit_code": 0,
+  "stdout": "bench_delta-0.2.1.tar.gz: OK\n",
+  "stderr": ""
+}

@@ -1,0 +1,201 @@
+{
+  "artifacts": [
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/output/record-review.json",
+      "sha256": "07f3df889cd3a8037271bfcfc99ba3f3e0a91cbe7bab70b0660bc730658344d5"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+      "sha256": "c7dc05d340e6bbf7b8c208dd5bf0f217ad63402bee987e50c012103d083f1dff"
+    }
+  ],
+  "case_id": "release-changed",
+  "condition": "baseline",
+  "context": {
+    "isolation_verified": true,
+    "loaded_skills": [],
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "tools": [
+      "network-disabled workspace MCP shell; code-mode/clock/core metadata"
+    ],
+    "cli_version": "codex-cli 0.160.0",
+    "runtime_bridge_sha256": "444a5bdd575d51c06c7450e46f0fb2ad1f35338eff6c568c31b096b674a9a00f",
+    "bridge_hash_provenance": "Frozen matching runtime source; legacy snapshot retained separately from UTF-8-corrected bridge.",
+    "image": "sha256:933b46a028fd786c9c3d426ebabc237e29a15912231ea8de576e95f0e4f41a4c",
+    "python": "Python 3.13.15"
+  },
+  "metrics": {
+    "elapsed_seconds": 95.750676,
+    "failed_tool_calls": 0,
+    "human_corrections": 0,
+    "input_tokens": 105360,
+    "output_tokens": 2624,
+    "tool_calls": 6,
+    "cached_input_tokens": 70656,
+    "nonzero_command_calls": 2
+  },
+  "prepared_receipt_sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b",
+  "repetition": 2,
+  "review": {
+    "accepted": true,
+    "criteria": [
+      {
+        "id": "actual-digest",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-baseline-write-clarified/input/candidate.bin",
+          "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+          "runs/release-changed-r2-baseline-write-clarified/output/review.md"
+        ],
+        "notes": "Independent current B hash matches record; review distinguishes absent A bytes and recorded A subject."
+      },
+      {
+        "id": "source-gap",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+          "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+        ],
+        "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+      },
+      {
+        "id": "next-check",
+        "critical": false,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+          "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+        ],
+        "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+      },
+      {
+        "id": "bounded-review",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+          "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+        ],
+        "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+      }
+    ],
+    "reviewer": "Independent condition-concealed artifact reviewer plus coordinator trace audit",
+    "notes": "Fixed criteria all pass. Diagnostic reporting defect, when present, is separately retained.",
+    "unsupported_claims": [],
+    "unintended_changes": []
+  },
+  "run_id": "release-changed-r2-baseline-write-clarified",
+  "run_order": null,
+  "run_status": "completed",
+  "schema_version": 1,
+  "trace": "runs/release-changed-r2-baseline-write-clarified/commands.jsonl",
+  "accepted": true,
+  "criteria": [
+    {
+      "id": "actual-digest",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-baseline-write-clarified/input/candidate.bin",
+        "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+        "runs/release-changed-r2-baseline-write-clarified/output/review.md"
+      ],
+      "notes": "Independent current B hash matches record; review distinguishes absent A bytes and recorded A subject."
+    },
+    {
+      "id": "source-gap",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+        "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+      ],
+      "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+    },
+    {
+      "id": "next-check",
+      "critical": false,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+        "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+      ],
+      "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+    },
+    {
+      "id": "bounded-review",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+        "runs/release-changed-r2-baseline-write-clarified/commands.jsonl"
+      ],
+      "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+    }
+  ],
+  "critical_failures": [],
+  "unsupported_claims": [],
+  "unintended_changes": [],
+  "diagnostics": [],
+  "submission_order": 2,
+  "concurrent_pair": true,
+  "cohort": "container-write-clarified-repair",
+  "performance_eligible": true,
+  "transport": {
+    "runtime_utf8_verified": true,
+    "requested_received_command_changes": [],
+    "exclusion_reason": null
+  },
+  "candidate_source_revision": "5b609d4c518255009795f3eb3af185f321dfcac3",
+  "candidate_skill_version": "0.1.0",
+  "original_cli_trace_sha256": "a128d33cac211e891148a889324252ffa791b00fab09161fc0cf17537308a33c",
+  "original_stderr_sha256": "9baf96aeb6fcbd3341d35b2348c81c0672d9071968c5815014b60c395727d57c",
+  "isolation": {
+    "network": "none",
+    "mounts": [
+      {
+        "source": "assigned_workspace",
+        "destination": "/workspace",
+        "rw": true
+      }
+    ],
+    "readonly_root": true,
+    "cap_drop": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "initial_inventory_matched": true,
+    "evaluator_host_paths_absent": true,
+    "account_tools_absent_in_preflight": true,
+    "only_workspace_shell_executed": true,
+    "limits": "Core utilities remain visible; actual executed route verified, not hostile-agent containment certification."
+  },
+  "published_evidence": [
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/commands.jsonl",
+      "sha256": "0e3a932581c578574883f5e053394b913649699d7d2e9630a02153281fdb7a08"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/commands.requested.jsonl",
+      "sha256": "0e3a932581c578574883f5e053394b913649699d7d2e9630a02153281fdb7a08"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/final.txt",
+      "sha256": "8fdfd226da06d665c2608d99e4512b39be41175f5fef96656a3874bbeef2576b"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    }
+  ],
+  "mechanical": {
+    "input_resource_changes": 0,
+    "mcp_calls": 6,
+    "truncated_calls": 0,
+    "native_artifacts": null,
+    "cli_warning": "Under-development skip_host_skill_discovery warning retained privately; not a task or transport failure."
+  }
+}

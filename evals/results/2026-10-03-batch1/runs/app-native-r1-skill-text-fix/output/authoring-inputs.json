@@ -1,0 +1,113 @@
+{
+  "workspace": "/workspace",
+  "app_root": "/workspace/output/bench_delta",
+  "operation": "create",
+  "app_id": "bench_delta",
+  "app_label": "Delta & Readiness",
+  "author": "Synthetic evaluation team",
+  "version": "0.2.1",
+  "description": "Offline benchmark fixture",
+  "install_state": "disabled",
+  "deployment": null,
+  "splunk_version": null,
+  "app_shape": "native Simple XML",
+  "data_contract": {
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    },
+    "data_source": "Supplied makeresults search; no index or external input specified",
+    "role_provisioning": "Unknown on any target",
+    "live_search_result": "not_run"
+  },
+  "read_roles": [
+    "bench_reader"
+  ],
+  "write_roles": [
+    "bench_editor"
+  ],
+  "native_config": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "template_source": "Not applicable; no external starter used",
+  "template_revision": null,
+  "template_reuse_terms": "Not applicable; no external starter used",
+  "helper": {
+    "source": "candidate/scripts/splunk_app.py",
+    "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "input": {
+    "source": "input/native.json",
+    "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+  },
+  "output_path": "output/bench_delta-0.2.1.tar.gz",
+  "release_files": [
+    "default/app.conf",
+    "default/data/ui/nav/default.xml",
+    "default/data/ui/views/home.xml",
+    "metadata/default.meta"
+  ],
+  "acceptance": {
+    "source": "passed",
+    "build": "not_applicable (native config/XML; no compilation)",
+    "structure_package": "passed",
+    "appinspect": "not_run",
+    "installed": "not_run",
+    "live": "not_run"
+  },
+  "artifact": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "members": [
+      "bench_delta",
+      "bench_delta/default/app.conf",
+      "bench_delta/default/data/ui/nav/default.xml",
+      "bench_delta/default/data/ui/views/home.xml",
+      "bench_delta/metadata/default.meta"
+    ]
+  },
+  "input_origins": {
+    "schema_version": "input/native.json (user-supplied synthetic fixture)",
+    "app_id": "input/native.json (user-supplied synthetic fixture)",
+    "app_label": "input/native.json (user-supplied synthetic fixture)",
+    "author": "input/native.json (user-supplied synthetic fixture)",
+    "version": "input/native.json (user-supplied synthetic fixture)",
+    "description": "input/native.json (user-supplied synthetic fixture)",
+    "install_state": "input/native.json (user-supplied synthetic fixture)",
+    "read_roles": "input/native.json (user-supplied synthetic fixture)",
+    "write_roles": "input/native.json (user-supplied synthetic fixture)",
+    "dashboard.title": "input/native.json (user-supplied synthetic fixture)",
+    "dashboard.query": "input/native.json (user-supplied synthetic fixture)",
+    "dashboard.earliest": "input/native.json (user-supplied synthetic fixture)",
+    "dashboard.latest": "input/native.json (user-supplied synthetic fixture)",
+    "workspace": "Observed workspace MCP shell root",
+    "app_root": "TASK.md",
+    "operation": "TASK.md",
+    "app_shape": "TASK.md and native requirement in input/native.json",
+    "deployment": "TASK.md: no deployment target selected",
+    "splunk_version": "Not supplied",
+    "release_files": "Supplied helper selection, reviewed and accepted for this minimal app",
+    "output_path": "TASK.md"
+  }
+}

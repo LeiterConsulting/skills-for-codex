@@ -1,0 +1,865 @@
+{
+  "fixture_only": true,
+  "input": {
+    "path": "input/native.json",
+    "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+  },
+  "helper": {
+    "path": "candidate/scripts/splunk_app.py",
+    "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "source_sha256": {
+    "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+    "PROMPT.txt": "499a9303338801f1c285edc6856422e18ea92448c0dcee68f609400eddda1cac",
+    "TASK.md": "1eabcf0cee707988c0454021346bad7550e4b0e8b889d6cbb315b9f3e4546724",
+    "input/native.json": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+    "candidate/assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+    "candidate/assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+    "candidate/assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+    "candidate/references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+    "candidate/references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+    "candidate/references/validation.md": "d87f6450625550d1b7c5037d75e490f68906a5cc508f332d84a05d91cb50559b",
+    "candidate/scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "configuration": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "candidate/scripts/splunk_app.py",
+        "scaffold",
+        "--config",
+        "input/native.json",
+        "--output",
+        "output/bench_delta"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"created_files\": 5,\n  \"release_file_count\": 4,\n  \"installed\": false\n}\n",
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "created_files": 5,
+        "release_file_count": 4,
+        "installed": false
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "candidate/scripts/splunk_app.py",
+        "validate",
+        "--app",
+        "output/bench_delta",
+        "--files",
+        "output/bench_delta/release-files.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\"\n}\n",
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "version": "0.2.1",
+        "selected_file_count": 4,
+        "structure": "passed",
+        "appinspect": "not_run",
+        "runtime": "not_run"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "candidate/scripts/splunk_app.py",
+        "package",
+        "--app",
+        "output/bench_delta",
+        "--files",
+        "output/bench_delta/release-files.json",
+        "--output",
+        "output/bench_delta-0.2.1.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\",\n  \"archive_bytes\": 708,\n  \"sha256\": \"322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd\",\n  \"package\": \"created\",\n  \"selected_files\": [\n    \"default/app.conf\",\n    \"default/data/ui/nav/default.xml\",\n    \"default/data/ui/views/home.xml\",\n    \"metadata/default.meta\"\n  ]\n}\n",
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "version": "0.2.1",
+        "selected_file_count": 4,
+        "structure": "passed",
+        "appinspect": "not_run",
+        "runtime": "not_run",
+        "archive_bytes": 708,
+        "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "package": "created",
+        "selected_files": [
+          "default/app.conf",
+          "default/data/ui/nav/default.xml",
+          "default/data/ui/views/home.xml",
+          "metadata/default.meta"
+        ]
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "Supplied helper scaffold and selected-file validation",
+      "status": "passed",
+      "evidence": {
+        "scaffold": {
+          "app_id": "bench_delta",
+          "created_files": 5,
+          "release_file_count": 4,
+          "installed": false
+        },
+        "validate": {
+          "app_id": "bench_delta",
+          "version": "0.2.1",
+          "selected_file_count": 4,
+          "structure": "passed",
+          "appinspect": "not_run",
+          "runtime": "not_run"
+        }
+      }
+    },
+    {
+      "name": "All app.conf values match supplied identity and state",
+      "status": "passed",
+      "evidence": {
+        "install": {
+          "state": "disabled"
+        },
+        "ui": {
+          "is_visible": "true",
+          "label": "Delta & Readiness",
+          "default_view": "home"
+        },
+        "launcher": {
+          "author": "Synthetic evaluation team",
+          "version": "0.2.1",
+          "description": "Offline benchmark fixture"
+        },
+        "package": {
+          "id": "bench_delta"
+        },
+        "id": {
+          "name": "bench_delta",
+          "version": "0.2.1"
+        }
+      }
+    },
+    {
+      "name": "ACL role lists and app-local export match",
+      "status": "passed",
+      "evidence": {
+        "roles": {
+          "read_roles": [
+            "bench_reader"
+          ],
+          "write_roles": [
+            "bench_editor"
+          ]
+        },
+        "export": "none",
+        "scope": "[]"
+      }
+    },
+    {
+      "name": "One native Simple XML table and home navigation",
+      "status": "passed",
+      "evidence": {
+        "dashboard_attributes": {
+          "version": "1.1",
+          "theme": "light"
+        },
+        "nav_attributes": {
+          "search_view": "search"
+        },
+        "nav_view": {
+          "name": "home",
+          "default": "true"
+        }
+      }
+    },
+    {
+      "name": "JSON-decoded app_label equals parsed XML text",
+      "status": "passed",
+      "evidence": {
+        "expected": "Delta & Readiness",
+        "actual": "Delta & Readiness",
+        "xml_path": "label",
+        "expected_code_points": [
+          "U+0044",
+          "U+0065",
+          "U+006C",
+          "U+0074",
+          "U+0061",
+          "U+0020",
+          "U+0026",
+          "U+0020",
+          "U+0052",
+          "U+0065",
+          "U+0061",
+          "U+0064",
+          "U+0069",
+          "U+006E",
+          "U+0065",
+          "U+0073",
+          "U+0073"
+        ],
+        "actual_code_points": [
+          "U+0044",
+          "U+0065",
+          "U+006C",
+          "U+0074",
+          "U+0061",
+          "U+0020",
+          "U+0026",
+          "U+0020",
+          "U+0052",
+          "U+0065",
+          "U+0061",
+          "U+0064",
+          "U+0069",
+          "U+006E",
+          "U+0065",
+          "U+0073",
+          "U+0073"
+        ],
+        "backslash_count": 0,
+        "quote_positions": []
+      }
+    },
+    {
+      "name": "JSON-decoded title equals parsed XML text",
+      "status": "passed",
+      "evidence": {
+        "expected": "Delta <Health> Å",
+        "actual": "Delta <Health> Å",
+        "xml_path": "row/panel/title",
+        "expected_code_points": [
+          "U+0044",
+          "U+0065",
+          "U+006C",
+          "U+0074",
+          "U+0061",
+          "U+0020",
+          "U+003C",
+          "U+0048",
+          "U+0065",
+          "U+0061",
+          "U+006C",
+          "U+0074",
+          "U+0068",
+          "U+003E",
+          "U+0020",
+          "U+00C5"
+        ],
+        "actual_code_points": [
+          "U+0044",
+          "U+0065",
+          "U+006C",
+          "U+0074",
+          "U+0061",
+          "U+0020",
+          "U+003C",
+          "U+0048",
+          "U+0065",
+          "U+0061",
+          "U+006C",
+          "U+0074",
+          "U+0068",
+          "U+003E",
+          "U+0020",
+          "U+00C5"
+        ],
+        "backslash_count": 0,
+        "quote_positions": []
+      }
+    },
+    {
+      "name": "JSON-decoded query equals parsed XML text",
+      "status": "passed",
+      "evidence": {
+        "expected": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "actual": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "xml_path": "row/panel/table/search/query",
+        "expected_code_points": [
+          "U+007C",
+          "U+0020",
+          "U+006D",
+          "U+0061",
+          "U+006B",
+          "U+0065",
+          "U+0072",
+          "U+0065",
+          "U+0073",
+          "U+0075",
+          "U+006C",
+          "U+0074",
+          "U+0073",
+          "U+0020",
+          "U+007C",
+          "U+0020",
+          "U+0065",
+          "U+0076",
+          "U+0061",
+          "U+006C",
+          "U+0020",
+          "U+0073",
+          "U+0074",
+          "U+0061",
+          "U+0074",
+          "U+0075",
+          "U+0073",
+          "U+003D",
+          "U+0022",
+          "U+0041",
+          "U+0026",
+          "U+0042",
+          "U+003C",
+          "U+0072",
+          "U+0065",
+          "U+0061",
+          "U+0064",
+          "U+0079",
+          "U+003E",
+          "U+0022",
+          "U+0020",
+          "U+007C",
+          "U+0020",
+          "U+0074",
+          "U+0061",
+          "U+0062",
+          "U+006C",
+          "U+0065",
+          "U+0020",
+          "U+0073",
+          "U+0074",
+          "U+0061",
+          "U+0074",
+          "U+0075",
+          "U+0073"
+        ],
+        "actual_code_points": [
+          "U+007C",
+          "U+0020",
+          "U+006D",
+          "U+0061",
+          "U+006B",
+          "U+0065",
+          "U+0072",
+          "U+0065",
+          "U+0073",
+          "U+0075",
+          "U+006C",
+          "U+0074",
+          "U+0073",
+          "U+0020",
+          "U+007C",
+          "U+0020",
+          "U+0065",
+          "U+0076",
+          "U+0061",
+          "U+006C",
+          "U+0020",
+          "U+0073",
+          "U+0074",
+          "U+0061",
+          "U+0074",
+          "U+0075",
+          "U+0073",
+          "U+003D",
+          "U+0022",
+          "U+0041",
+          "U+0026",
+          "U+0042",
+          "U+003C",
+          "U+0072",
+          "U+0065",
+          "U+0061",
+          "U+0064",
+          "U+0079",
+          "U+003E",
+          "U+0022",
+          "U+0020",
+          "U+007C",
+          "U+0020",
+          "U+0074",
+          "U+0061",
+          "U+0062",
+          "U+006C",
+          "U+0065",
+          "U+0020",
+          "U+0073",
+          "U+0074",
+          "U+0061",
+          "U+0074",
+          "U+0075",
+          "U+0073"
+        ],
+        "backslash_count": 0,
+        "quote_positions": [
+          28,
+          39
+        ]
+      }
+    },
+    {
+      "name": "JSON-decoded earliest equals parsed XML text",
+      "status": "passed",
+      "evidence": {
+        "expected": "-12h",
+        "actual": "-12h",
+        "xml_path": "row/panel/table/search/earliest",
+        "expected_code_points": [
+          "U+002D",
+          "U+0031",
+          "U+0032",
+          "U+0068"
+        ],
+        "actual_code_points": [
+          "U+002D",
+          "U+0031",
+          "U+0032",
+          "U+0068"
+        ],
+        "backslash_count": 0,
+        "quote_positions": []
+      }
+    },
+    {
+      "name": "JSON-decoded latest equals parsed XML text",
+      "status": "passed",
+      "evidence": {
+        "expected": "now",
+        "actual": "now",
+        "xml_path": "row/panel/table/search/latest",
+        "expected_code_points": [
+          "U+006E",
+          "U+006F",
+          "U+0077"
+        ],
+        "actual_code_points": [
+          "U+006E",
+          "U+006F",
+          "U+0077"
+        ],
+        "backslash_count": 0,
+        "quote_positions": []
+      }
+    },
+    {
+      "name": "Release manifest selects exactly the four reviewed app files",
+      "status": "passed",
+      "evidence": {
+        "manifest": "output/bench_delta/release-files.json",
+        "files": [
+          "default/app.conf",
+          "default/data/ui/nav/default.xml",
+          "default/data/ui/views/home.xml",
+          "metadata/default.meta"
+        ]
+      }
+    },
+    {
+      "name": "Archive has one app root and only selected regular files",
+      "status": "passed",
+      "evidence": [
+        "bench_delta/",
+        "bench_delta/default/app.conf",
+        "bench_delta/default/data/ui/nav/default.xml",
+        "bench_delta/default/data/ui/views/home.xml",
+        "bench_delta/metadata/default.meta"
+      ]
+    },
+    {
+      "name": "Archive file bytes equal the selected app files",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "default/app.conf",
+          "bytes": 269,
+          "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+        },
+        {
+          "path": "default/data/ui/nav/default.xml",
+          "bytes": 111,
+          "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+        },
+        {
+          "path": "default/data/ui/views/home.xml",
+          "bytes": 440,
+          "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+        },
+        {
+          "path": "metadata/default.meta",
+          "bytes": 76,
+          "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+        }
+      ]
+    },
+    {
+      "name": "Archive metadata has fixed times and portable modes",
+      "status": "passed",
+      "evidence": [
+        {
+          "name": "bench_delta",
+          "mode": "0o755",
+          "mtime": 0,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "name": "bench_delta/default/app.conf",
+          "mode": "0o644",
+          "mtime": 0,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "name": "bench_delta/default/data/ui/nav/default.xml",
+          "mode": "0o644",
+          "mtime": 0,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "name": "bench_delta/default/data/ui/views/home.xml",
+          "mode": "0o644",
+          "mtime": 0,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "name": "bench_delta/metadata/default.meta",
+          "mode": "0o644",
+          "mtime": 0,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "name": "Independent SHA-256 and archive size match package receipt",
+      "status": "passed",
+      "evidence": {
+        "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "archive_bytes": 708
+      }
+    },
+    {
+      "name": "All supplied workspace files remain byte-identical",
+      "status": "passed",
+      "evidence": {
+        "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+        "PROMPT.txt": "499a9303338801f1c285edc6856422e18ea92448c0dcee68f609400eddda1cac",
+        "TASK.md": "1eabcf0cee707988c0454021346bad7550e4b0e8b889d6cbb315b9f3e4546724",
+        "input/native.json": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+        "candidate/assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+        "candidate/assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+        "candidate/assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+        "candidate/references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+        "candidate/references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+        "candidate/references/validation.md": "d87f6450625550d1b7c5037d75e490f68906a5cc508f332d84a05d91cb50559b",
+        "candidate/scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+      }
+    },
+    {
+      "name": "Report quoted values match JSON-decoded input",
+      "status": "passed",
+      "evidence": {
+        "report": "output/report.md",
+        "sha256": "2ed274fa9892c4173acc5f6252bd8792952047aaa9d844e1455ea90da27772ac",
+        "query_format": "fenced SPL block"
+      }
+    }
+  ],
+  "appinspect": "not_run",
+  "installed": false,
+  "runtime": "not_run",
+  "deployment_target": null,
+  "splunk_version": null,
+  "text_evidence": {
+    "app_label": {
+      "expected": "Delta & Readiness",
+      "actual": "Delta & Readiness",
+      "xml_path": "label",
+      "expected_code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+0026",
+        "U+0020",
+        "U+0052",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0069",
+        "U+006E",
+        "U+0065",
+        "U+0073",
+        "U+0073"
+      ],
+      "actual_code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+0026",
+        "U+0020",
+        "U+0052",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0069",
+        "U+006E",
+        "U+0065",
+        "U+0073",
+        "U+0073"
+      ],
+      "backslash_count": 0,
+      "quote_positions": []
+    },
+    "title": {
+      "expected": "Delta <Health> Å",
+      "actual": "Delta <Health> Å",
+      "xml_path": "row/panel/title",
+      "expected_code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+003C",
+        "U+0048",
+        "U+0065",
+        "U+0061",
+        "U+006C",
+        "U+0074",
+        "U+0068",
+        "U+003E",
+        "U+0020",
+        "U+00C5"
+      ],
+      "actual_code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+003C",
+        "U+0048",
+        "U+0065",
+        "U+0061",
+        "U+006C",
+        "U+0074",
+        "U+0068",
+        "U+003E",
+        "U+0020",
+        "U+00C5"
+      ],
+      "backslash_count": 0,
+      "quote_positions": []
+    },
+    "query": {
+      "expected": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "actual": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "xml_path": "row/panel/table/search/query",
+      "expected_code_points": [
+        "U+007C",
+        "U+0020",
+        "U+006D",
+        "U+0061",
+        "U+006B",
+        "U+0065",
+        "U+0072",
+        "U+0065",
+        "U+0073",
+        "U+0075",
+        "U+006C",
+        "U+0074",
+        "U+0073",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0065",
+        "U+0076",
+        "U+0061",
+        "U+006C",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073",
+        "U+003D",
+        "U+0022",
+        "U+0041",
+        "U+0026",
+        "U+0042",
+        "U+003C",
+        "U+0072",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0079",
+        "U+003E",
+        "U+0022",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0074",
+        "U+0061",
+        "U+0062",
+        "U+006C",
+        "U+0065",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073"
+      ],
+      "actual_code_points": [
+        "U+007C",
+        "U+0020",
+        "U+006D",
+        "U+0061",
+        "U+006B",
+        "U+0065",
+        "U+0072",
+        "U+0065",
+        "U+0073",
+        "U+0075",
+        "U+006C",
+        "U+0074",
+        "U+0073",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0065",
+        "U+0076",
+        "U+0061",
+        "U+006C",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073",
+        "U+003D",
+        "U+0022",
+        "U+0041",
+        "U+0026",
+        "U+0042",
+        "U+003C",
+        "U+0072",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0079",
+        "U+003E",
+        "U+0022",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0074",
+        "U+0061",
+        "U+0062",
+        "U+006C",
+        "U+0065",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073"
+      ],
+      "backslash_count": 0,
+      "quote_positions": [
+        28,
+        39
+      ]
+    },
+    "earliest": {
+      "expected": "-12h",
+      "actual": "-12h",
+      "xml_path": "row/panel/table/search/earliest",
+      "expected_code_points": [
+        "U+002D",
+        "U+0031",
+        "U+0032",
+        "U+0068"
+      ],
+      "actual_code_points": [
+        "U+002D",
+        "U+0031",
+        "U+0032",
+        "U+0068"
+      ],
+      "backslash_count": 0,
+      "quote_positions": []
+    },
+    "latest": {
+      "expected": "now",
+      "actual": "now",
+      "xml_path": "row/panel/table/search/latest",
+      "expected_code_points": [
+        "U+006E",
+        "U+006F",
+        "U+0077"
+      ],
+      "actual_code_points": [
+        "U+006E",
+        "U+006F",
+        "U+0077"
+      ],
+      "backslash_count": 0,
+      "quote_positions": []
+    }
+  },
+  "artifact": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "bytes": 708,
+    "digest_path": "output/bench_delta-0.2.1.tar.gz.sha256",
+    "members": [
+      "bench_delta/",
+      "bench_delta/default/app.conf",
+      "bench_delta/default/data/ui/nav/default.xml",
+      "bench_delta/default/data/ui/views/home.xml",
+      "bench_delta/metadata/default.meta"
+    ]
+  },
+  "completion": "offline_structure_and_package_passed"
+}

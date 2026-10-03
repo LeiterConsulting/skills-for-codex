@@ -1,0 +1,99 @@
+{
+  "evidence_type": "offline synthetic fixtures; no live evidence",
+  "scaffold": {
+    "status": "passed",
+    "created_file_count": 5,
+    "installed": false
+  },
+  "helper_validation": {
+    "status": "passed",
+    "app_id": "bench_delta",
+    "version": "0.2.1",
+    "selected_file_count": 4
+  },
+  "source_checks": {
+    "status": "passed",
+    "exact_identity_and_metadata": true,
+    "exact_acl_roles": true,
+    "xml_text_matches_input": true,
+    "search_and_time_match_input": true,
+    "navigation_matches_home": true,
+    "selected_content_reviewed": true
+  },
+  "archive_checks": {
+    "status": "passed",
+    "membership_matches_manifest": true,
+    "single_app_root": true,
+    "regular_files_only": true,
+    "archive_bytes_match_selected_sources": true,
+    "archived_identity_matches": true,
+    "normalized_metadata": true,
+    "members": [
+      {
+        "name": "bench_delta",
+        "type": "directory",
+        "size": 0,
+        "mode": "0o755",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/app.conf",
+        "type": "file",
+        "size": 269,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/data/ui/nav/default.xml",
+        "type": "file",
+        "size": 111,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/data/ui/views/home.xml",
+        "type": "file",
+        "size": 440,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/metadata/default.meta",
+        "type": "file",
+        "size": 76,
+        "mode": "0o644",
+        "mtime": 0
+      }
+    ]
+  },
+  "schema_version_regex": {
+    "status": "passed",
+    "scope": "Isolated version pattern check, not full JSON Schema validation"
+  },
+  "input_preservation": {
+    "status": "passed",
+    "supplied_file_count": 12,
+    "sha256_baseline": "input-hashes.json"
+  },
+  "package": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+  },
+  "build": "not_applicable_native_configuration_only",
+  "appinspect": "not_run",
+  "installed": "not_run",
+  "live": "not_run",
+  "commands": [
+    "python3 candidate/scripts/splunk_app.py scaffold --config input/native.json --output output/bench_delta",
+    "python3 candidate/scripts/splunk_app.py validate --app output/bench_delta --files output/bench_delta/release-files.json",
+    "python3 candidate/scripts/splunk_app.py package --app output/bench_delta --files output/bench_delta/release-files.json --output output/bench_delta-0.2.1.tar.gz",
+    "python3 inline verification: configparser / ElementTree / tarfile / hashlib assertions (documented in report.md)"
+  ],
+  "origins": {
+    "task": "TASK.md",
+    "config": "input/native.json",
+    "helper": "candidate/scripts/splunk_app.py",
+    "helper_sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  }
+}

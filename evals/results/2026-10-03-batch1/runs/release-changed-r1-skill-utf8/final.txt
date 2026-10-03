@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md).
+
+B’s required package gate remains open: the receipt binds to A’s source revision and artifact digest. The helper confirmed both mismatches. The report includes exact bindings, evidence limits and next checks; all inputs remain unchanged.

@@ -1,0 +1,5 @@
+Created `output/bench_delta`, the [release archive](/workspace/output/bench_delta-0.2.1.tar.gz), [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256), and [report](/workspace/output/report.md).
+
+Structural validation, all 19 verification checks, and digest verification passed. Supplied values were preserved exactly.
+
+Target compatibility, AppInspect, and live behavior remain unverified. No deployment was performed.

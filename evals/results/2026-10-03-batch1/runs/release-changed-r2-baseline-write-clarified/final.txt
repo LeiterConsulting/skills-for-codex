@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, evidence limits, gaps, and next checks.
+
+Candidate B’s review is **incomplete**: the required receipt binds to A’s source revision and artifact digest. The helper confirmed both mismatches. Input files remain unchanged.

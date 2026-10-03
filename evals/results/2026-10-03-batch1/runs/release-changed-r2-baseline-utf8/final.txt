@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, gaps, and next checks.
+
+Candidate B’s review is **incomplete**: the required package pass binds A’s source revision and artifact digest. Local hashes match the record, and inputs remain unchanged. The report documents the synthetic evidence limits and unresolved inputs.

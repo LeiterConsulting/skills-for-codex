@@ -1,0 +1,158 @@
+{
+  "evidence": "offline synthetic fixtures; not live Splunk evidence",
+  "source_sha256": {
+    "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+    "TASK.md": "1eabcf0cee707988c0454021346bad7550e4b0e8b889d6cbb315b9f3e4546724",
+    "PROMPT.txt": "499a9303338801f1c285edc6856422e18ea92448c0dcee68f609400eddda1cac",
+    "input/native.json": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+    "candidate/assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+    "candidate/assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+    "candidate/assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+    "candidate/references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+    "candidate/references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+    "candidate/references/validation.md": "45e2eb5df3b5e8580b89e950c6c385d27471430c503ce2d0a9140e1605042182",
+    "candidate/scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "checks": [
+    {
+      "check": "All supplied files unchanged from pre-scaffold SHA-256 values",
+      "status": "passed"
+    },
+    {
+      "check": "Manifest schema and explicit four-file selection",
+      "status": "passed"
+    },
+    {
+      "check": "App source contains exactly four runtime files and the release manifest",
+      "status": "passed"
+    },
+    {
+      "check": "App source has no symbolic links",
+      "status": "passed"
+    },
+    {
+      "check": "All app.conf identity, label, author, version, description and disabled state match fixture",
+      "status": "passed"
+    },
+    {
+      "check": "Metadata roles match exactly; app objects remain app scoped",
+      "status": "passed"
+    },
+    {
+      "check": "Both selected XML files parse without DTD or entity declarations",
+      "status": "passed"
+    },
+    {
+      "check": "Native Simple XML dashboard has one table and one inline search",
+      "status": "passed"
+    },
+    {
+      "check": "Parsed dashboard label and title preserve exact fixture text",
+      "status": "passed"
+    },
+    {
+      "check": "Parsed query and time range preserve exact fixture text, including literal backslashes",
+      "status": "passed"
+    },
+    {
+      "check": "XML special characters are escaped as text without extra elements",
+      "status": "passed"
+    },
+    {
+      "check": "Navigation resolves home as the default view",
+      "status": "passed"
+    },
+    {
+      "check": "Archive has one app root and exactly the selected four files",
+      "status": "passed"
+    },
+    {
+      "check": "Archive contains regular files only beneath its root; no links",
+      "status": "passed"
+    },
+    {
+      "check": "Archive metadata uses 0755 root, 0644 files, zero timestamps and neutral owners",
+      "status": "passed"
+    },
+    {
+      "check": "Archived file bytes equal reviewed app source bytes",
+      "status": "passed"
+    },
+    {
+      "check": "Gzip header uses a zero timestamp",
+      "status": "passed"
+    },
+    {
+      "check": "Independent in-memory reconstruction produces identical package bytes",
+      "status": "passed"
+    },
+    {
+      "check": "Independent SHA-256, size and selection agree with helper package receipt",
+      "status": "passed"
+    }
+  ],
+  "selected_file_sha256": {
+    "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+    "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+    "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+    "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+  },
+  "archive_members": [
+    {
+      "name": "bench_delta",
+      "type": "directory",
+      "mode": "0o755",
+      "size": 0,
+      "mtime": 0
+    },
+    {
+      "name": "bench_delta/default/app.conf",
+      "type": "file",
+      "mode": "0o644",
+      "size": 269,
+      "mtime": 0
+    },
+    {
+      "name": "bench_delta/default/data/ui/nav/default.xml",
+      "type": "file",
+      "mode": "0o644",
+      "size": 111,
+      "mtime": 0
+    },
+    {
+      "name": "bench_delta/default/data/ui/views/home.xml",
+      "type": "file",
+      "mode": "0o644",
+      "size": 440,
+      "mtime": 0
+    },
+    {
+      "name": "bench_delta/metadata/default.meta",
+      "type": "file",
+      "mode": "0o644",
+      "size": 76,
+      "mtime": 0
+    }
+  ],
+  "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+  "archive_bytes": 708,
+  "decoded_dashboard_values": {
+    "title": "Delta <Health> \u00c5",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now"
+  },
+  "not_run": [
+    "Splunk AppInspect",
+    "target installation",
+    "SPL execution",
+    "browser runtime",
+    "effective role authorization"
+  ],
+  "unresolved": [
+    "deployment target",
+    "Splunk version and deployment type",
+    "target role existence and effective permissions",
+    "intended meaning of literal title/search backslashes"
+  ]
+}

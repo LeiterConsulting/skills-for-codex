@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "files": [
+    "default/app.conf",
+    "default/data/ui/nav/default.xml",
+    "default/data/ui/views/home.xml",
+    "metadata/default.meta"
+  ]
+}

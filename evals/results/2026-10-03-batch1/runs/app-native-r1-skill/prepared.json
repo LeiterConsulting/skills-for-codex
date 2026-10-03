@@ -1,0 +1,34 @@
+{
+  "candidate_files": {
+    "SKILL.md": "b86d9e011f7c109f7e051e6324e96b2d765cfa4f88c430a2896125fbc1086ad2",
+    "assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+    "assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+    "assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+    "references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+    "references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+    "references/validation.md": "45e2eb5df3b5e8580b89e950c6c385d27471430c503ce2d0a9140e1605042182",
+    "scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "case_id": "app-native",
+  "common_files": {
+    "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+    "TASK.md": "1eabcf0cee707988c0454021346bad7550e4b0e8b889d6cbb315b9f3e4546724",
+    "input/native.json": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+  },
+  "comparison": "explicit skill instructions; supporting resources available to both conditions",
+  "evaluation": "not_run",
+  "pack_sha256": "bd7242f5c0258accfd8d000bc87bcce48f2dcc8a05143f4a0ef845334ba5632f",
+  "pack_version": "0.1.0",
+  "resource_files": {
+    "assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+    "assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+    "assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+    "references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+    "references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+    "references/validation.md": "45e2eb5df3b5e8580b89e950c6c385d27471430c503ce2d0a9140e1605042182",
+    "scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "schema_version": 1,
+  "skill": "splunk-app-authoring",
+  "source_revision": "d42e6fd81eb5e13a8a52a1267e0061cc9700edd9"
+}

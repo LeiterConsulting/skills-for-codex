@@ -1,0 +1,87 @@
+{
+  "workspace": "/workspace",
+  "app_root": "output/bench_delta",
+  "operation": "create",
+  "app_id": "bench_delta",
+  "app_label": "Delta & Readiness",
+  "author": "Synthetic evaluation team",
+  "version": "0.2.1",
+  "deployment": null,
+  "splunk_version": null,
+  "app_shape": "native Classic Simple XML",
+  "data_contract": {
+    "fixture_type": "synthetic offline",
+    "title": "Delta <Health> Å",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now",
+    "indexes": null,
+    "fields": [
+      "status"
+    ],
+    "execution": "not_run"
+  },
+  "read_roles": [
+    "bench_reader"
+  ],
+  "write_roles": [
+    "bench_editor"
+  ],
+  "template_source": "candidate/scripts/splunk_app.py",
+  "template_revision": {
+    "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "template_reuse_terms": "Supplied workspace helper authorized for this task; no external starter used.",
+  "output_path": "output/bench_delta-0.2.1.tar.gz",
+  "native_config": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "acceptance": {
+    "source": "passed",
+    "build": "not_applicable_native_app",
+    "structure_package": "passed",
+    "appinspect": "not_run",
+    "installed": "not_run",
+    "live": "not_run"
+  },
+  "input_origins": {
+    "schema_version": "input/native.json",
+    "app_id": "input/native.json",
+    "app_label": "input/native.json",
+    "author": "input/native.json",
+    "version": "input/native.json",
+    "description": "input/native.json",
+    "install_state": "input/native.json",
+    "read_roles": "input/native.json",
+    "write_roles": "input/native.json",
+    "dashboard": "input/native.json",
+    "workspace": "Provided workspace MCP shell",
+    "app_root": "TASK.md",
+    "operation": "TASK.md",
+    "app_shape": "TASK.md",
+    "deployment": "TASK.md: no selected deployment target",
+    "splunk_version": "Not supplied; unknown",
+    "output_path": "TASK.md",
+    "template_source": "Supplied candidate skill/helper",
+    "release_selection": "Agent selected the four generated runtime files; manifest retained outside archive",
+    "dashboard_layout": "Supplied helper: one table, home default view, panel title, dashboard label from app_label"
+  }
+}

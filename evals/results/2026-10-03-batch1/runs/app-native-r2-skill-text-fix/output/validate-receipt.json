@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "candidate/scripts/splunk_app.py",
+    "validate",
+    "--app",
+    "output/bench_delta",
+    "--files",
+    "output/bench_delta/release-files.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\"\n}\n",
+  "stderr": ""
+}

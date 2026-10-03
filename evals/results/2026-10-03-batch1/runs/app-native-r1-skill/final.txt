@@ -1,0 +1,7 @@
+Created `output/bench_delta` with the supplied identity, roles, search, and time range.
+
+- [Release package](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Validation report](/workspace/output/report.md)
+
+Structural, exact-value, archive-content, and checksum checks passed. Inputs were preserved. AppInspect and live Splunk checks were not run; target compatibility remains unverified.

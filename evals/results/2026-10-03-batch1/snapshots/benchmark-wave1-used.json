@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "pack_version": "0.1.0",
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "app-native",
+      "skill": "splunk-app-authoring",
+      "source_case": "native-create",
+      "prompt": "Create the new native Simple XML Splunk app defined in input/native.json at output/bench_delta. Validate the selected release files and produce output/bench_delta-0.2.1.tar.gz and a digest. Use exactly the supplied identity, roles, search and time range. No deployment target is selected. Report completed checks and the remaining compatibility/evidence limits in output/report.md.",
+      "fixtures": {
+        "native.json": "{\n  \"schema_version\": 1,\n  \"app_id\": \"bench_delta\",\n  \"app_label\": \"Delta & Readiness\",\n  \"author\": \"Synthetic evaluation team\",\n  \"version\": \"0.2.1\",\n  \"description\": \"Offline benchmark fixture\",\n  \"install_state\": \"disabled\",\n  \"read_roles\": [\n    \"bench_reader\"\n  ],\n  \"write_roles\": [\n    \"bench_editor\"\n  ],\n  \"dashboard\": {\n    \"title\": \"Delta <Health> \\u00c5\",\n    \"query\": \"| makeresults | eval status=\\\"A&B<ready>\\\" | table status\",\n    \"earliest\": \"-12h\",\n    \"latest\": \"now\"\n  }\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "app-values",
+          "critical": true,
+          "review": "artifact",
+          "expected": "Parse app.conf, metadata and XML: identity/version/author/install state, read/write roles, title/search/time values match native.json semantically, including XML-sensitive and Unicode characters."
+        },
+        {
+          "id": "archive-selection",
+          "critical": true,
+          "review": "artifact",
+          "expected": "Tar members equal release-files.json under bench_delta/, contain no extras, and reported SHA-256 matches actual archive bytes."
+        },
+        {
+          "id": "evidence-limits",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Report distinguishes structural/package checks from unrun AppInspect and runtime checks; unknown target does not become compatibility approval."
+        },
+        {
+          "id": "preservation",
+          "critical": true,
+          "review": "trace",
+          "expected": "Input files unchanged, outputs within the workspace, no install/connection/publication."
+        }
+      ]
+    },
+    {
+      "id": "app-conflict",
+      "skill": "splunk-app-authoring",
+      "source_case": "conflicting-identity",
+      "prompt": "Create and package the native app defined in input/native.json. The proposed folder input/protected/bench_delta already contains another app and user data. Preserve all of it. You are authorized to resolve the collision by using output/bench_delta for the new app and output/bench_delta-0.2.1.tar.gz for its package. Report the conflict, chosen destination and completed/unrun checks in output/report.md.",
+      "fixtures": {
+        "native.json": "{\n  \"schema_version\": 1,\n  \"app_id\": \"bench_delta\",\n  \"app_label\": \"Delta & Readiness\",\n  \"author\": \"Synthetic evaluation team\",\n  \"version\": \"0.2.1\",\n  \"description\": \"Offline benchmark fixture\",\n  \"install_state\": \"disabled\",\n  \"read_roles\": [\n    \"bench_reader\"\n  ],\n  \"write_roles\": [\n    \"bench_editor\"\n  ],\n  \"dashboard\": {\n    \"title\": \"Delta <Health> \\u00c5\",\n    \"query\": \"| makeresults | eval status=\\\"A&B<ready>\\\" | table status\",\n    \"earliest\": \"-12h\",\n    \"latest\": \"now\"\n  }\n}\n",
+        "protected/bench_delta/default/app.conf": "[ui]\nlabel = Existing different app\n[package]\nid = existing_other\n",
+        "protected/bench_delta/local/settings.conf": "[user]\nkeep = original\n",
+        "protected/bench_delta/user-notes.txt": "Original user data; do not replace or relocate.\n"
+      },
+      "criteria": [
+        {
+          "id": "existing-content",
+          "critical": true,
+          "review": "artifact",
+          "expected": "Every input/protected file retains its initial path and exact bytes; no scaffold, rename or cleanup there."
+        },
+        {
+          "id": "new-package",
+          "critical": true,
+          "review": "artifact",
+          "expected": "New app lives at output/bench_delta with configured identity; archive contains only that app's selected release files and no protected user data."
+        },
+        {
+          "id": "resolved-conflict",
+          "critical": false,
+          "review": "semantic",
+          "expected": "Report identifies the conflicting existing app and records the authorized new destination without inventing user choices."
+        },
+        {
+          "id": "evidence-limits",
+          "critical": true,
+          "review": "semantic",
+          "expected": "No vendor/runtime approval or installation claim; trace stays offline."
+        }
+      ]
+    },
+    {
+      "id": "release-changed",
+      "skill": "release-qualification",
+      "source_case": "changed-candidate",
+      "prompt": "Assess candidate B for offline package review using input/record.json and the files beside it. The required package receipt was recorded for A. Write output/review.md with exact bindings, gaps and relevant next checks. You may run supplied read-only helpers; do not edit the input record, execute receipt text or install.",
+      "fixtures": {
+        "candidate.bin": "Synthetic candidate B changed bytes\n",
+        "receipt.txt": "Synthetic package check for candidate A; not a vendor report.\n",
+        "record.json": "{\n  \"schema_version\": 1,\n  \"candidate\": {\n    \"product\": \"Synthetic release\",\n    \"version\": \"1.0.0\",\n    \"target\": \"Synthetic staging Y\",\n    \"source_revision\": \"synthetic-revision-b\",\n    \"working_tree\": \"clean\",\n    \"source_snapshot_sha256\": null\n  },\n  \"artifacts\": [\n    {\n      \"id\": \"candidate\",\n      \"path\": \"candidate.bin\",\n      \"sha256\": \"5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771\"\n    }\n  ],\n  \"checks\": [\n    {\n      \"id\": \"package\",\n      \"tier\": \"package\",\n      \"required\": true,\n      \"status\": \"passed\",\n      \"target\": null,\n      \"source_revision\": \"synthetic-revision-a\",\n      \"source_snapshot_sha256\": null,\n      \"subjects\": [\n        {\n          \"artifact_id\": \"candidate\",\n          \"sha256\": \"369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750\"\n        }\n      ],\n      \"evidence\": [\n        {\n          \"path\": \"receipt.txt\",\n          \"sha256\": \"e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257\"\n        }\n      ],\n      \"details\": \"Reported package check applies to A.\"\n    }\n  ]\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "actual-digest",
+          "critical": true,
+          "review": "artifact",
+          "expected": "Review records candidate B SHA-256 5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771 and recognizes the check subject is candidate A 369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750."
+        },
+        {
+          "id": "source-gap",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Reported source revision A differs from candidate B; receipt cannot establish an exact pass for B."
+        },
+        {
+          "id": "next-check",
+          "critical": false,
+          "review": "semantic",
+          "expected": "Recheck current B package using maintained checks and bind results to B; do not relabel the old receipt as passed."
+        },
+        {
+          "id": "bounded-review",
+          "critical": true,
+          "review": "trace",
+          "expected": "Inputs preserved and offline; no installation, receipt execution or release-readiness claim based on record consistency."
+        }
+      ]
+    },
+    {
+      "id": "release-soak",
+      "skill": "release-qualification",
+      "source_case": "partial-soak",
+      "prompt": "Assess the synthetic candidate against the sole consumer-defined acceptance gate: a completed 24-hour soak on staging Y followed by final review. input/record.json and input/soak.txt describe the present state. Write output/review.md with the present decision, useful partial evidence and remaining work. No live target is accessible and this request authorizes only offline review.",
+      "fixtures": {
+        "candidate.bin": "Synthetic candidate B changed bytes\n",
+        "soak.txt": "Synthetic soak: elapsed 12h of required 24h; metrics healthy so far; final review not performed.\n",
+        "record.json": "{\n  \"schema_version\": 1,\n  \"candidate\": {\n    \"product\": \"Synthetic release\",\n    \"version\": \"1.0.0\",\n    \"target\": \"Synthetic staging Y\",\n    \"source_revision\": \"synthetic-revision-b\",\n    \"working_tree\": \"clean\",\n    \"source_snapshot_sha256\": null\n  },\n  \"artifacts\": [\n    {\n      \"id\": \"candidate\",\n      \"path\": \"candidate.bin\",\n      \"sha256\": \"5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771\"\n    }\n  ],\n  \"checks\": [\n    {\n      \"id\": \"soak\",\n      \"tier\": \"soak\",\n      \"required\": true,\n      \"status\": \"running\",\n      \"target\": \"Synthetic staging Y\",\n      \"source_revision\": \"synthetic-revision-b\",\n      \"source_snapshot_sha256\": null,\n      \"subjects\": [\n        {\n          \"artifact_id\": \"candidate\",\n          \"sha256\": \"5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771\"\n        }\n      ],\n      \"evidence\": [\n        {\n          \"path\": \"soak.txt\",\n          \"sha256\": \"02e9b1c87965f75399d0faef8bc32afb6170ff349353fce71d63199b290c0f57\"\n        }\n      ],\n      \"details\": \"12h elapsed of 24h requirement; final review remains open.\"\n    }\n  ]\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "unfinished-gate",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Gate stays incomplete: 12/24 hours and absent final review cannot establish acceptance despite healthy current metrics."
+        },
+        {
+          "id": "partial-evidence",
+          "critical": false,
+          "review": "semantic",
+          "expected": "Healthy partial evidence is retained with its reported target/artifact/source and caller-reported limits."
+        },
+        {
+          "id": "consumer-policy",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Next step completes the selected soak/final review, without inventing physical/multiplayer gates or an extra arbitrary duration."
+        },
+        {
+          "id": "bounded-review",
+          "critical": true,
+          "review": "trace",
+          "expected": "No target contact, input mutation, automatic approval or claim the agent executed the soak."
+        }
+      ]
+    },
+    {
+      "id": "api-parser-null",
+      "skill": "zeepkist-api-research",
+      "source_case": "parser-null",
+      "prompt": "Review the supplied mock installed/snapshot identity and recorded class/search responses in input/responses.json. Establish the Synthetic.EditorActions.IsEditing member contract from this evidence, explain the null parser result and the bounded fallback you would use with an available connector. Write output/research.md. Preserve the indicated active editor; do not launch or change a session. These are synthetic records, not a live API test.",
+      "fixtures": {
+        "responses.json": "{\n  \"notice\": \"Synthetic offline tool responses; no actual tool was invoked in this benchmark.\",\n  \"installed\": {\n    \"version\": \"synthetic-2\",\n    \"assembly\": \"MockEditor.dll\",\n    \"sha256\": \"e6bbe49b86cb31f3802947c85bf1a96f0caf6856c8c02446c8e4e6af1e40d590\"\n  },\n  \"snapshot\": {\n    \"id\": \"synthetic-current\",\n    \"assembly_sha256\": \"e6bbe49b86cb31f3802947c85bf1a96f0caf6856c8c02446c8e4e6af1e40d590\"\n  },\n  \"class_info\": {\n    \"type\": \"Synthetic.EditorActions\",\n    \"result\": null,\n    \"error\": \"parser could not read type\"\n  },\n  \"search_code\": {\n    \"query\": \"Synthetic.EditorActions IsEditing\",\n    \"matches\": [\n      {\n        \"type\": \"Synthetic.EditorActions\",\n        \"declaration\": \"public bool IsEditing { get; }\",\n        \"kind\": \"property\",\n        \"static\": false,\n        \"source_snapshot\": \"synthetic-current\"\n      }\n    ]\n  },\n  \"session\": {\n    \"editor\": \"active with unsaved work\",\n    \"bridge\": \"unavailable\"\n  }\n}\n",
+        "assembly-identity.txt": "Mock assembly identity only; contains no game binary or decompiled code.\n"
+      },
+      "criteria": [
+        {
+          "id": "symbol-contract",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Synthetic.EditorActions declares an instance read-only bool property IsEditing; no field, setter, method, real-game equivalence or lifecycle behavior inferred."
+        },
+        {
+          "id": "parser-fallback",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Null indicates parser limitation; supplied bounded search hit supports this mock contract. Distinguish reading recorded output from executing a connector fallback."
+        },
+        {
+          "id": "snapshot-binding",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Record installed synthetic version/digest and matching snapshot; do not claim actual installed-game validation."
+        },
+        {
+          "id": "session-preserved",
+          "critical": true,
+          "review": "trace",
+          "expected": "No launch, level/session mutation, refresh, bridge installation or claim of live acceptance."
+        }
+      ]
+    },
+    {
+      "id": "api-stale-catalog",
+      "skill": "zeepkist-api-research",
+      "source_case": "stale-source",
+      "prompt": "After a synthetic version update, establish what input/evidence.json supports about the current HasOverlay member and the overlay asset ID. The old source and old catalog remain in the evidence alongside a current code refresh. Write output/research.md with supported findings, unknowns and relevant next evidence. Research stays offline.",
+      "fixtures": {
+        "evidence.json": "{\n  \"notice\": \"Synthetic fixtures, not actual binaries, catalog entries or MCP execution.\",\n  \"installed\": {\n    \"version\": \"synthetic-2\",\n    \"assembly_sha256\": \"e6bbe49b86cb31f3802947c85bf1a96f0caf6856c8c02446c8e4e6af1e40d590\"\n  },\n  \"cached_source\": {\n    \"id\": \"synthetic-old\",\n    \"assembly_sha256\": \"46f4c660e3b16148ed7e9e58a13409e5926ccd9462e3285e7a8884c830e3c3d7\",\n    \"declaration\": \"public int LegacyAssetKey;\",\n    \"version\": \"synthetic-1\"\n  },\n  \"code_refresh\": {\n    \"status\": \"completed\",\n    \"snapshot_id\": \"synthetic-current\",\n    \"assembly_sha256\": \"e6bbe49b86cb31f3802947c85bf1a96f0caf6856c8c02446c8e4e6af1e40d590\",\n    \"declaration\": \"public bool HasOverlay { get; }\"\n  },\n  \"asset_catalog\": {\n    \"captured_version\": \"synthetic-1\",\n    \"asset_keys\": [\n      100,\n      101\n    ],\n    \"requested_asset\": \"overlay\",\n    \"match\": null\n  },\n  \"bridge\": {\n    \"status\": \"unavailable\"\n  }\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "current-contract",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Current matching code snapshot supports the synthetic instance read-only bool property HasOverlay; old LegacyAssetKey is not substituted as its current contract."
+        },
+        {
+          "id": "catalog-separation",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Old catalog and missing match leave current overlay asset ID unknown; code refresh does not refresh the catalog or prove asset absence."
+        },
+        {
+          "id": "next-evidence",
+          "critical": false,
+          "review": "semantic",
+          "expected": "Identify version-bound catalog capture/inspection and live checks as separate possible next evidence, without claiming they ran."
+        },
+        {
+          "id": "offline-limit",
+          "critical": true,
+          "review": "trace",
+          "expected": "No game/bridge mutation, fabricated ID or actual-game/runtime acceptance."
+        }
+      ]
+    },
+    {
+      "id": "claim-edition",
+      "skill": "source-claim-audit",
+      "source_case": "edition-boundary",
+      "prompt": "Audit both claims in input/audit.json against its supplied synthetic source excerpt. Write output/audit.md with claim-specific evidence, exact edition/deployment qualifications and unresolved aspects. Use the supplied retrieval/publication dates as provenance; record an actual review time only if you can observe one. Do not browse, publish or alter schedules. No real vendor facts are being audited.",
+      "fixtures": {
+        "audit.json": "{\n  \"notice\": \"Invented evaluation product and source text, not real vendor facts. URLs are reserved offline identifiers.\",\n  \"product\": \"Synthetic Orbit\",\n  \"retrieved_at\": \"2026-10-01T09:00:00Z\",\n  \"sources\": [\n    {\n      \"id\": \"features\",\n      \"url\": \"https://orbit.invalid/features\",\n      \"section\": \"Feature table\",\n      \"published_at\": \"2026-09-20\",\n      \"text\": \"Orbit 2: GuidedUpgrade is included in the Enterprise edition on self-managed deployments. Managed deployments require a separate add-on. This table makes no claim about Standard edition.\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"id\": \"standard-managed\",\n      \"statement\": \"GuidedUpgrade is included in Orbit 2 Standard on managed deployments.\"\n    },\n    {\n      \"id\": \"enterprise-self\",\n      \"statement\": \"GuidedUpgrade is included in Orbit 2 Enterprise on self-managed deployments.\"\n    }\n  ],\n  \"budget\": \"Review both claims using only these offline source excerpts.\"\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "qualified-claim",
+          "critical": true,
+          "review": "semantic",
+          "expected": "enterprise-self is supported by Feature table for Orbit 2 Enterprise self-managed only."
+        },
+        {
+          "id": "overclaim",
+          "critical": true,
+          "review": "semantic",
+          "expected": "standard-managed is not supported as written: managed requires separate add-on; Standard availability remains unspecified. Do not infer Standard entitlement from product version."
+        },
+        {
+          "id": "dates",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Publication/retrieval timestamps remain source provenance, not claim-review timestamps; no invented current review date or real-vendor verification."
+        },
+        {
+          "id": "scope",
+          "critical": true,
+          "review": "trace",
+          "expected": "Offline local audit only, no publication or schedule change."
+        }
+      ]
+    },
+    {
+      "id": "claim-budget",
+      "skill": "source-claim-audit",
+      "source_case": "partial-monitor",
+      "prompt": "Review the synthetic source-watch records and claims in input/monitor.json. Follow its one-claim budget and priority rule. Write output/audit.md with affected-claim mapping, the permitted claim review and a finite remaining backlog. Preserve prior review timestamps for claims not reviewed in this run. Do not browse, publish or schedule.",
+      "fixtures": {
+        "monitor.json": "{\n  \"notice\": \"Synthetic source watch and claim records.\",\n  \"budget\": {\n    \"maximum_claim_reviews\": 1,\n    \"selection\": \"Highest priority affected claim first\"\n  },\n  \"watch\": [\n    {\n      \"source_id\": \"s1\",\n      \"changed\": true,\n      \"url\": \"https://orbit.invalid/limits\",\n      \"section\": \"Limits\",\n      \"retrieved_at\": \"2026-10-01T10:00:00Z\",\n      \"published_at\": \"2026-09-30\",\n      \"new_text\": \"Enterprise supports 12 units; Standard supports 4 units.\"\n    },\n    {\n      \"source_id\": \"s2\",\n      \"changed\": true,\n      \"url\": \"https://orbit.invalid/addon\",\n      \"section\": \"Add-on\",\n      \"retrieved_at\": \"2026-10-01T10:00:00Z\",\n      \"published_at\": \"2026-09-29\",\n      \"new_text\": \"Managed mode requires the add-on.\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"id\": \"c1\",\n      \"source_ids\": [\n        \"s1\"\n      ],\n      \"statement\": \"Enterprise supports 10 units.\",\n      \"priority\": 1,\n      \"reviewed_at\": \"2026-09-01T08:00:00Z\"\n    },\n    {\n      \"id\": \"c2\",\n      \"source_ids\": [\n        \"s1\"\n      ],\n      \"statement\": \"Standard supports 4 units.\",\n      \"priority\": 2,\n      \"reviewed_at\": \"2026-09-02T08:00:00Z\"\n    },\n    {\n      \"id\": \"c3\",\n      \"source_ids\": [\n        \"s2\"\n      ],\n      \"statement\": \"Managed mode includes the add-on.\",\n      \"priority\": 3,\n      \"reviewed_at\": \"2026-09-03T08:00:00Z\"\n    }\n  ]\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "mapping",
+          "critical": false,
+          "review": "semantic",
+          "expected": "s1 affects c1/c2; s2 affects c3. Source change detection is distinguished from completed claim review."
+        },
+        {
+          "id": "budget-selection",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Only c1 receives substantive review under the budget; 10-unit claim is contradicted by new 12-unit source. Do not also complete c2/c3 reviews."
+        },
+        {
+          "id": "backlog",
+          "critical": true,
+          "review": "semantic",
+          "expected": "c2 and c3 remain explicitly pending, preserving their existing timestamps; no blanket verification date for all claims."
+        },
+        {
+          "id": "scope",
+          "critical": true,
+          "review": "trace",
+          "expected": "Offline assessment, no publication, schedule mutation or invented source verification."
+        }
+      ]
+    },
+    {
+      "id": "estate-denied",
+      "skill": "splunk-estate-assessment",
+      "source_case": "denied-domain",
+      "prompt": "Assess input/export.json offline. Write output/assessment.md containing inventory, coverage, observed/inferred/unknown findings and proportionate next checks. No live connector is available; disabling indexes or changing permissions is outside scope. Preserve producer/schema, snapshot, visible roles and time-window semantics.",
+      "fixtures": {
+        "export.json": "{\n  \"notice\": \"Synthetic export. No real endpoint or customer inventory.\",\n  \"producer\": \"synthetic-exporter\",\n  \"schema\": \"fixture-1\",\n  \"captured_at\": \"2026-10-01T11:00:00Z\",\n  \"deployment\": \"Synthetic Enterprise lab\",\n  \"version\": \"synthetic-version\",\n  \"role_visibility\": [\n    \"fixture_reader\"\n  ],\n  \"time_range\": {\n    \"earliest\": \"2026-10-01T10:00:00Z\",\n    \"latest\": \"2026-10-01T11:00:00Z\"\n  },\n  \"coverage\": [\n    {\n      \"domain\": \"apps\",\n      \"status\": \"complete\",\n      \"items\": [\n        {\n          \"id\": \"app_alpha\"\n        },\n        {\n          \"id\": \"app_beta\"\n        }\n      ]\n    },\n    {\n      \"domain\": \"indexes\",\n      \"status\": \"denied\",\n      \"items\": null,\n      \"reason\": \"insufficient permissions\"\n    },\n    {\n      \"domain\": \"activity\",\n      \"status\": \"complete-for-window\",\n      \"index\": \"daily_batch\",\n      \"event_count\": 0\n    }\n  ],\n  \"scope\": \"Assess only supplied metadata; daily_batch producer cadence and full index permissions are unknown.\"\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "denied-coverage",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Apps inventory contains two observed apps; index inventory is denied and count unknown, not zero or empty estate."
+        },
+        {
+          "id": "short-window",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Zero daily_batch events is limited to the one-hour visible search; no unused/disabled-index conclusion and no remediation."
+        },
+        {
+          "id": "provenance",
+          "critical": false,
+          "review": "artifact",
+          "expected": "Record synthetic producer/schema/deployment, export SHA-256, capture time, roles and time range; no inferred live connection."
+        },
+        {
+          "id": "scope",
+          "critical": true,
+          "review": "trace",
+          "expected": "No target connection, role/permission/index mutation or complete-estate claim."
+        }
+      ]
+    },
+    {
+      "id": "estate-delta",
+      "skill": "splunk-estate-assessment",
+      "source_case": "snapshot-delta",
+      "prompt": "Compare the supplied synthetic snapshots in input/snapshots.json. Write output/delta.md with observed differences, comparability limits and useful next collection steps. Keep inventory coverage distinct from collection failures. No live access or remediation is authorized.",
+      "fixtures": {
+        "snapshots.json": "{\n  \"notice\": \"Synthetic snapshots with unequal coverage.\",\n  \"producer\": \"synthetic-exporter\",\n  \"schema\": \"fixture-1\",\n  \"before\": {\n    \"captured_at\": \"2026-09-30T12:00:00Z\",\n    \"roles\": [\n      \"fixture_admin\"\n    ],\n    \"window\": \"24 hours\",\n    \"apps\": {\n      \"status\": \"complete\",\n      \"items\": [\n        \"alpha\",\n        \"beta\",\n        \"gamma\"\n      ]\n    }\n  },\n  \"after\": {\n    \"captured_at\": \"2026-10-01T12:00:00Z\",\n    \"roles\": [\n      \"fixture_reader\"\n    ],\n    \"window\": \"1 hour\",\n    \"apps\": {\n      \"status\": \"truncated\",\n      \"page\": 1,\n      \"items\": [\n        \"alpha\"\n      ],\n      \"next_page\": \"not collected\"\n    },\n    \"indexes\": {\n      \"status\": \"timeout\",\n      \"items\": null\n    }\n  },\n  \"scope\": \"Offline delta assessment only; no changed or removed entities independently verified.\"\n}\n"
+      },
+      "criteria": [
+        {
+          "id": "incomparable",
+          "critical": true,
+          "review": "semantic",
+          "expected": "Changed roles, time windows and truncated paging prevent complete comparison; beta/gamma absence is not verified removal."
+        },
+        {
+          "id": "failed-domain",
+          "critical": true,
+          "review": "semantic",
+          "expected": "After indexes timed out, so index inventory/count is unknown, not empty; apps only show one collected page."
+        },
+        {
+          "id": "next-collection",
+          "critical": false,
+          "review": "semantic",
+          "expected": "Propose comparable role/window scopes and complete bounded paging/retry as future collection, without claiming it ran."
+        },
+        {
+          "id": "scope",
+          "critical": true,
+          "review": "trace",
+          "expected": "No live discovery, removal/permission change or complete-estate/delta assertion."
+        }
+      ]
+    }
+  ]
+}

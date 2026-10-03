@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "fixture_only": true,
+  "source": {
+    "config": "input/native.json",
+    "config_sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+    "helper": "candidate/scripts/splunk_app.py",
+    "helper_sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "app_id": "bench_delta",
+  "version": "0.2.1",
+  "checks": [
+    {
+      "check": "Input fixture unchanged from its initial recorded SHA-256",
+      "status": "passed"
+    },
+    {
+      "check": "Supplied helper unchanged from its initial recorded SHA-256",
+      "status": "passed"
+    },
+    {
+      "check": "Decoded input passes the supplied helper config contract",
+      "status": "passed"
+    },
+    {
+      "check": "Explicit release selection contains exactly the four intended runtime files",
+      "status": "passed"
+    },
+    {
+      "check": "Selected files pass helper path, regular-file, link and size checks",
+      "status": "passed"
+    },
+    {
+      "check": "App identity, label, author, version, description and disabled state match decoded input",
+      "status": "passed"
+    },
+    {
+      "check": "ACL uses one app-wide metadata stanza",
+      "status": "passed"
+    },
+    {
+      "check": "ACL read/write roles equal the supplied role arrays; export is none",
+      "status": "passed"
+    },
+    {
+      "check": "Default navigation and app default_view resolve to the selected home dashboard",
+      "status": "passed"
+    },
+    {
+      "check": "Native Simple XML has one table and one explicitly scoped inline search",
+      "status": "passed"
+    },
+    {
+      "check": "Parsed XML text equals decoded JSON as exact Unicode strings, including query and time range",
+      "status": "passed"
+    },
+    {
+      "check": "Actual helper packaging receipt records successful structure validation and selected identity",
+      "status": "passed"
+    },
+    {
+      "check": "Independent archive SHA-256 and byte size match the packaging receipt",
+      "status": "passed"
+    },
+    {
+      "check": "Archive has one app root and exactly the selected regular files, with no links or extra content",
+      "status": "passed"
+    },
+    {
+      "check": "Archive payload equals selected source bytes: default/app.conf",
+      "status": "passed"
+    },
+    {
+      "check": "Archive payload equals selected source bytes: default/data/ui/nav/default.xml",
+      "status": "passed"
+    },
+    {
+      "check": "Archive payload equals selected source bytes: default/data/ui/views/home.xml",
+      "status": "passed"
+    },
+    {
+      "check": "Archive payload equals selected source bytes: metadata/default.meta",
+      "status": "passed"
+    },
+    {
+      "check": "Archive timestamps, owners and modes use the deterministic helper settings",
+      "status": "passed"
+    }
+  ],
+  "text_round_trip": {
+    "app_label": {
+      "decoded_input": "Delta & Readiness",
+      "parsed_xml": "Delta & Readiness",
+      "equal": true,
+      "code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+0026",
+        "U+0020",
+        "U+0052",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0069",
+        "U+006E",
+        "U+0065",
+        "U+0073",
+        "U+0073"
+      ]
+    },
+    "title": {
+      "decoded_input": "Delta <Health> Å",
+      "parsed_xml": "Delta <Health> Å",
+      "equal": true,
+      "code_points": [
+        "U+0044",
+        "U+0065",
+        "U+006C",
+        "U+0074",
+        "U+0061",
+        "U+0020",
+        "U+003C",
+        "U+0048",
+        "U+0065",
+        "U+0061",
+        "U+006C",
+        "U+0074",
+        "U+0068",
+        "U+003E",
+        "U+0020",
+        "U+00C5"
+      ]
+    },
+    "query": {
+      "decoded_input": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "parsed_xml": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "equal": true,
+      "code_points": [
+        "U+007C",
+        "U+0020",
+        "U+006D",
+        "U+0061",
+        "U+006B",
+        "U+0065",
+        "U+0072",
+        "U+0065",
+        "U+0073",
+        "U+0075",
+        "U+006C",
+        "U+0074",
+        "U+0073",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0065",
+        "U+0076",
+        "U+0061",
+        "U+006C",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073",
+        "U+003D",
+        "U+0022",
+        "U+0041",
+        "U+0026",
+        "U+0042",
+        "U+003C",
+        "U+0072",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0079",
+        "U+003E",
+        "U+0022",
+        "U+0020",
+        "U+007C",
+        "U+0020",
+        "U+0074",
+        "U+0061",
+        "U+0062",
+        "U+006C",
+        "U+0065",
+        "U+0020",
+        "U+0073",
+        "U+0074",
+        "U+0061",
+        "U+0074",
+        "U+0075",
+        "U+0073"
+      ]
+    },
+    "earliest": {
+      "decoded_input": "-12h",
+      "parsed_xml": "-12h",
+      "equal": true,
+      "code_points": [
+        "U+002D",
+        "U+0031",
+        "U+0032",
+        "U+0068"
+      ]
+    },
+    "latest": {
+      "decoded_input": "now",
+      "parsed_xml": "now",
+      "equal": true,
+      "code_points": [
+        "U+006E",
+        "U+006F",
+        "U+0077"
+      ]
+    }
+  },
+  "selected_files": [
+    {
+      "path": "default/app.conf",
+      "bytes": 269,
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "default/data/ui/nav/default.xml",
+      "bytes": 111,
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "default/data/ui/views/home.xml",
+      "bytes": 440,
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "metadata/default.meta",
+      "bytes": 76,
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    }
+  ],
+  "archive": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "bytes": 708,
+    "members": [
+      {
+        "name": "bench_delta",
+        "type": "directory",
+        "size": 0,
+        "mode": "0o755",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/app.conf",
+        "type": "file",
+        "size": 269,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/data/ui/nav/default.xml",
+        "type": "file",
+        "size": 111,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/default/data/ui/views/home.xml",
+        "type": "file",
+        "size": 440,
+        "mode": "0o644",
+        "mtime": 0
+      },
+      {
+        "name": "bench_delta/metadata/default.meta",
+        "type": "file",
+        "size": 76,
+        "mode": "0o644",
+        "mtime": 0
+      }
+    ]
+  },
+  "content_review": "Four selected UTF-8 text files inspected; only app configuration, navigation, dashboard and ACL metadata are included.",
+  "deployment_target": null,
+  "splunk_version": null,
+  "deployment_type": null,
+  "appinspect": "not_run",
+  "installed": false,
+  "runtime": "not_run"
+}

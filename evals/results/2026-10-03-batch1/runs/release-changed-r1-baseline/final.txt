@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, gaps, evidence limits and next checks.
+
+B’s review is **incomplete**: the required package receipt binds to A’s source revision and artifact digest. Both supplied file hashes match their declarations; inputs remain unchanged.

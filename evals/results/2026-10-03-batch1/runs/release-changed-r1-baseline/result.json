@@ -1,0 +1,197 @@
+{
+  "artifacts": [
+    {
+      "path": "runs/release-changed-r1-baseline/output/review.md",
+      "sha256": "df4967d16df446b13c3554f3ebaf27474b974262a342e1be3eeddc95e74cf2d3"
+    }
+  ],
+  "case_id": "release-changed",
+  "condition": "baseline",
+  "context": {
+    "isolation_verified": true,
+    "loaded_skills": [],
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "tools": [
+      "network-disabled workspace MCP shell; code-mode/clock/core metadata"
+    ],
+    "cli_version": "codex-cli 0.160.0",
+    "runtime_bridge_sha256": "cec39859f6c6ef92348305ea19e0bca148fedc9376d7d9d27b1b4788cfefa11d",
+    "bridge_hash_provenance": "Frozen matching runtime source; legacy snapshot retained separately from UTF-8-corrected bridge.",
+    "image": "sha256:933b46a028fd786c9c3d426ebabc237e29a15912231ea8de576e95f0e4f41a4c",
+    "python": "Python 3.13.15"
+  },
+  "metrics": {
+    "elapsed_seconds": 113.145151,
+    "failed_tool_calls": 0,
+    "human_corrections": 0,
+    "input_tokens": 140147,
+    "output_tokens": 2825,
+    "tool_calls": 7,
+    "cached_input_tokens": 113792,
+    "nonzero_command_calls": 2
+  },
+  "prepared_receipt_sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa",
+  "repetition": 1,
+  "review": {
+    "accepted": true,
+    "criteria": [
+      {
+        "id": "actual-digest",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r1-baseline/input/candidate.bin",
+          "runs/release-changed-r1-baseline/input/record.json",
+          "runs/release-changed-r1-baseline/output/review.md"
+        ],
+        "notes": "Independent current B hash matches record; review distinguishes absent A bytes and recorded A subject."
+      },
+      {
+        "id": "source-gap",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r1-baseline/output/review.md",
+          "runs/release-changed-r1-baseline/commands.jsonl"
+        ],
+        "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+      },
+      {
+        "id": "next-check",
+        "critical": false,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r1-baseline/output/review.md",
+          "runs/release-changed-r1-baseline/commands.jsonl"
+        ],
+        "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+      },
+      {
+        "id": "bounded-review",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r1-baseline/output/review.md",
+          "runs/release-changed-r1-baseline/commands.jsonl"
+        ],
+        "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+      }
+    ],
+    "reviewer": "Independent condition-concealed artifact reviewer plus coordinator trace audit",
+    "notes": "Fixed criteria all pass. Diagnostic reporting defect, when present, is separately retained.",
+    "unsupported_claims": [],
+    "unintended_changes": []
+  },
+  "run_id": "release-changed-r1-baseline",
+  "run_order": null,
+  "run_status": "completed",
+  "schema_version": 1,
+  "trace": "runs/release-changed-r1-baseline/commands.jsonl",
+  "accepted": true,
+  "criteria": [
+    {
+      "id": "actual-digest",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r1-baseline/input/candidate.bin",
+        "runs/release-changed-r1-baseline/input/record.json",
+        "runs/release-changed-r1-baseline/output/review.md"
+      ],
+      "notes": "Independent current B hash matches record; review distinguishes absent A bytes and recorded A subject."
+    },
+    {
+      "id": "source-gap",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r1-baseline/output/review.md",
+        "runs/release-changed-r1-baseline/commands.jsonl"
+      ],
+      "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+    },
+    {
+      "id": "next-check",
+      "critical": false,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r1-baseline/output/review.md",
+        "runs/release-changed-r1-baseline/commands.jsonl"
+      ],
+      "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+    },
+    {
+      "id": "bounded-review",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r1-baseline/output/review.md",
+        "runs/release-changed-r1-baseline/commands.jsonl"
+      ],
+      "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+    }
+  ],
+  "critical_failures": [],
+  "unsupported_claims": [],
+  "unintended_changes": [],
+  "diagnostics": [],
+  "submission_order": 1,
+  "concurrent_pair": true,
+  "cohort": "initial-runtime",
+  "performance_eligible": false,
+  "transport": {
+    "runtime_utf8_verified": false,
+    "requested_received_command_changes": [],
+    "exclusion_reason": "Legacy Windows MCP stdio lacked UTF-8 conformance; all 14 earlier trials excluded from performance conclusions."
+  },
+  "candidate_source_revision": "d42e6fd81eb5e13a8a52a1267e0061cc9700edd9",
+  "candidate_skill_version": "0.1.0",
+  "original_cli_trace_sha256": "ea3e95bb1662a75c38ae2efcda40c907b086d9feb55e580cf285c8bc94c7455f",
+  "original_stderr_sha256": "f446347178cfdd3e55e4e133d55acade3b6b095b1f50d5c2f064c46947bdbeb0",
+  "isolation": {
+    "network": "none",
+    "mounts": [
+      {
+        "source": "assigned_workspace",
+        "destination": "/workspace",
+        "rw": true
+      }
+    ],
+    "readonly_root": true,
+    "cap_drop": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "initial_inventory_matched": true,
+    "evaluator_host_paths_absent": true,
+    "account_tools_absent_in_preflight": true,
+    "only_workspace_shell_executed": true,
+    "limits": "Core utilities remain visible; actual executed route verified, not hostile-agent containment certification."
+  },
+  "published_evidence": [
+    {
+      "path": "runs/release-changed-r1-baseline/commands.jsonl",
+      "sha256": "95528460c63b31c0a4e802c0c5c8177bc8bf1940f5a6953596b4a8c7603ed3a9"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/commands.requested.jsonl",
+      "sha256": "95528460c63b31c0a4e802c0c5c8177bc8bf1940f5a6953596b4a8c7603ed3a9"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/final.txt",
+      "sha256": "ed62b116b629152a16048e06a2e9ebd1a163f8971b8a76d5785ba931c20062bc"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/prepared.json",
+      "sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa"
+    }
+  ],
+  "mechanical": {
+    "input_resource_changes": 0,
+    "mcp_calls": 7,
+    "truncated_calls": 0,
+    "native_artifacts": null,
+    "cli_warning": "Under-development skip_host_skill_discovery warning retained privately; not a task or transport failure."
+  }
+}

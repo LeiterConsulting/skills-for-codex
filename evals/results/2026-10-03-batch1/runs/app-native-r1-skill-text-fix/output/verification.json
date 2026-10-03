@@ -1,0 +1,210 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Explicit release manifest selects exactly the four reviewed files",
+      "status": "passed"
+    },
+    {
+      "name": "App root and release identity match the supplied input",
+      "status": "passed"
+    },
+    {
+      "name": "All app.conf values preserve identity, author, version, description and disabled state",
+      "status": "passed"
+    },
+    {
+      "name": "Navigation resolves to the released home view",
+      "status": "passed"
+    },
+    {
+      "name": "Native Simple XML contains one table and one inline search",
+      "status": "passed"
+    },
+    {
+      "name": "JSON-decoded label equals parsed XML label",
+      "status": "passed"
+    },
+    {
+      "name": "JSON-decoded dashboard.title equals parsed XML text",
+      "status": "passed"
+    },
+    {
+      "name": "JSON-decoded dashboard.query equals parsed XML text",
+      "status": "passed"
+    },
+    {
+      "name": "JSON-decoded dashboard.earliest equals parsed XML text",
+      "status": "passed"
+    },
+    {
+      "name": "JSON-decoded dashboard.latest equals parsed XML text",
+      "status": "passed"
+    },
+    {
+      "name": "App metadata uses the default stanza",
+      "status": "passed"
+    },
+    {
+      "name": "Metadata ACL has explicit read and write lists",
+      "status": "passed"
+    },
+    {
+      "name": "Read and write roles exactly match the input",
+      "status": "passed"
+    },
+    {
+      "name": "Metadata export scope is none",
+      "status": "passed"
+    },
+    {
+      "name": "Archive has exactly one app root and the selected release files",
+      "status": "passed"
+    },
+    {
+      "name": "Archive contains regular files and the app root directory, with no links",
+      "status": "passed"
+    },
+    {
+      "name": "Archive ownership, modes and timestamps are normalized",
+      "status": "passed"
+    },
+    {
+      "name": "Archived bytes equal the reviewed source: default/app.conf",
+      "status": "passed"
+    },
+    {
+      "name": "Archived bytes equal the reviewed source: default/data/ui/nav/default.xml",
+      "status": "passed"
+    },
+    {
+      "name": "Archived bytes equal the reviewed source: default/data/ui/views/home.xml",
+      "status": "passed"
+    },
+    {
+      "name": "Archived bytes equal the reviewed source: metadata/default.meta",
+      "status": "passed"
+    },
+    {
+      "name": "SHA-256 sidecar matches the actual archive",
+      "status": "passed"
+    },
+    {
+      "name": "Every original workspace file is unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "Every new deliverable is confined to output/",
+      "status": "passed"
+    }
+  ],
+  "parsed_values": {
+    "app_label": "Delta & Readiness",
+    "title": "Delta <Health> Å",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now"
+  },
+  "title_code_points": [
+    "U+0044",
+    "U+0065",
+    "U+006C",
+    "U+0074",
+    "U+0061",
+    "U+0020",
+    "U+003C",
+    "U+0048",
+    "U+0065",
+    "U+0061",
+    "U+006C",
+    "U+0074",
+    "U+0068",
+    "U+003E",
+    "U+0020",
+    "U+00C5"
+  ],
+  "query_code_points": [
+    "U+007C",
+    "U+0020",
+    "U+006D",
+    "U+0061",
+    "U+006B",
+    "U+0065",
+    "U+0072",
+    "U+0065",
+    "U+0073",
+    "U+0075",
+    "U+006C",
+    "U+0074",
+    "U+0073",
+    "U+0020",
+    "U+007C",
+    "U+0020",
+    "U+0065",
+    "U+0076",
+    "U+0061",
+    "U+006C",
+    "U+0020",
+    "U+0073",
+    "U+0074",
+    "U+0061",
+    "U+0074",
+    "U+0075",
+    "U+0073",
+    "U+003D",
+    "U+0022",
+    "U+0041",
+    "U+0026",
+    "U+0042",
+    "U+003C",
+    "U+0072",
+    "U+0065",
+    "U+0061",
+    "U+0064",
+    "U+0079",
+    "U+003E",
+    "U+0022",
+    "U+0020",
+    "U+007C",
+    "U+0020",
+    "U+0074",
+    "U+0061",
+    "U+0062",
+    "U+006C",
+    "U+0065",
+    "U+0020",
+    "U+0073",
+    "U+0074",
+    "U+0061",
+    "U+0074",
+    "U+0075",
+    "U+0073"
+  ],
+  "roles": {
+    "read": [
+      "bench_reader"
+    ],
+    "write": [
+      "bench_editor"
+    ]
+  },
+  "archive": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "members": [
+      "bench_delta",
+      "bench_delta/default/app.conf",
+      "bench_delta/default/data/ui/nav/default.xml",
+      "bench_delta/default/data/ui/views/home.xml",
+      "bench_delta/metadata/default.meta"
+    ]
+  },
+  "selected_file_sha256": {
+    "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+    "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+    "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+    "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+  },
+  "original_file_count": 12
+}

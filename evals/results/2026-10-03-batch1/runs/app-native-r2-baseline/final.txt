@@ -1,0 +1,7 @@
+Created `output/bench_delta` with the supplied configuration preserved exactly.
+
+- [Release archive](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Report](/workspace/output/report.md)
+
+Offline structure, archive-content and checksum checks passed. AppInspect and live compatibility remain unverified; no deployment was performed.

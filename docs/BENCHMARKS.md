@@ -1,6 +1,6 @@
 # First matched benchmark wave
 
-The [wave-one pack](../evals/benchmark-wave1.json) fixes ten original synthetic tasks: two for each of the five skill pilots. They are concrete offline instances of the broader [agent cases](EVALUATION.md), with fixtures and review rubrics. All agent results remain **not run**.
+The [wave-one pack](../evals/benchmark-wave1.json) fixes ten original synthetic tasks: two for each of the five skill pilots. They are concrete offline instances of the broader [agent cases](EVALUATION.md), with fixtures and review rubrics. The app-native and release-changed cases have [reviewed matched results](BENCHMARK-BATCH1.md); the other eight cases remain unrun. The frozen pack and preparation receipts use `not_run` to identify task definitions and fresh result templates, rather than the separate execution ledger.
 
 | Skill | Case IDs | Decision exercised |
 | --- | --- | --- |
@@ -37,6 +37,8 @@ The helper creates files only. It does not launch an agent, provision a sandbox,
 A first pass of one run per condition is a **20-run smoke wave**, useful for finding defects. It provides little evidence about variability. Follow with repeated matched runs and balanced/randomized condition order; choose the repetition count and decision thresholds before inspecting comparative results. Do not change fixtures or skills halfway through a comparison. After fixing a defect, prepare a new revision and run both conditions again for the affected case.
 
 Compare accepted completions using the attempted-run denominator, critical failures, unsupported claims, unintended changes and human corrections. Summarize elapsed time, token use and tool calls for all attempted runs; also show accepted-run subsets without hiding failed effort. Report paired differences and spread across repetitions rather than one favorable example. Unavailable measurements and excluded/contaminated runs need explicit denominators and reasons.
+
+The [isolated runtime recipe](ISOLATED-BENCHMARK-RUNTIME.md) documents the first batch's actual controls and infrastructure failures. The optional workspace MCP bridge runs only inside a caller-provisioned container; it does not establish isolation by itself.
 
 ## Limits and next batches
 

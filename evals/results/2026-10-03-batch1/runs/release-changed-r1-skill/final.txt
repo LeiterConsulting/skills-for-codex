@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, evidence limits and next checks.
+
+B’s digest matches the record, but the required package pass binds to A’s source revision and artifact digest. B’s package gate remains open. Inputs were preserved; these synthetic fixtures establish no live qualification.

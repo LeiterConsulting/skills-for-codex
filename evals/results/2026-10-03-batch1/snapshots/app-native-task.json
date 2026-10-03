@@ -1,0 +1,29 @@
+{
+  "prompt": "Create the new native Simple XML Splunk app defined in input/native.json at output/bench_delta. Validate the selected release files and produce output/bench_delta-0.2.1.tar.gz and a digest. Use exactly the supplied identity, roles, search and time range. No deployment target is selected. Report completed checks and the remaining compatibility/evidence limits in output/report.md.",
+  "criteria": [
+    {
+      "id": "app-values",
+      "critical": true,
+      "review": "artifact",
+      "expected": "Parse app.conf, metadata and XML: identity/version/author/install state, read/write roles, title/search/time values match native.json semantically, including XML-sensitive and Unicode characters."
+    },
+    {
+      "id": "archive-selection",
+      "critical": true,
+      "review": "artifact",
+      "expected": "Tar members equal release-files.json under bench_delta/, contain no extras, and reported SHA-256 matches actual archive bytes."
+    },
+    {
+      "id": "evidence-limits",
+      "critical": true,
+      "review": "semantic",
+      "expected": "Report distinguishes structural/package checks from unrun AppInspect and runtime checks; unknown target does not become compatibility approval."
+    },
+    {
+      "id": "preservation",
+      "critical": true,
+      "review": "trace",
+      "expected": "Input files unchanged, outputs within the workspace, no install/connection/publication."
+    }
+  ]
+}

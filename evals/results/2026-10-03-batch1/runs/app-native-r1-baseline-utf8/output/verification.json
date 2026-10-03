@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "scope": "Offline synthetic fixtures; no target selected and no runtime evidence.",
+  "checks": [
+    {
+      "name": "helper_commands",
+      "status": "passed",
+      "detail": "Scaffold, selected-file validation and package commands exited 0 without stderr."
+    },
+    {
+      "name": "release_selection",
+      "status": "passed",
+      "detail": "Explicit release manifest selects only the four native app files; manifest and evidence are excluded from the archive."
+    },
+    {
+      "name": "app_file_set",
+      "status": "passed",
+      "detail": "App source contains exactly the selected files and the release manifest."
+    },
+    {
+      "name": "regular_files",
+      "status": "passed",
+      "detail": "Selected files are regular files with no linked path components."
+    },
+    {
+      "name": "utf8",
+      "status": "passed",
+      "detail": "All selected files round-trip as UTF-8."
+    },
+    {
+      "name": "app_conf_identity",
+      "status": "passed",
+      "detail": "All app.conf sections and values exactly match fixture metadata and the native home-view scaffold, including disabled state and both version stanzas."
+    },
+    {
+      "name": "navigation",
+      "status": "passed",
+      "detail": "Navigation selects the packaged home view; search_view refers to the platform search view."
+    },
+    {
+      "name": "simple_xml_shape",
+      "status": "passed",
+      "detail": "One Simple XML 1.1 dashboard with one row, one panel, one table and one inline search; no extra tokens or searches."
+    },
+    {
+      "name": "xml_value_equality",
+      "status": "passed",
+      "detail": "Parsed XML label, title, query, earliest and latest equal JSON-decoded fixture strings, character for character."
+    },
+    {
+      "name": "xml_escaping",
+      "status": "passed",
+      "detail": "Ampersands and angle brackets are escaped as XML text; U+00C5 is UTF-8; no DTD/entity declarations."
+    },
+    {
+      "name": "metadata_roles",
+      "status": "passed",
+      "detail": "Global metadata ACL exactly preserves bench_reader read and bench_editor write roles, with export = none and no wildcard or additional grants."
+    },
+    {
+      "name": "package_receipt_digest",
+      "status": "passed",
+      "detail": "Independently recomputed package SHA-256 and byte length match the packaging receipt."
+    },
+    {
+      "name": "archive_membership",
+      "status": "passed",
+      "detail": "Archive contains one bench_delta root and exactly four regular selected files; no links, duplicate names or extra content."
+    },
+    {
+      "name": "archive_path_safety",
+      "status": "passed",
+      "detail": "All archive member names are relative and free of path traversal."
+    },
+    {
+      "name": "archive_bytes",
+      "status": "passed",
+      "detail": "Every archive file is byte-identical to its selected source file; archive inspected without extracting."
+    },
+    {
+      "name": "normalized_archive_metadata",
+      "status": "passed",
+      "detail": "Tar timestamps/ownership are normalized; root mode 0755 and file modes 0644; gzip timestamp is zero with no stored filename."
+    },
+    {
+      "name": "source_preservation",
+      "status": "passed",
+      "detail": "AGENTS.md, TASK.md and all supplied input/candidate files retain their pre-build SHA-256 values."
+    },
+    {
+      "name": "digest_sidecar",
+      "status": "passed",
+      "detail": "SHA-256 sidecar names the exact package and contains its recomputed digest."
+    }
+  ],
+  "fixture_values": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "parsed_xml_values": {
+    "app_label": "Delta & Readiness",
+    "title": "Delta <Health> Å",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now"
+  },
+  "xml_text_code_points": {
+    "app_label": [
+      "U+0044",
+      "U+0065",
+      "U+006C",
+      "U+0074",
+      "U+0061",
+      "U+0020",
+      "U+0026",
+      "U+0020",
+      "U+0052",
+      "U+0065",
+      "U+0061",
+      "U+0064",
+      "U+0069",
+      "U+006E",
+      "U+0065",
+      "U+0073",
+      "U+0073"
+    ],
+    "title": [
+      "U+0044",
+      "U+0065",
+      "U+006C",
+      "U+0074",
+      "U+0061",
+      "U+0020",
+      "U+003C",
+      "U+0048",
+      "U+0065",
+      "U+0061",
+      "U+006C",
+      "U+0074",
+      "U+0068",
+      "U+003E",
+      "U+0020",
+      "U+00C5"
+    ],
+    "query": [
+      "U+007C",
+      "U+0020",
+      "U+006D",
+      "U+0061",
+      "U+006B",
+      "U+0065",
+      "U+0072",
+      "U+0065",
+      "U+0073",
+      "U+0075",
+      "U+006C",
+      "U+0074",
+      "U+0073",
+      "U+0020",
+      "U+007C",
+      "U+0020",
+      "U+0065",
+      "U+0076",
+      "U+0061",
+      "U+006C",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+0074",
+      "U+0075",
+      "U+0073",
+      "U+003D",
+      "U+0022",
+      "U+0041",
+      "U+0026",
+      "U+0042",
+      "U+003C",
+      "U+0072",
+      "U+0065",
+      "U+0061",
+      "U+0064",
+      "U+0079",
+      "U+003E",
+      "U+0022",
+      "U+0020",
+      "U+007C",
+      "U+0020",
+      "U+0074",
+      "U+0061",
+      "U+0062",
+      "U+006C",
+      "U+0065",
+      "U+0020",
+      "U+0073",
+      "U+0074",
+      "U+0061",
+      "U+0074",
+      "U+0075",
+      "U+0073"
+    ],
+    "earliest": [
+      "U+002D",
+      "U+0031",
+      "U+0032",
+      "U+0068"
+    ],
+    "latest": [
+      "U+006E",
+      "U+006F",
+      "U+0077"
+    ]
+  },
+  "selected_files": [
+    {
+      "path": "default/app.conf",
+      "bytes": 269,
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "default/data/ui/nav/default.xml",
+      "bytes": 111,
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "default/data/ui/views/home.xml",
+      "bytes": 440,
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "metadata/default.meta",
+      "bytes": 76,
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    }
+  ],
+  "artifact": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+  },
+  "input_sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+  "helper_sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda",
+  "source_files_preserved": true,
+  "external_checks": {
+    "appinspect": "not_run",
+    "installed": "not_run",
+    "runtime": "not_run"
+  },
+  "unresolved_inputs": [
+    "Deployment target and platform (Enterprise/Cloud)",
+    "Exact Splunk version",
+    "Target role existence and effective permissions"
+  ]
+}

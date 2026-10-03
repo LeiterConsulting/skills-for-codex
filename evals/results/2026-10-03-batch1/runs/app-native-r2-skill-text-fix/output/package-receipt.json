@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "candidate/scripts/splunk_app.py",
+    "package",
+    "--app",
+    "output/bench_delta",
+    "--files",
+    "output/bench_delta/release-files.json",
+    "--output",
+    "output/bench_delta-0.2.1.tar.gz"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\",\n  \"archive_bytes\": 708,\n  \"sha256\": \"322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd\",\n  \"package\": \"created\",\n  \"selected_files\": [\n    \"default/app.conf\",\n    \"default/data/ui/nav/default.xml\",\n    \"default/data/ui/views/home.xml\",\n    \"metadata/default.meta\"\n  ]\n}\n",
+  "stderr": ""
+}

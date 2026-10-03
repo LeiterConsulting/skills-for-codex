@@ -1,0 +1,266 @@
+{
+  "artifacts": [
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/report.md",
+      "sha256": "4ac6fc162afa5d680539022c767b5479c0fcf18f35fb4538cbdd3f94145c154c"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/validation.json",
+      "sha256": "d52b56ead644c0704b4b5464f39b6efb4a055df0064dc87d6ffe0eadf6ae30bf"
+    }
+  ],
+  "case_id": "app-native",
+  "condition": "baseline",
+  "context": {
+    "isolation_verified": true,
+    "loaded_skills": [],
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "tools": [
+      "network-disabled workspace MCP shell; code-mode/clock/core metadata"
+    ],
+    "cli_version": "codex-cli 0.160.0",
+    "runtime_bridge_sha256": "cec39859f6c6ef92348305ea19e0bca148fedc9376d7d9d27b1b4788cfefa11d",
+    "bridge_hash_provenance": "Frozen matching runtime source; legacy snapshot retained separately from UTF-8-corrected bridge.",
+    "image": "sha256:933b46a028fd786c9c3d426ebabc237e29a15912231ea8de576e95f0e4f41a4c",
+    "python": "Python 3.13.15"
+  },
+  "metrics": {
+    "elapsed_seconds": 317.590528,
+    "failed_tool_calls": 0,
+    "human_corrections": 0,
+    "input_tokens": 299853,
+    "output_tokens": 8654,
+    "tool_calls": 15,
+    "cached_input_tokens": 265216,
+    "nonzero_command_calls": 2
+  },
+  "prepared_receipt_sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671",
+  "repetition": 1,
+  "review": {
+    "accepted": true,
+    "criteria": [
+      {
+        "id": "app-values",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/app-native-r1-baseline/input/native.json",
+          "runs/app-native-r1-baseline/output/bench_delta/default/app.conf",
+          "runs/app-native-r1-baseline/output/bench_delta/metadata/default.meta",
+          "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/views/home.xml"
+        ],
+        "notes": "Parsed configuration/XML and roles match decoded fixture. Prose fidelity is separately diagnosed."
+      },
+      {
+        "id": "archive-selection",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/app-native-r1-baseline/output/bench_delta/release-files.json",
+          "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz",
+          "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz.sha256"
+        ],
+        "notes": "Exact root/file selection, archived bytes and reported digest independently match."
+      },
+      {
+        "id": "evidence-limits",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/app-native-r1-baseline/output/report.md",
+          "runs/app-native-r1-baseline/commands.jsonl"
+        ],
+        "notes": "Report/final leave vendor, target compatibility, installation and live behavior unverified."
+      },
+      {
+        "id": "preservation",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/app-native-r1-baseline/output/report.md",
+          "runs/app-native-r1-baseline/commands.jsonl"
+        ],
+        "notes": "Copied-byte hashes unchanged; reviewed container command trace stays offline and in scope."
+      }
+    ],
+    "reviewer": "Independent condition-concealed artifact reviewer plus coordinator trace audit",
+    "notes": "Fixed criteria all pass. Diagnostic reporting defect, when present, is separately retained.",
+    "unsupported_claims": [],
+    "unintended_changes": []
+  },
+  "run_id": "app-native-r1-baseline",
+  "run_order": null,
+  "run_status": "completed",
+  "schema_version": 1,
+  "trace": "runs/app-native-r1-baseline/commands.jsonl",
+  "accepted": true,
+  "criteria": [
+    {
+      "id": "app-values",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/app-native-r1-baseline/input/native.json",
+        "runs/app-native-r1-baseline/output/bench_delta/default/app.conf",
+        "runs/app-native-r1-baseline/output/bench_delta/metadata/default.meta",
+        "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/views/home.xml"
+      ],
+      "notes": "Parsed configuration/XML and roles match decoded fixture. Prose fidelity is separately diagnosed."
+    },
+    {
+      "id": "archive-selection",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/app-native-r1-baseline/output/bench_delta/release-files.json",
+        "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz",
+        "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz.sha256"
+      ],
+      "notes": "Exact root/file selection, archived bytes and reported digest independently match."
+    },
+    {
+      "id": "evidence-limits",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/app-native-r1-baseline/output/report.md",
+        "runs/app-native-r1-baseline/commands.jsonl"
+      ],
+      "notes": "Report/final leave vendor, target compatibility, installation and live behavior unverified."
+    },
+    {
+      "id": "preservation",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/app-native-r1-baseline/output/report.md",
+        "runs/app-native-r1-baseline/commands.jsonl"
+      ],
+      "notes": "Copied-byte hashes unchanged; reviewed container command trace stays offline and in scope."
+    }
+  ],
+  "critical_failures": [],
+  "unsupported_claims": [],
+  "unintended_changes": [],
+  "diagnostics": [],
+  "submission_order": 1,
+  "concurrent_pair": true,
+  "cohort": "initial-runtime",
+  "performance_eligible": false,
+  "transport": {
+    "runtime_utf8_verified": false,
+    "requested_received_command_changes": [
+      9
+    ],
+    "exclusion_reason": "Legacy Windows MCP stdio lacked UTF-8 conformance; all 14 earlier trials excluded from performance conclusions."
+  },
+  "candidate_source_revision": "d42e6fd81eb5e13a8a52a1267e0061cc9700edd9",
+  "candidate_skill_version": "0.1.0",
+  "original_cli_trace_sha256": "c792886aa040aefba63f8cf834d413915f7df3cc7e90b0889f9f64b102ab41ac",
+  "original_stderr_sha256": "575987b048d6d5771a93e0f4605ab96a359b0a25ebb1d6dbef6d21adaaa44159",
+  "isolation": {
+    "network": "none",
+    "mounts": [
+      {
+        "source": "assigned_workspace",
+        "destination": "/workspace",
+        "rw": true
+      }
+    ],
+    "readonly_root": true,
+    "cap_drop": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "initial_inventory_matched": true,
+    "evaluator_host_paths_absent": true,
+    "account_tools_absent_in_preflight": true,
+    "only_workspace_shell_executed": true,
+    "limits": "Core utilities remain visible; actual executed route verified, not hostile-agent containment certification."
+  },
+  "published_evidence": [
+    {
+      "path": "runs/app-native-r1-baseline/commands.jsonl",
+      "sha256": "72b0a9cad5ca9f919aaa8799750e526a39de460f7fb3d4547624451b5556b7db"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/commands.requested.jsonl",
+      "sha256": "96976a3a4d4ecb4c001e5a0e6cc076b2d16d18916a1143b924245c059f0dd4f2"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/final.txt",
+      "sha256": "e9101b6b2701d14a9d9f14111f23900a68cc84b0a174ccc743842d8f7d5aa38a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    }
+  ],
+  "mechanical": {
+    "input_resource_changes": 0,
+    "mcp_calls": 15,
+    "truncated_calls": 0,
+    "native_artifacts": {
+      "app_values_passed": true,
+      "observed_values": {
+        "app_id": "bench_delta",
+        "label": "Delta & Readiness",
+        "author": "Synthetic evaluation team",
+        "version": "0.2.1",
+        "state": "disabled",
+        "dashboard_title": "Delta <Health> \u00c5",
+        "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "earliest": "-12h",
+        "latest": "now",
+        "read_roles": "read : [ bench_reader ], write : [ bench_editor ]",
+        "nav_view": "home"
+      },
+      "metadata_sections": {
+        "__app_root__": {
+          "access": "read : [ bench_reader ], write : [ bench_editor ]",
+          "export": "none"
+        }
+      },
+      "archive_members_passed": true,
+      "archive_bytes_match_source": true,
+      "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+      "digest_present_in_report": true,
+      "selected_files": [
+        "default/app.conf",
+        "default/data/ui/nav/default.xml",
+        "default/data/ui/views/home.xml",
+        "metadata/default.meta"
+      ]
+    },
+    "cli_warning": "Under-development skip_host_skill_discovery warning retained privately; not a task or transport failure."
+  }
+}

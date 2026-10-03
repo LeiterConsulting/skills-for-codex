@@ -1,0 +1,1 @@
+Synthetic package check for candidate A; not a vendor report.

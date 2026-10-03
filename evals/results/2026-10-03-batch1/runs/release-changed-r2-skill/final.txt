@@ -1,0 +1,3 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, gaps and next checks.
+
+B’s required package gate remains open: A’s receipt mismatches B’s source revision and artifact digest. File hashes match, but this synthetic evidence does not establish B’s package acceptance. Inputs are unchanged.

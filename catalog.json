@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collection_version": "0.3.0",
+  "collection_version": "0.4.0",
   "license": "MIT",
   "skills": [
     {
@@ -13,7 +13,12 @@
       ],
       "inputs": "skills/splunk-app-authoring/references/inputs.md",
       "acceptance": "docs/EVALUATION.md",
-      "performance_gain": "unmeasured"
+      "performance_gain": "not-established",
+      "agent_evaluation": {
+        "status": "matched-offline-exploratory",
+        "results": "docs/BENCHMARK-BATCH1.md",
+        "implicit_triggers": "not-run"
+      }
     },
     {
       "name": "release-qualification",
@@ -26,7 +31,12 @@
       ],
       "inputs": "skills/release-qualification/references/record.md",
       "acceptance": "docs/EVALUATION.md",
-      "performance_gain": "unmeasured"
+      "performance_gain": "not-established",
+      "agent_evaluation": {
+        "status": "matched-offline-exploratory",
+        "results": "docs/BENCHMARK-BATCH1.md",
+        "implicit_triggers": "not-run"
+      }
     },
     {
       "name": "zeepkist-api-research",

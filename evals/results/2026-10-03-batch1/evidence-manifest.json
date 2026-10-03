@@ -1,0 +1,1417 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "preflight/container-write/commands.jsonl",
+      "sha256": "1c8fad259a4fdba3fd75cc6efbc85c95f56479f8016c63923c937933d989f4db"
+    },
+    {
+      "path": "preflight/container-write/commands.requested.jsonl",
+      "sha256": "1c8fad259a4fdba3fd75cc6efbc85c95f56479f8016c63923c937933d989f4db"
+    },
+    {
+      "path": "preflight/container-write/result.json",
+      "sha256": "948e48f6404d0331c214ec3544f0e6bc803fddedd8a53e757b2d566576ded00e"
+    },
+    {
+      "path": "preflight/container-write/write-probe.txt",
+      "sha256": "2dc9c68cb0e0012ee78667636e133fa1a4f2d84a73f87cb5524dda7dba1fa818"
+    },
+    {
+      "path": "preflight/utf8/commands.jsonl",
+      "sha256": "8dfc75c7cb62f05877c658235b37b229352eb4295ce016300d6a2d38fd4fcc5a"
+    },
+    {
+      "path": "preflight/utf8/commands.requested.jsonl",
+      "sha256": "8dfc75c7cb62f05877c658235b37b229352eb4295ce016300d6a2d38fd4fcc5a"
+    },
+    {
+      "path": "preflight/utf8/result.json",
+      "sha256": "6ff6aa6a1f5736b503e1d4fbe1ca2c6f905bf29b1435fe1650261168e8e920e6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1de438fb12bfeaa020377e42358c298107ad53b90cb55889a17b31a4123adf91"
+    },
+    {
+      "path": "reviewer-receipt.json",
+      "sha256": "ec0e6f5d5b14942f6c70e6521449e1bffe19499bd199a67668639cef29dcefe9"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/commands.jsonl",
+      "sha256": "72b0a9cad5ca9f919aaa8799750e526a39de460f7fb3d4547624451b5556b7db"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/commands.requested.jsonl",
+      "sha256": "96976a3a4d4ecb4c001e5a0e6cc076b2d16d18916a1143b924245c059f0dd4f2"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/final.txt",
+      "sha256": "e9101b6b2701d14a9d9f14111f23900a68cc84b0a174ccc743842d8f7d5aa38a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/report.md",
+      "sha256": "4ac6fc162afa5d680539022c767b5479c0fcf18f35fb4538cbdd3f94145c154c"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/output/validation.json",
+      "sha256": "d52b56ead644c0704b4b5464f39b6efb4a055df0064dc87d6ffe0eadf6ae30bf"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r1-baseline/result.json",
+      "sha256": "96ad960465ab408ff2de00b0d6a8ce8464555ab327213317ec007c1fb1f81afa"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/commands.jsonl",
+      "sha256": "260d8b4d5efb1d6ee50e5d34f035745ae06657ed81d45146a77d094d183f904e"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/commands.requested.jsonl",
+      "sha256": "db9db8fa42c2366b34132ff7ea50691901aa816b3388751b96b8623ed4540969"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/final.txt",
+      "sha256": "c59875dd8dd11becfb1f5860b2af51ebb4465f15ef7c87869b2a7ffc43f42abd"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/build-receipt.json",
+      "sha256": "a594b38d4f74419a3c293a47ddc42a5039491bcdcfd843168f0833953bfe1215"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/report.md",
+      "sha256": "b9f7f1164b5b5d7f24d3bc807547b6b71b0444b0fcf18d9a9c7db052989bc19b"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/verification-receipt.json",
+      "sha256": "7b0aac7b33501dc70c3c1fd0dde7bcc4251106dfc446fa17a465d593b48b7b91"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/output/verify_release.py",
+      "sha256": "1ac069be7faed5d5b4994f0b38e1e3260cf674c4f3a2cb91845fa072fefd6056"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/prepared.json",
+      "sha256": "de455244d37e628865affc91ac3421256a1687263b22a175436f630238714280"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-text-fix/result.json",
+      "sha256": "b3a210842d3f6686b509fe39484f119af161bf072f12797218d264f132d160d6"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/commands.jsonl",
+      "sha256": "96b9bb5dd13b21a82a81e30a730e22419c25bdd1b2f13b80a6719a9330fae21a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/commands.requested.jsonl",
+      "sha256": "96b9bb5dd13b21a82a81e30a730e22419c25bdd1b2f13b80a6719a9330fae21a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/final.txt",
+      "sha256": "0507bdb069b2a899b34963d0649bcb039d6ad32e563ed5055e418fe722fbd4cb"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/build-receipts.json",
+      "sha256": "5c96814fc4e370392060f11ad812e2f320246efb2981b35aa435921129bd2974"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/report.md",
+      "sha256": "1d8b15f9871b1f364516e461fff8acda9591fd6125be9d8e1186ab5d8de0d54c"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/verification.json",
+      "sha256": "194c3babb5bfb876f97fd2716bae0c80be07d267cdd17af31dd3af0e95cd0dfb"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/output/verify_release.py",
+      "sha256": "9462516d3c91cc47ee4104b0bc232388f8f5989a6473611371a911957b8e8616"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/prepared.json",
+      "sha256": "9563393f41fb713e799ed84fde363d0054a8ca270940560fdb373c6943bd01a2"
+    },
+    {
+      "path": "runs/app-native-r1-baseline-utf8/result.json",
+      "sha256": "0ff364f69afa3494ff39572b74163f303af2a64ae3163122de337357215a57c3"
+    },
+    {
+      "path": "runs/app-native-r1-skill/commands.jsonl",
+      "sha256": "71b1051aafe0e499e000d2a05c23ed804dc606691af3dde295247f151ac7ba3c"
+    },
+    {
+      "path": "runs/app-native-r1-skill/commands.requested.jsonl",
+      "sha256": "8c3666f8c29a77d4223a6097cbb3fa1a95f1038d34f338bf414ff69608561848"
+    },
+    {
+      "path": "runs/app-native-r1-skill/final.txt",
+      "sha256": "182415201960cf035318e4ef3e694cd05fedb60fcdc3f0047da27a6872e70d11"
+    },
+    {
+      "path": "runs/app-native-r1-skill/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/checks.json",
+      "sha256": "e737a5e3a0cc8d63d5717f164cf0b689cea7ab509eaf2861f1058940d07e0f59"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/package-result.json",
+      "sha256": "c29a282786d3877233813e5ed2dc363485ffa160ff44222cfb8748e5744de41d"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/report.md",
+      "sha256": "a6466e3ace8901a30877d5c0edecd71c0a55c64a7816b42b9a7590e9be1b4d98"
+    },
+    {
+      "path": "runs/app-native-r1-skill/output/verify_release.py",
+      "sha256": "18a03f7eee86b2c01a26607b51fb4dccd25e96ef08ca25ae6161c4d697b255ed"
+    },
+    {
+      "path": "runs/app-native-r1-skill/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r1-skill/result.json",
+      "sha256": "23c632c30af3c7dacf511fced09dd40955ea15c18da4e3dd99c22ca240ac2b43"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/commands.jsonl",
+      "sha256": "c2608e74fed2760fb41a19e2b2b008ba219005ad2b132ed157dd066195a6b8ce"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/commands.requested.jsonl",
+      "sha256": "c2608e74fed2760fb41a19e2b2b008ba219005ad2b132ed157dd066195a6b8ce"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/final.txt",
+      "sha256": "f0703ced90c9553f65d104792ed6219e3667d3693052c945df3fee729d4eaa4f"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/authoring-inputs.json",
+      "sha256": "6dadb35592f6f31da214ff64482dbec025e593ffa6be9d657283632b95b9f065"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/command-receipts.json",
+      "sha256": "7d01e62c3d23064b8c4907c8e43f38a71748d763cbf863edc6d0742719b586a1"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/digest-check.json",
+      "sha256": "421893630c493524010516ce68b1c2d2e67a9ca6208888c51fddbdcb85077126"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/input-hashes.json",
+      "sha256": "63924576b4b444727601b47588f44bcddc576bc9a41c5342fde9e7d045bda676"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/report.md",
+      "sha256": "847d8dccbbb56b1d9e61e8433761e757fdcfe0326f5d289d5ec081ed65b5050d"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/verification.json",
+      "sha256": "2ba5db875ae35c87d037c9ebc071d550575166cd40d0f8f9a38a391e20083a94"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/output/verify_release.py",
+      "sha256": "66890edb7a16b38da8ff08503cabfc27fd7d611a2ceb7193344009cacca04a93"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/prepared.json",
+      "sha256": "de455244d37e628865affc91ac3421256a1687263b22a175436f630238714280"
+    },
+    {
+      "path": "runs/app-native-r1-skill-text-fix/result.json",
+      "sha256": "2acafcefbe1a064e387005e7ad73191356552165786c3ec427f00ebbac7836b5"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/commands.jsonl",
+      "sha256": "2f34a44ec99f2ec28ba0f9f96a9b235b05a8c08064f181a12e3025ba03b96c78"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/commands.requested.jsonl",
+      "sha256": "2f34a44ec99f2ec28ba0f9f96a9b235b05a8c08064f181a12e3025ba03b96c78"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/final.txt",
+      "sha256": "27e80488522b43fd4d58f7a6a2a7e53ace68e916a582f0300c5543cb8d5483fb"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/command-results.json",
+      "sha256": "1de03dbd241f8ae42e430b60eb18ac3031ed6c4fca2415cc53c18d7281945758"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/inputs-and-origins.json",
+      "sha256": "82a8e46123ea7b50f61bedc31a05cbfe98e66e79e282c39d232ed2bc2dae152b"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/report.md",
+      "sha256": "ad3dc062e72e3c1220e5b5f2c6e5acf87333b822e2ee8d2495582b3ddce4f7ca"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/verification.json",
+      "sha256": "5677926a900c8069f5ba87799425dbbc7cef78762525e6e4077b098830325c10"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/output/verify_release.py",
+      "sha256": "08c89a16289f613b7da653365c3af34570927349fb977d41bb8c2e1f3dd29b9d"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/prepared.json",
+      "sha256": "9563393f41fb713e799ed84fde363d0054a8ca270940560fdb373c6943bd01a2"
+    },
+    {
+      "path": "runs/app-native-r1-skill-utf8/result.json",
+      "sha256": "8241b72027307d8d9c9db3a2e7f1ce7813f12433c4852d227615d32ea4c04058"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/commands.jsonl",
+      "sha256": "d92c10617f71bbb7adade838e6c1b3247ae281aece6aa9785c21a3e558ab2045"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/commands.requested.jsonl",
+      "sha256": "f21ff6927959ff555eb139ce7c90e6936e3c9d2df9952c13f36bbf81de6ac63c"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/final.txt",
+      "sha256": "abacf4a345e22b00074215386842cfe8ea25df20f2fe5e2ab97a67338375585c"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/report.md",
+      "sha256": "cee5f237e9dd8fd6bc9bf1a61e002925f123fbb0284c8bb2e057e088754fa7ab"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/output/validation.json",
+      "sha256": "8926e915eb65b06d9b16553d2d1f71054fdd113a0db734a80da80b9ec6ce7aae"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r2-baseline/result.json",
+      "sha256": "05d163d098e8c17c802e3aaf441e6c9fdbd4c11545a9c94db179a7fd82a91df3"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/commands.jsonl",
+      "sha256": "0d8d7afca88764c27107367ed41385c50325bc69913d6d1afb1ad0d5f037e3eb"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/commands.requested.jsonl",
+      "sha256": "3fe623fe861782caa3bac0f91d6051f5e9ebae2d833459da30901e6e5f221dcf"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/final.txt",
+      "sha256": "11b73660a32dd04506cfbce36a5de604c1cc5b17b83c90b68491bcc1cc006822"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/checks.json",
+      "sha256": "d025cdfa85aed515509b7a72d588084470d0fc2fedceeb23fdb07263d8acb266"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/package-result.json",
+      "sha256": "ede0fe72a4b8fa619238747b4e36f600358927f44fcdbb44f5d6126b4a112c25"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/report.md",
+      "sha256": "7cdf395af79cbec1c647766a6c345ff1cc6baab9608acafbabd52f99e186a8b9"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/output/validation.json",
+      "sha256": "ce25eaab3a032d15443075ad61064af5ea874fa54b1afd182004facdc77c842b"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-rerun/result.json",
+      "sha256": "dd90e9c65d691912ed20f5c0d74f5b5adc845496ad45bb08fcced5f365b8e771"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/commands.jsonl",
+      "sha256": "a3bd1d7f429ad4add7d3d2b919ed6c41642a92bd09f06dda9b68004a48577d12"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/commands.requested.jsonl",
+      "sha256": "a3bd1d7f429ad4add7d3d2b919ed6c41642a92bd09f06dda9b68004a48577d12"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/final.txt",
+      "sha256": "0233cf7d7ee77afb1aca1a995f1c5bd6bd9975179970f35141115c0b9c068099"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/complete_task.py",
+      "sha256": "393e21a8cee422e6dbb326d8678b3123640f90727e418ddbd1df489c0b665cac"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/report.md",
+      "sha256": "2ed274fa9892c4173acc5f6252bd8792952047aaa9d844e1455ea90da27772ac"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/output/verification.json",
+      "sha256": "6b33637fa6f552edb15f70435d31e69f7b1d7d6d7296cd6b8b1bc85772bc7b4e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/prepared.json",
+      "sha256": "de455244d37e628865affc91ac3421256a1687263b22a175436f630238714280"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-text-fix/result.json",
+      "sha256": "1945c10c4e7195bfdd85822509a204f12e944579eb680fbca8403b01954e8a0e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/commands.jsonl",
+      "sha256": "7805cf3be3af39e911116d4b401800fb038f756b8aa2e2ce4964f58225442b56"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/commands.requested.jsonl",
+      "sha256": "7805cf3be3af39e911116d4b401800fb038f756b8aa2e2ce4964f58225442b56"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/final.txt",
+      "sha256": "a645fd9fd49f7ce99fd4eb1f9a2e80f17cc319da158dede09765b0ad58136d0f"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/package-receipt.json",
+      "sha256": "ede0fe72a4b8fa619238747b4e36f600358927f44fcdbb44f5d6126b4a112c25"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/report.md",
+      "sha256": "9ca1f2e141cab848c9777c5d1b96abee9bae15a650ac569cbbdcceaaaa57e651"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/sha256-check.txt",
+      "sha256": "5e20d906543023658084d86f20e0f8f909a1aadb61b2b4df08a5b1f6f951286f"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/verification-receipt.json",
+      "sha256": "0aed167dc619234ff86a7292d4e86887b534c3d19fd37dc8d6e7065ddffe9b38"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/output/verify_release.py",
+      "sha256": "79de689ff4a1ece2a278d447bfc839ff92f5c501d13308da09e89dff8fcc2fcc"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/prepared.json",
+      "sha256": "9563393f41fb713e799ed84fde363d0054a8ca270940560fdb373c6943bd01a2"
+    },
+    {
+      "path": "runs/app-native-r2-baseline-utf8/result.json",
+      "sha256": "d2ee5f3f8b9008d72c53aa502ca68dbc2d3c711193c5c5501e6fe80673d6ac70"
+    },
+    {
+      "path": "runs/app-native-r2-skill/commands.jsonl",
+      "sha256": "e03eeacac0f4eb21f82bfe1532e6672cbc8adbbd7f2d78536114e7db7e520718"
+    },
+    {
+      "path": "runs/app-native-r2-skill/commands.requested.jsonl",
+      "sha256": "c3db987230eaa916e7fdcd8480004443046d34e8ce77780c678da77095c7bdb7"
+    },
+    {
+      "path": "runs/app-native-r2-skill/final.txt",
+      "sha256": "0d2ca6eabd68555f8950b75e62ba64898e00826f12da895c6d8be1c4deed363b"
+    },
+    {
+      "path": "runs/app-native-r2-skill/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/authoring-inputs.json",
+      "sha256": "51e1efc1e089b1a70c3b1f58571c8615a435fa024ee3145c33b7597c7a5ca85f"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/checks.json",
+      "sha256": "a70776199803fa74ac849429a24fc596f642bb3f805f2292b4d0873a168eda4a"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/input-hashes.json",
+      "sha256": "5665a0b2a2a77bc05f8c63dc012ba40c13a2a98f73877d8f2ced383d4fb71615"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/report.corrected.md",
+      "sha256": "f4c545edb39080aad6dc843f43ab1c84130dcbf806213313e85bc2918c310485"
+    },
+    {
+      "path": "runs/app-native-r2-skill/output/report.md",
+      "sha256": "4b5178173b6b423b6bbab4535afc0be026eb95185483020c43c044f1406dc30b"
+    },
+    {
+      "path": "runs/app-native-r2-skill/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r2-skill/result.json",
+      "sha256": "10399389bdd5d7862258b84aa769107dcb3f0437ba0e50f7e824e7f1f920030e"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/commands.jsonl",
+      "sha256": "3c153c9cee7844c4f0d7b7cd2553229992d96d474c5510083a5371308ace3660"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/commands.requested.jsonl",
+      "sha256": "8e8ee14e359a8898830a75fc03a382a3b03cc9faeca222a0f1d7bafd767c8207"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/final.txt",
+      "sha256": "42b5ab3f868d0abf2b5db2b112f295de7ce5e572163a0a2317ccad426f326cdf"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/package-result.json",
+      "sha256": "ede0fe72a4b8fa619238747b4e36f600358927f44fcdbb44f5d6126b4a112c25"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/report.md",
+      "sha256": "ff418d073c824d8e120e1605b77f3868b5118d5995101b0fd70892c04bae3c6c"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/scaffold-result.json",
+      "sha256": "399be0c4e45802ee711e7a25fad5b12379e7d60adc160912ceb138e253c7215e"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/source-hashes.json",
+      "sha256": "62d43e72103a4ebbb417e127df4979eb764c31084f684d6cd78e2f622cf79c22"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/validate-result.json",
+      "sha256": "ce25eaab3a032d15443075ad61064af5ea874fa54b1afd182004facdc77c842b"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/verification-result.json",
+      "sha256": "4be4333c6e642080ff657c93c40e2ac6b33d4c96fcbb9d20406e61579a1bfd9d"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/output/verify_release.py",
+      "sha256": "df01689587ed2016a1f9e49b517591c98db922521d5ba003a1de81d66f4dc037"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/prepared.json",
+      "sha256": "c600def8c00f236c3af404d45d97a6f7e0beebfbc98e5d8a11b208a7894df671"
+    },
+    {
+      "path": "runs/app-native-r2-skill-rerun/result.json",
+      "sha256": "df967d038862c8cc2b63c50a1eb4dbbe7af7583708acab4d5c22a8ca7feebe78"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/commands.jsonl",
+      "sha256": "614755f166e17e561d363ec9c955afeca39103e60f219c59fb37b433f0289f18"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/commands.requested.jsonl",
+      "sha256": "421b50045383f6b217554820400b0ef6e4faf5b35a0b2e3fd2ee4af24ccede03"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/final.txt",
+      "sha256": "c8ce7ee258891417a773812a4f55b9fbf0efeb81f2b157f8efcf75faf74406c9"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/authoring-inputs.json",
+      "sha256": "cab96ac8604c1a347b888443c5c38b9581598eb1bda4a0ee66eea9ecb4211a46"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/package-receipt.json",
+      "sha256": "dcce4808aead7f24ac34cebe28ea3e1b8513a9f698aa49963959fd6169ee941b"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/report.md",
+      "sha256": "7aa1117dda509bf860b65c71b5e986062290a52ba8889ab75ec15c47543a73a6"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/scaffold-receipt.json",
+      "sha256": "bc7d16f383bd444ac8b8e0c9a43af4665be850ce0cfa29da59e1472cbcc58fd4"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/source-hashes.json",
+      "sha256": "63924576b4b444727601b47588f44bcddc576bc9a41c5342fde9e7d045bda676"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/validate-receipt.json",
+      "sha256": "ad7ff7b89411dad0f3dc45f15e93f691c75f4bea8841934cf1d0f1f353129e88"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/verification.json",
+      "sha256": "0f3ed2cbbc37fa81f3862f30c75f62112405d7f04716f021be811bdc01cfc217"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/output/verify_release.py",
+      "sha256": "fe44523f6622fecaa8b3f5382c35ea412d1a4c1e1c44f5f07c67872346821517"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/prepared.json",
+      "sha256": "de455244d37e628865affc91ac3421256a1687263b22a175436f630238714280"
+    },
+    {
+      "path": "runs/app-native-r2-skill-text-fix/result.json",
+      "sha256": "a434ee8449d4c11f115b0b198a35d9a5d218e7f33e02c7cfadbfab0ff41278af"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/commands.jsonl",
+      "sha256": "d1166c6cd02aa28d29fcedd49e324692e19e98ffcbc3dcc9ca650a1245a0b2c1"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/commands.requested.jsonl",
+      "sha256": "d1166c6cd02aa28d29fcedd49e324692e19e98ffcbc3dcc9ca650a1245a0b2c1"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/final.txt",
+      "sha256": "9f1d260540da0b882867121b2e2614178bd46a3475f7acdb176cdb36185098fa"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/authoring-inputs.json",
+      "sha256": "81189f61e1042ba70ce745657974e8992ecf29204efa947480ba78ca2071e413"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta/default/app.conf",
+      "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+      "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta/default/data/ui/views/home.xml",
+      "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta/metadata/default.meta",
+      "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta/release-files.json",
+      "sha256": "98ac9eec4b1e036dafa942ecc6952f6adb99834c08ce21d4a9901e6789af753a"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta-0.2.1.tar.gz",
+      "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+      "sha256": "15075583f8034642112421e30c3e1881ccaec6f6ea7ee913ed51dcb21c45176e"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/command-results.json",
+      "sha256": "575211307cc7acb0397fc9ef19d1c32919becad458ac9e23c5f73cea34570323"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/report.md",
+      "sha256": "a4300a59c18dbbb008d2c92432ed36f0e80af99bc6d4f47dafd09cc4494d569d"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/source-hashes.json",
+      "sha256": "63924576b4b444727601b47588f44bcddc576bc9a41c5342fde9e7d045bda676"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/verification-results.json",
+      "sha256": "67e8ffb8c260e32b4cb07fbc162a582474ffea27277de651d5ebd7a19bade79c"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/output/verify.py",
+      "sha256": "9f72d46f712cc350a6cd9a91130ebe3ea3bcad9e07d922d370efb2b3be165917"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/prepared.json",
+      "sha256": "9563393f41fb713e799ed84fde363d0054a8ca270940560fdb373c6943bd01a2"
+    },
+    {
+      "path": "runs/app-native-r2-skill-utf8/result.json",
+      "sha256": "f4d7fa0b0f3a4139066ed5b01b94690721ab2f559d561a4270acea9fa4a49334"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/commands.jsonl",
+      "sha256": "95528460c63b31c0a4e802c0c5c8177bc8bf1940f5a6953596b4a8c7603ed3a9"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/commands.requested.jsonl",
+      "sha256": "95528460c63b31c0a4e802c0c5c8177bc8bf1940f5a6953596b4a8c7603ed3a9"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/final.txt",
+      "sha256": "ed62b116b629152a16048e06a2e9ebd1a163f8971b8a76d5785ba931c20062bc"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/output/review.md",
+      "sha256": "df4967d16df446b13c3554f3ebaf27474b974262a342e1be3eeddc95e74cf2d3"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/prepared.json",
+      "sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline/result.json",
+      "sha256": "274b4da9c04642a091b3a0853dceda9654f73b24dfa236e2483b9946312e5735"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/commands.jsonl",
+      "sha256": "9a4e80d9776742a1c95131038e37eba78ae198bbda91ad771eb2325b09e8dd04"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/commands.requested.jsonl",
+      "sha256": "9a4e80d9776742a1c95131038e37eba78ae198bbda91ad771eb2325b09e8dd04"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/final.txt",
+      "sha256": "bb3b56fe5a5195229a4301b05263f537ae4bcbef49257181667fb961415aa442"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/output/review.md",
+      "sha256": "6072748c036ca40224238a2fea6b12cc69ea13ffd72903418f41cdfa791fb6cd"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r1-baseline-utf8/result.json",
+      "sha256": "c309a0645a6483876b11c0e4738a470776d343c1a6dc54c95e8d62fb36485247"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/commands.jsonl",
+      "sha256": "2989a83a23fe56de6263ce23aab61de848029312cbed1269134a38a9c99d5255"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/commands.requested.jsonl",
+      "sha256": "b991dc0ecfe185e01f7baae1d5f186523275cd916bf8018cf51255dc88068abc"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/final.txt",
+      "sha256": "f5499f60391083a487a3e6df5d0ced3360f2a9360b87d2c25b1bae8ae846b9f6"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/output/review.md",
+      "sha256": "0f4b18c21ad2472fb2c0731c55094d9a3d03e54e72d7b2a22ed0182860a55bdb"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/prepared.json",
+      "sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa"
+    },
+    {
+      "path": "runs/release-changed-r1-skill/result.json",
+      "sha256": "d244a1f42b590c5e9976e21f2e50bd2392415b67eef67ecfc3e0b71e78fe7c23"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/commands.jsonl",
+      "sha256": "a922c04f283b332623539c9a88f4d0313d016d832ae168ab5e04eb7e67dcdf09"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/commands.requested.jsonl",
+      "sha256": "a922c04f283b332623539c9a88f4d0313d016d832ae168ab5e04eb7e67dcdf09"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/final.txt",
+      "sha256": "66690d2ce960ebb74c2e20ca09a03fc3f524d7d6aa12fd1ad0e8fc43e87e6a44"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/output/review.md",
+      "sha256": "7526650470db6e17dd9850451ac4c178e30f6e2ae05842111c36624b0352a6e8"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r1-skill-utf8/result.json",
+      "sha256": "dfff31cbc0e9712a4da4415610525f6f7fb8f66c75af7958e6ee10c8765efd3a"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/commands.jsonl",
+      "sha256": "4b40a7e4243208019419c2bf7e60d8061874062d5e92aee9e7951b4daefd8289"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/commands.requested.jsonl",
+      "sha256": "4b40a7e4243208019419c2bf7e60d8061874062d5e92aee9e7951b4daefd8289"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/final.txt",
+      "sha256": "bd367d47fd38819e38c64051353f89eb68268941e9dcf65e7d279af3e8f5ae68"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/output/review.md",
+      "sha256": "8c15a6af7e5f2c788b4f09783e24e4b123bc03a44b4031f67bd5c223bda1776b"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/prepared.json",
+      "sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline/result.json",
+      "sha256": "e82b7733c33940964e34b17f0d5aea627432ea400dbbb61ab51b5342f0460773"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/commands.jsonl",
+      "sha256": "2f2b9c0872347eff7c7672e0b03fd5911b2d40b7ec08f01414302f95ec4c2f7d"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/commands.requested.jsonl",
+      "sha256": "2f2b9c0872347eff7c7672e0b03fd5911b2d40b7ec08f01414302f95ec4c2f7d"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/final.txt",
+      "sha256": "9ff56009f763b14724bc31718e308c473f391222f2c9cae8e88ae02f79689650"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/output/review.md",
+      "sha256": "abcd2e09baf7c512c04b09768bf81c688662742d000c3013d5c68fc1635e7bf1"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-utf8/result.json",
+      "sha256": "70853946c27a50131ba910632e2259d4c494cc1dfda6923672164b2e6b83393e"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/commands.jsonl",
+      "sha256": "0e3a932581c578574883f5e053394b913649699d7d2e9630a02153281fdb7a08"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/commands.requested.jsonl",
+      "sha256": "0e3a932581c578574883f5e053394b913649699d7d2e9630a02153281fdb7a08"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/final.txt",
+      "sha256": "8fdfd226da06d665c2608d99e4512b39be41175f5fef96656a3874bbeef2576b"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/output/record-review.json",
+      "sha256": "07f3df889cd3a8037271bfcfc99ba3f3e0a91cbe7bab70b0660bc730658344d5"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+      "sha256": "c7dc05d340e6bbf7b8c208dd5bf0f217ad63402bee987e50c012103d083f1dff"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r2-baseline-write-clarified/result.json",
+      "sha256": "241650deba0081c3f8614cdc7d11053f2eff993e596bf43cf9ac0e2fd5275c3f"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/commands.jsonl",
+      "sha256": "5a9d889bea92004a75a4671ec0b17f6ed4bc3b01846389db8c583891a9e7b595"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/commands.requested.jsonl",
+      "sha256": "5a9d889bea92004a75a4671ec0b17f6ed4bc3b01846389db8c583891a9e7b595"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/final.txt",
+      "sha256": "6e100ba4e3df47b978f5056d6463ffd05362b7fdde30e4f8d02adbc27c5e52a4"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/output/review.md",
+      "sha256": "4de528431ea6cb52e9df5d2c6d83c8d99ef56078f34b295f307d4e03e6a0599e"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/prepared.json",
+      "sha256": "53aee4ecb0913568792e0362854036a64b257cc6be566b03ca713e7ab5c244aa"
+    },
+    {
+      "path": "runs/release-changed-r2-skill/result.json",
+      "sha256": "8c19c395bed9cc0fd38dfa4241fbf392f36011f92a3f76f64f19407e17a5a20f"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/commands.jsonl",
+      "sha256": "3e57024f1e3a87f20a53df4c0e9db543a02fbbe0366f39ef1a03e8d55e406e97"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/commands.requested.jsonl",
+      "sha256": "3e57024f1e3a87f20a53df4c0e9db543a02fbbe0366f39ef1a03e8d55e406e97"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/final.txt",
+      "sha256": "df98633c36d0724a6f008662db9b0ecfbaedbd0ccf914310ba1b83d54022ca30"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/result.json",
+      "sha256": "8e0b70106f57dccf8cdf8c1741b64223f8a4c8af163294f74af435d2f9193c81"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/commands.jsonl",
+      "sha256": "5d9858923c19a93d3c8f472c6cde4cd07e9b1826dcf718a691d0236f61641ca0"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/commands.requested.jsonl",
+      "sha256": "5d9858923c19a93d3c8f472c6cde4cd07e9b1826dcf718a691d0236f61641ca0"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/final.txt",
+      "sha256": "7614bbd858109229805a91146707b1799febe315271df4e8794f270af57ac7d0"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/input/candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/input/receipt.txt",
+      "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/input/record.json",
+      "sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/output/review.md",
+      "sha256": "f78460787305470895a304285f0b76799c88262f1c05470c6bcc7851cce7ed08"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-write-clarified/result.json",
+      "sha256": "c1d686c893a144121d381cb6fb1f520d603a514ee5f92006da377bfba663bf41"
+    },
+    {
+      "path": "snapshots/app-native-task.json",
+      "sha256": "3326f88d187b04405b3d03671930d172e8f7aa14f1f6d5217e3d84d70ce78d92"
+    },
+    {
+      "path": "snapshots/benchmark-wave1-used.json",
+      "sha256": "bd7242f5c0258accfd8d000bc87bcce48f2dcc8a05143f4a0ef845334ba5632f"
+    },
+    {
+      "path": "snapshots/candidate-source-bytes.json",
+      "sha256": "63bd5f0ba03826165fce05d1d2c4289d595877c92befeb2e02a55bc065f33b3d"
+    },
+    {
+      "path": "snapshots/release-changed-task.json",
+      "sha256": "7b47afa336a9bab6bce5fab5d1d84d9e12a6119d84fffbcb74dcc8bde540d971"
+    },
+    {
+      "path": "snapshots/runtime-bridge-before-utf8-fix.py",
+      "sha256": "cec39859f6c6ef92348305ea19e0bca148fedc9376d7d9d27b1b4788cfefa11d"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "f3ca7d0b05e77f982dd3812b05c64a5c82e08719993152410e13d0cd0849ff0d"
+    }
+  ]
+}

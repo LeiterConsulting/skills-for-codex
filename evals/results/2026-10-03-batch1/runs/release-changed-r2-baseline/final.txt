@@ -1,0 +1,5 @@
+Created [output/review.md](/workspace/output/review.md) with exact bindings, gaps, evidence limits, and next checks.
+
+Candidate B’s review is **incomplete**: the required package pass belongs to A, with mismatched source revision and artifact digest. The helper confirmed both gaps.
+
+Input files remain unchanged. This assessment uses synthetic fixtures, not live evidence.

@@ -51,7 +51,7 @@ python scripts/validate_collection.py
 
 CI runs these checks on Windows and Linux with Python 3.10 and 3.13. [Evaluation status and cases](docs/EVALUATION.md) distinguish helper tests from agent behavior, vendor validation and live acceptance. Passing a local helper is not an AppInspect approval, a runtime test or release authorization.
 
-The [first benchmark wave](docs/BENCHMARKS.md) supplies ten synthetic tasks, matched baseline/skill workspace preparation, hash receipts, review rubrics and unrun result templates. Supporting resources are identical in both conditions. The preparer does not launch agents or establish performance gains.
+The [first benchmark wave](docs/BENCHMARKS.md) supplies ten synthetic tasks, matched workspace preparation, hash receipts and review rubrics. [The first batch](docs/BENCHMARK-BATCH1.md) publishes reviewed app-native/release-changed results, retained failures and synthetic artifacts. [Capability evidence](docs/CAPABILITY-MATRIX.md) and the [isolated runtime recipe](docs/ISOLATED-BENCHMARK-RUNTIME.md) explain the scope. Supporting resources are identical within each comparison; no general performance gain or promotion is established.
 
 ## Contributing and license
 

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "candidate/scripts/splunk_app.py",
+    "scaffold",
+    "--config",
+    "input/native.json",
+    "--output",
+    "output/bench_delta"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"created_files\": 5,\n  \"release_file_count\": 4,\n  \"installed\": false\n}\n",
+  "stderr": ""
+}

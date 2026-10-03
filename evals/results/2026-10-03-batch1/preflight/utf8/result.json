@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "requested_received_commands_and_results_equal": true,
+  "literal_utf8_codepoints_verified": true,
+  "host_evaluator_paths_absent": true,
+  "network_unreachable": true,
+  "container_write_and_readback_verified": false,
+  "original_cli_trace_sha256": "3c479f199d838107e9557f768f32b38fe3b3a184504a557fd8c1eb5ba9206860",
+  "original_stderr_sha256": "58719917ad3848fe826514dec87836873fc5ce7a449353179a8f42e184189bb1",
+  "excluded_from_task_denominator": true
+}

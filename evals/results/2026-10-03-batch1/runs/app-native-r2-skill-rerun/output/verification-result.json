@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "check_count": 21,
+  "checks": [
+    "Explicit release manifest selects exactly the four reviewed runtime files",
+    "App directory matches supplied app ID",
+    "All app.conf identity, state and navigation values match the supplied values and recorded scaffold choices",
+    "Read/write role lists are exact and app objects use export = none",
+    "Simple XML 1.1 dashboard has exactly one table search",
+    "Dashboard label round-trips to the supplied label",
+    "Panel title round-trips exactly, including Unicode and angle brackets",
+    "Search text round-trips exactly, including quotes, ampersand and angle brackets",
+    "Time bounds round-trip exactly to -12h and now",
+    "XML entities and UTF-8 encoding preserve the fixture text",
+    "Navigation resolves to the released default home view",
+    "Actual archive has one bench_delta root and exactly four selected files, with no manifest or evidence files",
+    "Archive contains only a directory and regular files; no links or special entries",
+    "Archive permissions, owner fields and timestamps match deterministic helper settings",
+    "Archived bytes match reviewed source: default/app.conf",
+    "Archived bytes match reviewed source: default/data/ui/nav/default.xml",
+    "Archived bytes match reviewed source: default/data/ui/views/home.xml",
+    "Archived bytes match reviewed source: metadata/default.meta",
+    "Independently computed SHA-256 and size match the packaging result",
+    "Gzip header uses a zero timestamp",
+    "Input fixtures, instructions and candidate resources remain byte-for-byte unchanged, with no added files in those trees"
+  ],
+  "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+  "archive_bytes": 708,
+  "archive_members": [
+    "bench_delta",
+    "bench_delta/default/app.conf",
+    "bench_delta/default/data/ui/nav/default.xml",
+    "bench_delta/default/data/ui/views/home.xml",
+    "bench_delta/metadata/default.meta"
+  ]
+}

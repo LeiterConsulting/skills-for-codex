@@ -1,0 +1,5 @@
+Created the [app](/workspace/output/bench_delta), [release archive](/workspace/output/bench_delta-0.2.1.tar.gz), and [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256).
+
+All four release files passed validation, and 19 independent checks passed. Supplied files remain unchanged.
+
+The [report](/workspace/output/report.md) records the results and remaining limits: target compatibility, AppInspect, and live behavior remain unverified.

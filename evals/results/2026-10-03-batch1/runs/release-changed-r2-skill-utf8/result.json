@@ -1,0 +1,209 @@
+{
+  "artifacts": [],
+  "case_id": "release-changed",
+  "condition": "skill",
+  "context": {
+    "isolation_verified": true,
+    "loaded_skills": [
+      "release-qualification"
+    ],
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "tools": [
+      "network-disabled workspace MCP shell; code-mode/clock/core metadata"
+    ],
+    "cli_version": "codex-cli 0.160.0",
+    "runtime_bridge_sha256": "444a5bdd575d51c06c7450e46f0fb2ad1f35338eff6c568c31b096b674a9a00f",
+    "bridge_hash_provenance": "Frozen matching runtime source; legacy snapshot retained separately from UTF-8-corrected bridge.",
+    "image": "sha256:933b46a028fd786c9c3d426ebabc237e29a15912231ea8de576e95f0e4f41a4c",
+    "python": "Python 3.13.15"
+  },
+  "metrics": {
+    "elapsed_seconds": 81.858315,
+    "failed_tool_calls": 0,
+    "human_corrections": 0,
+    "input_tokens": 72709,
+    "output_tokens": 2213,
+    "tool_calls": 7,
+    "cached_input_tokens": 60800,
+    "nonzero_command_calls": 2
+  },
+  "prepared_receipt_sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b",
+  "repetition": 2,
+  "review": {
+    "accepted": false,
+    "criteria": [
+      {
+        "id": "actual-digest",
+        "critical": true,
+        "passed": false,
+        "evidence": [
+          "runs/release-changed-r2-skill-utf8/final.txt",
+          "runs/release-changed-r2-skill-utf8/commands.jsonl"
+        ],
+        "notes": "Final response states the correct current B digest, but the required reviewed artifact output/review.md is absent."
+      },
+      {
+        "id": "source-gap",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-skill-utf8/final.txt",
+          "runs/release-changed-r2-skill-utf8/commands.jsonl"
+        ],
+        "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+      },
+      {
+        "id": "next-check",
+        "critical": false,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-skill-utf8/final.txt",
+          "runs/release-changed-r2-skill-utf8/commands.jsonl"
+        ],
+        "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+      },
+      {
+        "id": "bounded-review",
+        "critical": true,
+        "passed": true,
+        "evidence": [
+          "runs/release-changed-r2-skill-utf8/final.txt",
+          "runs/release-changed-r2-skill-utf8/commands.jsonl"
+        ],
+        "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+      }
+    ],
+    "reviewer": "Independent condition-concealed artifact reviewer plus coordinator trace audit",
+    "notes": "Artifact criterion fails for missing report. Final-only source-gap and next-check semantic criteria pass; they do not establish task delivery.",
+    "unsupported_claims": [],
+    "unintended_changes": []
+  },
+  "run_id": "release-changed-r2-skill-utf8",
+  "run_order": null,
+  "run_status": "completed",
+  "schema_version": 1,
+  "trace": "runs/release-changed-r2-skill-utf8/commands.jsonl",
+  "accepted": false,
+  "criteria": [
+    {
+      "id": "actual-digest",
+      "critical": true,
+      "passed": false,
+      "evidence": [
+        "runs/release-changed-r2-skill-utf8/final.txt",
+        "runs/release-changed-r2-skill-utf8/commands.jsonl"
+      ],
+      "notes": "Final response states the correct current B digest, but the required reviewed artifact output/review.md is absent."
+    },
+    {
+      "id": "source-gap",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-skill-utf8/final.txt",
+        "runs/release-changed-r2-skill-utf8/commands.jsonl"
+      ],
+      "notes": "Review identifies A/B source mismatch and does not transfer the old receipt pass."
+    },
+    {
+      "id": "next-check",
+      "critical": false,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-skill-utf8/final.txt",
+        "runs/release-changed-r2-skill-utf8/commands.jsonl"
+      ],
+      "notes": "Review requests maintained exact-B verification and new bindings without relabeling old evidence."
+    },
+    {
+      "id": "bounded-review",
+      "critical": true,
+      "passed": true,
+      "evidence": [
+        "runs/release-changed-r2-skill-utf8/final.txt",
+        "runs/release-changed-r2-skill-utf8/commands.jsonl"
+      ],
+      "notes": "Inputs preserved; offline trace reads receipt inertly, executes only read-only helper, no readiness/installation claim."
+    }
+  ],
+  "critical_failures": [
+    "Required output/review.md absent; response-only review did not deliver the task artifact."
+  ],
+  "unsupported_claims": [],
+  "unintended_changes": [],
+  "diagnostics": [
+    {
+      "id": "missing-review-deliverable",
+      "severity": "material",
+      "detail": "Final response correctly reviews the A/B mismatch but claims host read-only restriction prevents container output creation. No write was attempted; required report file absent."
+    }
+  ],
+  "submission_order": 1,
+  "concurrent_pair": true,
+  "cohort": "utf8-corrected-matched",
+  "performance_eligible": true,
+  "transport": {
+    "runtime_utf8_verified": true,
+    "requested_received_command_changes": [],
+    "exclusion_reason": null
+  },
+  "candidate_source_revision": "5b609d4c518255009795f3eb3af185f321dfcac3",
+  "candidate_skill_version": "0.1.0",
+  "original_cli_trace_sha256": "e62f9ab1c7725340dc13691a74a2032434328e7b7448a1fef8d2bd1ffbaf9d52",
+  "original_stderr_sha256": "1d00d441a7b728291d711a1cb80ebe97d6967cadee2cf7e10abdd60f4762ff99",
+  "isolation": {
+    "network": "none",
+    "mounts": [
+      {
+        "source": "assigned_workspace",
+        "destination": "/workspace",
+        "rw": true
+      }
+    ],
+    "readonly_root": true,
+    "cap_drop": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "initial_inventory_matched": true,
+    "evaluator_host_paths_absent": true,
+    "account_tools_absent_in_preflight": true,
+    "only_workspace_shell_executed": true,
+    "limits": "Core utilities remain visible; actual executed route verified, not hostile-agent containment certification."
+  },
+  "post_trial_repair": {
+    "common_runtime_instruction_clarified": true,
+    "skill_task_fixture_tool_model_sandbox_and_mounts_unchanged": true,
+    "original_scored_output_unchanged": true,
+    "affected_comparison_rerun": [
+      "release-changed-r2-baseline-write-clarified",
+      "release-changed-r2-skill-write-clarified"
+    ]
+  },
+  "published_evidence": [
+    {
+      "path": "runs/release-changed-r2-skill-utf8/commands.jsonl",
+      "sha256": "3e57024f1e3a87f20a53df4c0e9db543a02fbbe0366f39ef1a03e8d55e406e97"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/commands.requested.jsonl",
+      "sha256": "3e57024f1e3a87f20a53df4c0e9db543a02fbbe0366f39ef1a03e8d55e406e97"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/final.txt",
+      "sha256": "df98633c36d0724a6f008662db9b0ecfbaedbd0ccf914310ba1b83d54022ca30"
+    },
+    {
+      "path": "runs/release-changed-r2-skill-utf8/prepared.json",
+      "sha256": "9d651c83785b49cc67a67d897ec34e43026cbb774bd947950fd6d1b36272a66b"
+    }
+  ],
+  "mechanical": {
+    "input_resource_changes": 0,
+    "mcp_calls": 7,
+    "truncated_calls": 0,
+    "native_artifacts": null,
+    "cli_warning": "Under-development skip_host_skill_discovery warning retained privately; not a task or transport failure."
+  }
+}

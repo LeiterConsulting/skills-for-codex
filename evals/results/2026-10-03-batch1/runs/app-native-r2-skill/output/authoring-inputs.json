@@ -1,0 +1,86 @@
+{
+  "workspace": "/workspace",
+  "app_root": "/workspace/output/bench_delta",
+  "operation": "create",
+  "app_id": "bench_delta",
+  "app_label": "Delta & Readiness",
+  "author": "Synthetic evaluation team",
+  "version": "0.2.1",
+  "deployment": null,
+  "splunk_version": null,
+  "app_shape": "native Simple XML 1.1 table dashboard",
+  "data_contract": {
+    "type": "synthetic makeresults search",
+    "title": "Delta <Health> Å",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now",
+    "indexes": [],
+    "output_fields": [
+      "status"
+    ],
+    "real_data_contract": null
+  },
+  "read_roles": [
+    "bench_reader"
+  ],
+  "write_roles": [
+    "bench_editor"
+  ],
+  "template_source": "supplied local candidate/scripts/splunk_app.py",
+  "template_revision": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda",
+  "template_reuse_terms": "supplied resource authorized by AGENTS.md; no external starter selected",
+  "output_path": "output/bench_delta-0.2.1.tar.gz",
+  "acceptance": {
+    "source": "passed",
+    "build": "not applicable",
+    "structure_package": "passed",
+    "AppInspect": "not run",
+    "installed": "not run",
+    "live": "not run"
+  },
+  "native_config": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> Å",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "input_origins": {
+    "workspace": "observed tool workspace /workspace",
+    "app_root": "TASK.md",
+    "operation": "TASK.md",
+    "app_id": "input/native.json",
+    "app_label": "input/native.json",
+    "author": "input/native.json",
+    "version": "input/native.json",
+    "description": "input/native.json",
+    "install_state": "input/native.json",
+    "dashboard": "input/native.json",
+    "read_roles": "input/native.json",
+    "write_roles": "input/native.json",
+    "data_contract": "input/native.json; output field observed from supplied SPL text, not executed",
+    "deployment": "TASK.md: no deployment target selected",
+    "splunk_version": "not supplied",
+    "app_shape": "TASK.md and supplied helper",
+    "template_source": "AGENTS.md permitted supplied resources",
+    "template_revision": "observed helper SHA-256; no release/Git revision supplied",
+    "output_path": "TASK.md",
+    "release_selection": "agent-reviewed explicit four-file manifest from supplied helper",
+    "acceptance": "TASK.md and candidate/references/validation.md"
+  }
+}

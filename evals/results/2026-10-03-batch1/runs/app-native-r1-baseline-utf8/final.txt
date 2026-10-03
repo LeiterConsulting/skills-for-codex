@@ -1,0 +1,7 @@
+Created `output/bench_delta` with the exact supplied values.
+
+- [Release package](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Validation report](/workspace/output/report.md)
+
+All 18 offline checks passed; inputs were preserved. Target compatibility, AppInspect, and runtime behavior remain unverified.

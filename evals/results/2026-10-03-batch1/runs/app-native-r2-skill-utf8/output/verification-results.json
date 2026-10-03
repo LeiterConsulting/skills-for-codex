@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "check_count": 13,
+  "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+  "archive_bytes": 708,
+  "checks": [
+    {
+      "name": "Scaffold, validate and package commands succeeded",
+      "status": "passed"
+    },
+    {
+      "name": "Release manifest selects exactly four intended runtime files",
+      "status": "passed"
+    },
+    {
+      "name": "App directory contains only generated source and release manifest",
+      "status": "passed"
+    },
+    {
+      "name": "Every app.conf value and app root match the supplied identity/state",
+      "status": "passed",
+      "details": {
+        "install": {
+          "state": "disabled"
+        },
+        "ui": {
+          "is_visible": "true",
+          "label": "Delta & Readiness",
+          "default_view": "home"
+        },
+        "launcher": {
+          "author": "Synthetic evaluation team",
+          "version": "0.2.1",
+          "description": "Offline benchmark fixture"
+        },
+        "package": {
+          "id": "bench_delta"
+        },
+        "id": {
+          "name": "bench_delta",
+          "version": "0.2.1"
+        }
+      }
+    },
+    {
+      "name": "Metadata exactly preserves supplied read/write roles and app-scoped export",
+      "status": "passed",
+      "details": {
+        "read_roles": [
+          "bench_reader"
+        ],
+        "write_roles": [
+          "bench_editor"
+        ],
+        "export": "none"
+      }
+    },
+    {
+      "name": "Native Simple XML has one table and one inline search",
+      "status": "passed"
+    },
+    {
+      "name": "Parsed UTF-8 XML text exactly equals JSON-decoded input",
+      "status": "passed",
+      "details": {
+        "parsed_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> Å",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "code_points": {
+          "app_label": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+0026",
+            "U+0020",
+            "U+0052",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0069",
+            "U+006E",
+            "U+0065",
+            "U+0073",
+            "U+0073"
+          ],
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ],
+          "earliest": [
+            "U+002D",
+            "U+0031",
+            "U+0032",
+            "U+0068"
+          ],
+          "latest": [
+            "U+006E",
+            "U+006F",
+            "U+0077"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Navigation and app.conf route to the released home view",
+      "status": "passed"
+    },
+    {
+      "name": "Real archive contains one app root and exactly the selected files",
+      "status": "passed",
+      "details": [
+        "bench_delta/",
+        "bench_delta/default/app.conf",
+        "bench_delta/default/data/ui/nav/default.xml",
+        "bench_delta/default/data/ui/views/home.xml",
+        "bench_delta/metadata/default.meta"
+      ]
+    },
+    {
+      "name": "Archive uses regular files, deterministic timestamps and expected permissions",
+      "status": "passed"
+    },
+    {
+      "name": "Every archive file is byte-identical to its selected source",
+      "status": "passed",
+      "details": {
+        "default/app.conf": true,
+        "default/data/ui/nav/default.xml": true,
+        "default/data/ui/views/home.xml": true,
+        "metadata/default.meta": true
+      }
+    },
+    {
+      "name": "Independent SHA-256 and archive size match package receipt and digest file",
+      "status": "passed",
+      "details": {
+        "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "archive_bytes": 708
+      }
+    },
+    {
+      "name": "All original workspace files remain byte-identical; all additions are in output/",
+      "status": "passed",
+      "details": {
+        "preserved_original_file_count": 12
+      }
+    }
+  ],
+  "scope": "Synthetic offline fixtures only; no AppInspect, SPL execution or installed/live validation."
+}

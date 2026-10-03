@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "offline synthetic fixtures",
+  "provenance": {
+    "input": {
+      "path": "input/native.json",
+      "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+    },
+    "helper": {
+      "path": "candidate/scripts/splunk_app.py",
+      "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "candidate/scripts/splunk_app.py",
+        "scaffold",
+        "--config",
+        "input/native.json",
+        "--output",
+        "output/bench_delta"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "created_files": 5,
+        "release_file_count": 4,
+        "installed": false
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate/scripts/splunk_app.py",
+        "validate",
+        "--app",
+        "output/bench_delta",
+        "--files",
+        "output/bench_delta/release-files.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "version": "0.2.1",
+        "selected_file_count": 4,
+        "structure": "passed",
+        "appinspect": "not_run",
+        "runtime": "not_run"
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate/scripts/splunk_app.py",
+        "package",
+        "--app",
+        "output/bench_delta",
+        "--files",
+        "output/bench_delta/release-files.json",
+        "--output",
+        "output/bench_delta-0.2.1.tar.gz"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "result": {
+        "app_id": "bench_delta",
+        "version": "0.2.1",
+        "selected_file_count": 4,
+        "structure": "passed",
+        "appinspect": "not_run",
+        "runtime": "not_run",
+        "archive_bytes": 708,
+        "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "package": "created",
+        "selected_files": [
+          "default/app.conf",
+          "default/data/ui/nav/default.xml",
+          "default/data/ui/views/home.xml",
+          "metadata/default.meta"
+        ]
+      }
+    }
+  ]
+}

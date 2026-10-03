@@ -1,0 +1,3491 @@
+{
+  "schema_version": 1,
+  "reviewer_role": "blind artifact and semantic reviewer",
+  "created_at_utc": "2026-10-03T22:05:34.223588+00:00",
+  "review_root": "condition-concealed reviewer tree",
+  "condition_labels_sought_or_inferred": false,
+  "review_method": [
+    "Read only task definitions and explicitly supplied fixtures, deliverables and final responses under blind-review.",
+    "Used reviewer-authored read-only Python standard-library inspections; did not execute entry programs, supplied helpers or receipt text.",
+    "Parsed app.conf using configparser without interpolation; parsed XML with ElementTree and compared decoded text directly to json.loads fixture values; inspected exact role metadata.",
+    "Read gzip/tar archives without extraction, checked raw tar headers, member types, exact manifest selection, member/source byte equality, SHA-256, sidecars and reported digests.",
+    "Independently hashed release candidate, receipt and record bytes; distinguished actual B bytes from caller-recorded A source/subject claims.",
+    "Reviewed report/final prose for evidence limits, present decisions, relevant next checks, unsupported compatibility/readiness claims and explicitly requested Unicode/identity diagnostics.",
+    "The only authorized write is this new UTF-8 reviewer receipt; original scored artifacts were not edited."
+  ],
+  "trace_review": {
+    "performed": false,
+    "status": "not_reviewed",
+    "reserved_to": "coordinator",
+    "limitations": "Did not inspect experiment traces, Git history, candidate skill instructions, source checkouts, before/after file histories, target actions or condition assignments. Preservation/offline-operation assertions remain unverified by this reviewer."
+  },
+  "grading_note": "Fixed-criterion verdicts follow their declared artifact/semantic scope. Separately recorded prose defects do not change correct artifact bytes or turn explicit unresolved compatibility into approval.",
+  "entries": {
+    "entry01": {
+      "entry_label": "entry01",
+      "directory_label": "entry-01",
+      "diagnostics": [],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill/input/native.json",
+            "runs/app-native-r1-skill/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-skill/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-skill/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r1-skill/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill/output/bench_delta/release-files.json",
+            "runs/app-native-r1-skill/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-skill/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-skill/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill/output/report.md",
+            "runs/app-native-r1-skill/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry02": {
+      "entry_label": "entry02",
+      "directory_label": "entry-02",
+      "diagnostics": [],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline/input/native.json",
+            "runs/app-native-r1-baseline/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-baseline/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r1-baseline/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline/output/bench_delta/release-files.json",
+            "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-baseline/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-baseline/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline/output/report.md",
+            "runs/app-native-r1-baseline/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry03": {
+      "entry_label": "entry03",
+      "directory_label": "entry-03",
+      "diagnostics": [],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline/input/native.json",
+            "runs/app-native-r2-baseline/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-baseline/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-baseline/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-baseline/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline/output/bench_delta/release-files.json",
+            "runs/app-native-r2-baseline/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-baseline/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-baseline/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline/output/report.md",
+            "runs/app-native-r2-baseline/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry04": {
+      "entry_label": "entry04",
+      "directory_label": "entry-04",
+      "diagnostics": [
+        {
+          "id": "prose-unicode-mojibake",
+          "severity": "minor",
+          "diagnostic_verdict": "fail",
+          "evidence_path": "runs/app-native-r2-skill/output/report.md",
+          "line": 25,
+          "observed_text": "The title contains Unicode \u00c3\u2026",
+          "observed_codepoints": [
+            "U+00C3",
+            "U+2026"
+          ],
+          "expected_character": "\u00c5",
+          "expected_codepoints": [
+            "U+00C5"
+          ],
+          "reason": "Report prose misstates the Unicode character. Actual fixture, app XML and package preserve U+00C5. Fixed criteria remain passed.",
+          "original_artifacts_changed_by_reviewer": false
+        }
+      ],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill/input/native.json",
+            "runs/app-native-r2-skill/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-skill/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-skill/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-skill/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill/output/bench_delta/release-files.json",
+            "runs/app-native-r2-skill/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-skill/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-skill/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill/output/report.md",
+            "runs/app-native-r2-skill/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry05": {
+      "entry_label": "entry05",
+      "directory_label": "entry-05",
+      "diagnostics": [],
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hash of candidate B and receipt matches declarations and review. A subject digest is correctly identified as recorded; A artifact was not supplied for independent hashing.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline/input/candidate.bin",
+            "runs/release-changed-r1-baseline/input/receipt.txt",
+            "runs/release-changed-r1-baseline/input/record.json",
+            "runs/release-changed-r1-baseline/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review distinguishes synthetic-revision-b from synthetic-revision-a and B artifact digest from A recorded subject; A receipt does not satisfy B package gate.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline/input/record.json",
+            "runs/release-changed-r1-baseline/input/receipt.txt",
+            "runs/release-changed-r1-baseline/output/review.md",
+            "runs/release-changed-r1-baseline/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requires maintained package checks on exact B, new B-bound completed evidence and hashes, preserving A evidence without relabeling its old pass.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace component reserved to coordinator. Final prose was separately assessed and contains no misleading release-readiness claim.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline/final.txt"
+          ]
+        }
+      },
+      "independent_artifact_observations": {
+        "candidate_B_bytes": 36,
+        "candidate_B_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "receipt_bytes": 62,
+        "receipt_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_revision": "synthetic-revision-b",
+        "recorded_check_revision": "synthetic-revision-a",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "A_subject_independently_hashed": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "B_required_package_gate_reported_open_or_incomplete": true,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry06": {
+      "entry_label": "entry06",
+      "directory_label": "entry-06",
+      "diagnostics": [],
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hash of candidate B and receipt matches declarations and review. A subject digest is correctly identified as recorded; A artifact was not supplied for independent hashing.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill/input/candidate.bin",
+            "runs/release-changed-r1-skill/input/receipt.txt",
+            "runs/release-changed-r1-skill/input/record.json",
+            "runs/release-changed-r1-skill/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review distinguishes synthetic-revision-b from synthetic-revision-a and B artifact digest from A recorded subject; A receipt does not satisfy B package gate.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill/input/record.json",
+            "runs/release-changed-r1-skill/input/receipt.txt",
+            "runs/release-changed-r1-skill/output/review.md",
+            "runs/release-changed-r1-skill/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requires maintained package checks on exact B, new B-bound completed evidence and hashes, preserving A evidence without relabeling its old pass.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace component reserved to coordinator. Final prose was separately assessed and contains no misleading release-readiness claim.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill/final.txt"
+          ]
+        }
+      },
+      "independent_artifact_observations": {
+        "candidate_B_bytes": 36,
+        "candidate_B_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "receipt_bytes": 62,
+        "receipt_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_revision": "synthetic-revision-b",
+        "recorded_check_revision": "synthetic-revision-a",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "A_subject_independently_hashed": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "B_required_package_gate_reported_open_or_incomplete": true,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry07": {
+      "entry_label": "entry07",
+      "directory_label": "entry-07",
+      "diagnostics": [
+        {
+          "id": "prose-encoding-identity-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill/input/record.json",
+            "runs/release-changed-r2-skill/output/review.md",
+            "runs/release-changed-r2-skill/final.txt"
+          ],
+          "reason": "Report is ASCII and matches supplied product/version/target/revisions. Final is valid UTF-8 with normal U+2019 apostrophes and no replacement character or mojibake."
+        }
+      ],
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hash of candidate B and receipt matches declarations and review. A subject digest is correctly identified as recorded; A artifact was not supplied for independent hashing.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill/input/candidate.bin",
+            "runs/release-changed-r2-skill/input/receipt.txt",
+            "runs/release-changed-r2-skill/input/record.json",
+            "runs/release-changed-r2-skill/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review distinguishes synthetic-revision-b from synthetic-revision-a and B artifact digest from A recorded subject; A receipt does not satisfy B package gate.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill/input/record.json",
+            "runs/release-changed-r2-skill/input/receipt.txt",
+            "runs/release-changed-r2-skill/output/review.md",
+            "runs/release-changed-r2-skill/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requires maintained package checks on exact B, new B-bound completed evidence and hashes, preserving A evidence without relabeling its old pass.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace component reserved to coordinator. Final prose was separately assessed and contains no misleading release-readiness claim.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill/final.txt"
+          ]
+        }
+      },
+      "independent_artifact_observations": {
+        "candidate_B_bytes": 36,
+        "candidate_B_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "receipt_bytes": 62,
+        "receipt_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_revision": "synthetic-revision-b",
+        "recorded_check_revision": "synthetic-revision-a",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "A_subject_independently_hashed": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "B_required_package_gate_reported_open_or_incomplete": true,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry08": {
+      "entry_label": "entry08",
+      "directory_label": "entry-08",
+      "diagnostics": [
+        {
+          "id": "prose-encoding-identity-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline/input/record.json",
+            "runs/release-changed-r2-baseline/output/review.md",
+            "runs/release-changed-r2-baseline/final.txt"
+          ],
+          "reason": "Report is ASCII and matches supplied product/version/target/revisions. Final is valid UTF-8 with normal U+2019 apostrophes and no replacement character or mojibake."
+        }
+      ],
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hash of candidate B and receipt matches declarations and review. A subject digest is correctly identified as recorded; A artifact was not supplied for independent hashing.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline/input/candidate.bin",
+            "runs/release-changed-r2-baseline/input/receipt.txt",
+            "runs/release-changed-r2-baseline/input/record.json",
+            "runs/release-changed-r2-baseline/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review distinguishes synthetic-revision-b from synthetic-revision-a and B artifact digest from A recorded subject; A receipt does not satisfy B package gate.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline/input/record.json",
+            "runs/release-changed-r2-baseline/input/receipt.txt",
+            "runs/release-changed-r2-baseline/output/review.md",
+            "runs/release-changed-r2-baseline/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requires maintained package checks on exact B, new B-bound completed evidence and hashes, preserving A evidence without relabeling its old pass.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace component reserved to coordinator. Final prose was separately assessed and contains no misleading release-readiness claim.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline/final.txt"
+          ]
+        }
+      },
+      "independent_artifact_observations": {
+        "candidate_B_bytes": 36,
+        "candidate_B_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "receipt_bytes": 62,
+        "receipt_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_revision": "synthetic-revision-b",
+        "recorded_check_revision": "synthetic-revision-a",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "A_subject_independently_hashed": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "B_required_package_gate_reported_open_or_incomplete": true,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry09": {
+      "entry_label": "entry09",
+      "directory_label": "entry-09",
+      "diagnostics": [
+        {
+          "id": "prose-unicode-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-rerun/input/native.json",
+            "runs/app-native-r2-skill-rerun/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-skill-rerun/output/report.md",
+            "runs/app-native-r2-skill-rerun/final.txt"
+          ],
+          "reason": "Report lines 20 and 30 use actual U+00C5 and correctly describe ordinary query quotes without backslashes. Final is ASCII and does not contradict fixture semantics."
+        }
+      ],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-rerun/input/native.json",
+            "runs/app-native-r2-skill-rerun/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-skill-rerun/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-skill-rerun/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-skill-rerun/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-rerun/output/bench_delta/release-files.json",
+            "runs/app-native-r2-skill-rerun/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-skill-rerun/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-skill-rerun/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-rerun/output/report.md",
+            "runs/app-native-r2-skill-rerun/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry10": {
+      "entry_label": "entry10",
+      "directory_label": "entry-10",
+      "diagnostics": [
+        {
+          "id": "prose-fixture-semantics",
+          "severity": "material_reporting_defect",
+          "diagnostic_verdict": "fail",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-rerun/input/native.json",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-baseline-rerun/output/report.md",
+            "runs/app-native-r2-baseline-rerun/output/checks.json"
+          ],
+          "report_lines": [
+            32,
+            38,
+            41
+          ],
+          "reason": "Report renders a literal backslash-u00c5 title and backslash-escaped query, labels them exact JSON-decoded values, and says literal backslashes are preserved. Decoded fixture and XML instead contain actual U+00C5 and ordinary quotes with no backslashes. checks.json repeats the nonexistent-literal-backslashes description and an invented unresolved intent, while its decoded_dashboard_values are actually correct. Artifact criteria remain passed."
+        },
+        {
+          "id": "prose-mojibake",
+          "severity": "minor",
+          "diagnostic_verdict": "fail",
+          "evidence_path": "runs/app-native-r2-baseline-rerun/output/report.md",
+          "report_lines": [
+            6,
+            41
+          ],
+          "observed_sequences": [
+            {
+              "line": 6,
+              "codepoints": [
+                "U+00E2",
+                "U+20AC",
+                "U+201D"
+              ]
+            },
+            {
+              "line": 41,
+              "codepoints": [
+                "U+00C3",
+                "U+2026"
+              ]
+            }
+          ],
+          "reason": "UTF-8 file contains mojibake punctuation and an incorrect representation of the U+00C5 character."
+        },
+        {
+          "id": "final-check-count-qualification",
+          "severity": "reporting_qualification",
+          "diagnostic_verdict": "unknown",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-rerun/final.txt",
+            "runs/app-native-r2-baseline-rerun/output/checks.json"
+          ],
+          "final_line": 3,
+          "reason": "Final reports 19 independent passed checks, matching the 19 stored passed statuses. One stored check inaccurately describes preserved literal backslashes, so that semantic description cannot be accepted as verified. No unsupported vendor/runtime compatibility claim is made; check-execution trace is not reviewed."
+        }
+      ],
+      "task_definition_path": "snapshots/app-native-task.json",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent configuration, role metadata and XML parsing match the decoded fixture exactly, including U+00C5, XML-sensitive characters, plain query quotes and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-rerun/input/native.json",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/default/data/ui/views/home.xml",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/default/data/ui/nav/default.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual gzip/tar has one app-root directory header plus exactly the four manifest-selected regular files. Member bytes equal source files. Actual SHA-256 matches sidecar and report.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-rerun/output/bench_delta/release-files.json",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-baseline-rerun/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-baseline-rerun/output/report.md"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and final distinguish offline structure/package checks from unrun AppInspect and runtime checks; unknown target remains unqualified and no vendor/runtime compatibility approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-rerun/output/report.md",
+            "runs/app-native-r2-baseline-rerun/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; input preservation and absence of target actions were not independently assessed by this reviewer.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "xml_title": "Delta <Health> \u00c5",
+        "xml_query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+        "title_and_query_contain_literal_backslashes": false
+      },
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "trace_assertions_reviewed": false
+      }
+    },
+    "entry11": {
+      "entry_label": "entry11",
+      "directory_label": "entry-11",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:19:03.052270+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independently parsed configuration, exact role metadata and XML match the JSON-decoded fixture, including U+00C5, ordinary U+0022 quotes, XML-sensitive characters and exact time values.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-text-fix/input/native.json",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar has one app-root directory header and exactly the four manifest-selected regular files with no extras; member/source bytes, normalized metadata, archive digest, sidecar and report agree.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta/release-files.json",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-baseline-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-baseline-text-fix/output/report.md",
+            "runs/app-native-r1-baseline-text-fix/output/verification-receipt.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final clearly distinguish offline source/package checks from unrun AppInspect and live checks; exact target compatibility and effective permissions remain unverified.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-text-fix/output/report.md",
+            "runs/app-native-r1-baseline-text-fix/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; historical preservation, actual command execution, environment, helper identity and target actions were not independently assessed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "normalized_archive_modes_owner_ids_names_timestamps": true,
+        "app_tree_equals_selected_files_plus_manifest": true,
+        "app_tree_has_symbolic_links": false,
+        "parsed_xml_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_and_query_contain_literal_backslashes": false,
+        "query_U0022_count": 2,
+        "codepoints": {
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ]
+        },
+        "selected_file_sha256": {
+          "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+          "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+          "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+          "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+        },
+        "verification_check_count": 28,
+        "all_stored_check_statuses_passed": true,
+        "receipt_parsed_values_match_artifacts": true,
+        "receipt_codepoints_match_artifacts": true,
+        "additional_receipt_consistency_checks": {
+          "verifier_hash_matches_receipt": true,
+          "selected_file_hashes_match": true,
+          "codepoints_match": true,
+          "three_declared_helper_commands_exit_zero": true
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-text-fix/input/native.json",
+            "runs/app-native-r1-baseline-text-fix/output/report.md",
+            "runs/app-native-r1-baseline-text-fix/output/verification-receipt.json",
+            "runs/app-native-r1-baseline-text-fix/output/verify_release.py",
+            "runs/app-native-r1-baseline-text-fix/final.txt"
+          ],
+          "reason": "Inspectable report/check claims agree with exact fixture values, actual XML, file hashes, package members/bytes/metadata and 28 stored passed statuses. Unicode is actual U+00C5; quotes are U+0022; no nonexistent backslashes, mojibake or replacement characters are reported. Execution/preservation/environment claims remain trace-limited."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Did not run supplied programs or helpers.",
+        "Did not read candidate skill instructions, changed resources, experiment traces, Git history, conditions or source checkout.",
+        "Only appended this entry to the existing authorized reviewer receipt; did not edit original artifacts."
+      ]
+    },
+    "entry12": {
+      "entry_label": "entry12",
+      "directory_label": "entry-12",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:19:03.053314+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independently parsed configuration, exact role metadata and XML match the JSON-decoded fixture, including U+00C5, ordinary U+0022 quotes, XML-sensitive characters and exact time values.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-text-fix/input/native.json",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar has one app-root directory header and exactly the four manifest-selected regular files with no extras; member/source bytes, normalized metadata, archive digest, sidecar and report agree.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-text-fix/output/bench_delta/release-files.json",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-skill-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-skill-text-fix/output/report.md",
+            "runs/app-native-r1-skill-text-fix/output/verification.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final clearly distinguish offline source/package checks from unrun AppInspect and live checks; exact target compatibility and effective permissions remain unverified.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-text-fix/output/report.md",
+            "runs/app-native-r1-skill-text-fix/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace review reserved to coordinator; historical preservation, actual command execution, environment, helper identity and target actions were not independently assessed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "normalized_archive_modes_owner_ids_names_timestamps": true,
+        "app_tree_equals_selected_files_plus_manifest": true,
+        "app_tree_has_symbolic_links": false,
+        "parsed_xml_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_and_query_contain_literal_backslashes": false,
+        "query_U0022_count": 2,
+        "codepoints": {
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ]
+        },
+        "selected_file_sha256": {
+          "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+          "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+          "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+          "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+        },
+        "verification_check_count": 24,
+        "all_stored_check_statuses_passed": true,
+        "receipt_parsed_values_match_artifacts": true,
+        "receipt_codepoints_match_artifacts": true,
+        "additional_receipt_consistency_checks": {
+          "selected_file_hashes_match": true,
+          "codepoints_match": true,
+          "recorded_verifier_stdout_matches_verification_receipt": true,
+          "four_declared_commands_exit_zero": true,
+          "authoring_native_config_matches_fixture": true,
+          "recorded_original_hash_entry_count": 12,
+          "digest_check_receipt_agrees": true
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-text-fix/input/native.json",
+            "runs/app-native-r1-skill-text-fix/output/report.md",
+            "runs/app-native-r1-skill-text-fix/output/verification.json",
+            "runs/app-native-r1-skill-text-fix/output/verify_release.py",
+            "runs/app-native-r1-skill-text-fix/final.txt"
+          ],
+          "reason": "Inspectable report/check claims agree with exact fixture values, actual XML, file hashes, package members/bytes/metadata and 24 stored passed statuses. Unicode is actual U+00C5; quotes are U+0022; no nonexistent backslashes, mojibake or replacement characters are reported. Execution/preservation/environment claims remain trace-limited."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Did not run supplied programs or helpers.",
+        "Did not read candidate skill instructions, changed resources, experiment traces, Git history, conditions or source checkout.",
+        "Only appended this entry to the existing authorized reviewer receipt; did not edit original artifacts."
+      ]
+    },
+    "entry13": {
+      "entry_label": "entry13",
+      "directory_label": "entry-13",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:26:48.951810+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independently parsed full app.conf, exact role metadata and XML match the decoded fixture, including U+00C5, U+0022 quotes, ampersands/angle brackets and exact time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-text-fix/input/native.json",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Raw tar headers and parsed members contain one app-root directory and exactly four manifest-selected regular files; source/archive bytes, normalized metadata, size, sidecar, receipts and reported SHA-256 agree.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-text-fix/output/bench_delta/release-files.json",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-skill-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-skill-text-fix/output/report.md",
+            "runs/app-native-r2-skill-text-fix/output/verification.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final restrict completion to offline source/package evidence and leave target compatibility, AppInspect, installation and live behavior unverified.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-text-fix/output/report.md",
+            "runs/app-native-r2-skill-text-fix/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Preservation, command-execution, target-operation and isolation traces are reserved to coordinator; not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "normalized_archive_modes_owner_ids_names_timestamps": true,
+        "source_tree_equals_selected_files_plus_manifest": true,
+        "source_tree_has_symbolic_links": false,
+        "parsed_xml_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_and_query_contain_literal_backslashes": false,
+        "codepoints": {
+          "app_label": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+0026",
+            "U+0020",
+            "U+0052",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0069",
+            "U+006E",
+            "U+0065",
+            "U+0073",
+            "U+0073"
+          ],
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ],
+          "earliest": [
+            "U+002D",
+            "U+0031",
+            "U+0032",
+            "U+0068"
+          ],
+          "latest": [
+            "U+006E",
+            "U+006F",
+            "U+0077"
+          ]
+        },
+        "selected_file_sha256": {
+          "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+          "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+          "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+          "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+        },
+        "receipt_factual_checks": {
+          "source_and_archive_text_comparison_count": 10,
+          "all_expected_actual_codepoints_match": true,
+          "recorded_check_count": 32,
+          "release_file_hashes_match": true,
+          "authoring_native_config_matches_fixture": true,
+          "declared_original_hash_count": 12
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-text-fix/input/native.json",
+            "runs/app-native-r2-skill-text-fix/output/report.md",
+            "runs/app-native-r2-skill-text-fix/output/verification.json",
+            "runs/app-native-r2-skill-text-fix/output/verify_release.py",
+            "runs/app-native-r2-skill-text-fix/final.txt"
+          ],
+          "reason": "Inspectable quoted values and check claims agree with decoded fixture, parsed source/archive XML, Unicode code points, actual package membership/bytes/metadata, digests and 32 stored passed statuses. No mojibake, nonexistent backslashes or replacement characters found. Bundled schema-regex execution and historical source/helper/preservation assertions are retained-record claims; candidate resources were not read or executed by this reviewer."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "No supplied program, helper or receipt text was executed.",
+        "No candidate instructions/resources, experiment traces, Git history, source checkout or condition assignments were sought.",
+        "Only entries13/14 were added to the authorized reviewer receipt; original artifacts and earlier receipt entries were not changed.",
+        "Bundled schema-regex execution and historical source/helper/preservation assertions are retained-record claims; candidate resources were not read or executed by this reviewer."
+      ]
+    },
+    "entry14": {
+      "entry_label": "entry14",
+      "directory_label": "entry-14",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:26:48.952869+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independently parsed full app.conf, exact role metadata and XML match the decoded fixture, including U+00C5, U+0022 quotes, ampersands/angle brackets and exact time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-text-fix/input/native.json",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Raw tar headers and parsed members contain one app-root directory and exactly four manifest-selected regular files; source/archive bytes, normalized metadata, size, sidecar, receipts and reported SHA-256 agree.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta/release-files.json",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-baseline-text-fix/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-baseline-text-fix/output/report.md",
+            "runs/app-native-r2-baseline-text-fix/output/verification.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final restrict completion to offline source/package evidence and leave target compatibility, AppInspect, installation and live behavior unverified.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-text-fix/output/report.md",
+            "runs/app-native-r2-baseline-text-fix/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Preservation, command-execution, target-operation and isolation traces are reserved to coordinator; not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "root_directory_header_count": 1,
+        "regular_file_count": 4,
+        "selected_archive_bytes_equal_source": true,
+        "normalized_archive_modes_owner_ids_names_timestamps": true,
+        "source_tree_equals_selected_files_plus_manifest": true,
+        "source_tree_has_symbolic_links": false,
+        "parsed_xml_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_and_query_contain_literal_backslashes": false,
+        "codepoints": {
+          "app_label": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+0026",
+            "U+0020",
+            "U+0052",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0069",
+            "U+006E",
+            "U+0065",
+            "U+0073",
+            "U+0073"
+          ],
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ],
+          "earliest": [
+            "U+002D",
+            "U+0031",
+            "U+0032",
+            "U+0068"
+          ],
+          "latest": [
+            "U+006E",
+            "U+006F",
+            "U+0077"
+          ]
+        },
+        "selected_file_sha256": {
+          "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+          "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+          "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+          "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+        },
+        "receipt_factual_checks": {
+          "text_comparison_count": 5,
+          "all_expected_actual_codepoints_counts_positions_match": true,
+          "recorded_check_count": 16,
+          "configuration_matches_fixture": true,
+          "report_hash_matches_receipt": true,
+          "query_quote_positions": [
+            28,
+            39
+          ],
+          "declared_original_hash_count": 11,
+          "script_existing_destination_refusal_statically_confirmed": true
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-text-fix/input/native.json",
+            "runs/app-native-r2-baseline-text-fix/output/report.md",
+            "runs/app-native-r2-baseline-text-fix/output/verification.json",
+            "runs/app-native-r2-baseline-text-fix/output/complete_task.py",
+            "runs/app-native-r2-baseline-text-fix/final.txt"
+          ],
+          "reason": "Inspectable quoted values and check claims agree with decoded fixture, parsed source/archive XML, Unicode code points, actual package membership/bytes/metadata, digests and 16 stored passed statuses. No mojibake, nonexistent backslashes or replacement characters found. Historical preservation, command execution, helper provenance and target-operation assertions remain trace-limited. Existing-destination refusal was inspected statically, without executing the script."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "No supplied program, helper or receipt text was executed.",
+        "No candidate instructions/resources, experiment traces, Git history, source checkout or condition assignments were sought.",
+        "Only entries13/14 were added to the authorized reviewer receipt; original artifacts and earlier receipt entries were not changed.",
+        "Historical preservation, command execution, helper provenance and target-operation assertions remain trace-limited. Existing-destination refusal was inspected statically, without executing the script."
+      ]
+    },
+    "entry15": {
+      "entry_label": "entry15",
+      "directory_label": "entry-15",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:47:35.147569+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent full configuration/role/XML parsing matches the decoded fixture exactly, including actual U+00C5, ordinary quotes, XML-sensitive characters and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-utf8/input/native.json",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar headers/members contain one app-root directory and exactly the four selected regular files; archived/source bytes, actual SHA-256, sidecar and reported values agree, without extras or links.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-utf8/output/bench_delta/release-files.json",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-baseline-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-baseline-utf8/output/report.md",
+            "runs/app-native-r1-baseline-utf8/output/verification.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final distinguish offline structure/package acceptance from unrun AppInspect and runtime checks. Unknown target compatibility remains unverified; no vendor/runtime readiness approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-utf8/output/report.md",
+            "runs/app-native-r1-baseline-utf8/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, context, transport, input-preservation history, command execution and target-operation/isolation acceptance are reserved to coordinator; not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "app_values_pass": true,
+        "shape_and_navigation_match": true,
+        "xml_serialization_matches": true,
+        "source_tree_exact": true,
+        "no_linked_selected_path_components_within_review_root": true,
+        "selected_utf8_roundtrip": true,
+        "archive_selection_pass": true,
+        "archive_metadata_normalized": true,
+        "gzip_zero_timestamp": true,
+        "gzip_no_stored_filename": true,
+        "archive_paths_safe_and_unique": true,
+        "raw_tar_headers": [
+          {
+            "name": "bench_delta/",
+            "typeflag": "5"
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "typeflag": "0"
+          }
+        ],
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "report_digest_matches": true,
+        "parsed_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_query_have_no_literal_backslash": true,
+        "actual_codepoints": {
+          "app_label": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+0026",
+            "U+0020",
+            "U+0052",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0069",
+            "U+006E",
+            "U+0065",
+            "U+0073",
+            "U+0073"
+          ],
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ],
+          "earliest": [
+            "U+002D",
+            "U+0031",
+            "U+0032",
+            "U+0068"
+          ],
+          "latest": [
+            "U+006E",
+            "U+006F",
+            "U+0077"
+          ]
+        },
+        "verification_check_count": 18,
+        "declared_check_count_matches": true,
+        "all_stored_statuses_passed": true,
+        "receipt_factual_consistency": {
+          "fixture_values_match": true,
+          "parsed_xml_values_match": true,
+          "all_five_codepoint_vectors_match": true,
+          "selected_file_hashes_and_counts_match": true,
+          "artifact_summary_matches": true,
+          "package_summary_matches_actual": true,
+          "all_declared_command_statuses_zero": true,
+          "input_digest_in_report_matches_actual": true
+        },
+        "report_selected_file_sizes_hashes_match": true,
+        "prose_encoding": {
+          "output/report.md": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": [
+              "U+00C5"
+            ]
+          },
+          "output/verification.json": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": [
+              "U+00C5"
+            ]
+          },
+          "final.txt": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": []
+          }
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r1-baseline-utf8/input/native.json",
+            "runs/app-native-r1-baseline-utf8/output/report.md",
+            "runs/app-native-r1-baseline-utf8/output/verification.json",
+            "runs/app-native-r1-baseline-utf8/final.txt"
+          ],
+          "reason": "Inspectable parsed values, Unicode vectors, file-byte counts/hashes, archive membership/types/metadata and reported digest match actual artifacts. Stored check count is 18, matching report/final. Report and receipt contain only actual U+00C5 as non-ASCII prose, with no mojibake or replacement characters. Source-preservation and execution assertions remain trace-limited."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Reviewed actual artifacts, raw fixture and original final only within the authorized blind-review tree.",
+        "Did not inspect execution context, transport, traces, candidate instructions/resources, Git history or condition assignments.",
+        "Did not execute supplied programs or helpers.",
+        "Only appended entries15/16 to the authorized reviewer receipt; earlier artifact verdicts and original files were not altered."
+      ]
+    },
+    "entry16": {
+      "entry_label": "entry16",
+      "directory_label": "entry-16",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:47:35.147749+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent full configuration/role/XML parsing matches the decoded fixture exactly, including actual U+00C5, ordinary quotes, XML-sensitive characters and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-utf8/input/native.json",
+            "runs/app-native-r1-skill-utf8/output/bench_delta/default/app.conf",
+            "runs/app-native-r1-skill-utf8/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r1-skill-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r1-skill-utf8/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar headers/members contain one app-root directory and exactly the four selected regular files; archived/source bytes, actual SHA-256, sidecar and reported values agree, without extras or links.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-utf8/output/bench_delta/release-files.json",
+            "runs/app-native-r1-skill-utf8/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r1-skill-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r1-skill-utf8/output/report.md",
+            "runs/app-native-r1-skill-utf8/output/verification.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final distinguish offline structure/package acceptance from unrun AppInspect and runtime checks. Unknown target compatibility remains unverified; no vendor/runtime readiness approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-utf8/output/report.md",
+            "runs/app-native-r1-skill-utf8/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, context, transport, input-preservation history, command execution and target-operation/isolation acceptance are reserved to coordinator; not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "app_values_pass": true,
+        "shape_and_navigation_match": true,
+        "xml_serialization_matches": true,
+        "source_tree_exact": true,
+        "no_linked_selected_path_components_within_review_root": true,
+        "selected_utf8_roundtrip": true,
+        "archive_selection_pass": true,
+        "archive_metadata_normalized": true,
+        "gzip_zero_timestamp": true,
+        "gzip_no_stored_filename": true,
+        "archive_paths_safe_and_unique": true,
+        "raw_tar_headers": [
+          {
+            "name": "bench_delta/",
+            "typeflag": "5"
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "typeflag": "0"
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "typeflag": "0"
+          }
+        ],
+        "archive_bytes": 708,
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "report_digest_matches": true,
+        "parsed_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_query_have_no_literal_backslash": true,
+        "actual_codepoints": {
+          "app_label": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+0026",
+            "U+0020",
+            "U+0052",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0069",
+            "U+006E",
+            "U+0065",
+            "U+0073",
+            "U+0073"
+          ],
+          "title": [
+            "U+0044",
+            "U+0065",
+            "U+006C",
+            "U+0074",
+            "U+0061",
+            "U+0020",
+            "U+003C",
+            "U+0048",
+            "U+0065",
+            "U+0061",
+            "U+006C",
+            "U+0074",
+            "U+0068",
+            "U+003E",
+            "U+0020",
+            "U+00C5"
+          ],
+          "query": [
+            "U+007C",
+            "U+0020",
+            "U+006D",
+            "U+0061",
+            "U+006B",
+            "U+0065",
+            "U+0072",
+            "U+0065",
+            "U+0073",
+            "U+0075",
+            "U+006C",
+            "U+0074",
+            "U+0073",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0065",
+            "U+0076",
+            "U+0061",
+            "U+006C",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073",
+            "U+003D",
+            "U+0022",
+            "U+0041",
+            "U+0026",
+            "U+0042",
+            "U+003C",
+            "U+0072",
+            "U+0065",
+            "U+0061",
+            "U+0064",
+            "U+0079",
+            "U+003E",
+            "U+0022",
+            "U+0020",
+            "U+007C",
+            "U+0020",
+            "U+0074",
+            "U+0061",
+            "U+0062",
+            "U+006C",
+            "U+0065",
+            "U+0020",
+            "U+0073",
+            "U+0074",
+            "U+0061",
+            "U+0074",
+            "U+0075",
+            "U+0073"
+          ],
+          "earliest": [
+            "U+002D",
+            "U+0031",
+            "U+0032",
+            "U+0068"
+          ],
+          "latest": [
+            "U+006E",
+            "U+006F",
+            "U+0077"
+          ]
+        },
+        "verification_check_count": 16,
+        "declared_check_count_matches": true,
+        "all_stored_statuses_passed": true,
+        "receipt_factual_consistency": {
+          "fixture_values_match": true,
+          "configuration_check_evidence_match": true,
+          "native_structure_evidence_matches": true,
+          "title_and_query_codepoint_vectors_match": true,
+          "selected_file_hashes_match": true,
+          "membership_evidence_matches": true,
+          "archive_metadata_evidence_matches": true,
+          "per_file_bytes_hash_evidence_matches": true,
+          "independent_digest_evidence_matches": true,
+          "gzip_timestamp_evidence_matches": true,
+          "origin_config_matches_fixture": true,
+          "package_summary_matches_actual": true,
+          "all_declared_command_statuses_zero": true,
+          "input_digest_in_report_matches_actual": true
+        },
+        "report_selected_file_sizes_hashes_match": null,
+        "prose_encoding": {
+          "output/report.md": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": [
+              "U+00C5"
+            ]
+          },
+          "output/verification.json": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": [
+              "U+00C5"
+            ]
+          },
+          "final.txt": {
+            "valid_utf8": true,
+            "replacement_character_present": false,
+            "non_ascii_codepoints": []
+          }
+        }
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r1-skill-utf8/input/native.json",
+            "runs/app-native-r1-skill-utf8/output/report.md",
+            "runs/app-native-r1-skill-utf8/output/verification.json",
+            "runs/app-native-r1-skill-utf8/final.txt"
+          ],
+          "reason": "Inspectable parsed values, Unicode vectors, file-byte counts/hashes, archive membership/types/metadata and reported digest match actual artifacts. Stored check count is 16, matching report/final. Report and receipt contain only actual U+00C5 as non-ASCII prose, with no mojibake or replacement characters. Source-preservation and execution assertions remain trace-limited."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Reviewed actual artifacts, raw fixture and original final only within the authorized blind-review tree.",
+        "Did not inspect execution context, transport, traces, candidate instructions/resources, Git history or condition assignments.",
+        "Did not execute supplied programs or helpers.",
+        "Only appended entries15/16 to the authorized reviewer receipt; earlier artifact verdicts and original files were not altered."
+      ]
+    },
+    "entry17": {
+      "entry_label": "entry17",
+      "directory_label": "entry-17",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:58:56.215362+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent full configuration, role and XML parsing matches the decoded fixture exactly, including U+00C5, ordinary quotes, XML-sensitive characters and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-utf8/input/native.json",
+            "runs/app-native-r2-skill-utf8/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-skill-utf8/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-skill-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r2-skill-utf8/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar headers and members contain one app-root directory and exactly the four selected regular files. Archived and source bytes, actual SHA-256, sidecar and report agree, without extra headers, files or links.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-utf8/output/bench_delta/release-files.json",
+            "runs/app-native-r2-skill-utf8/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-skill-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-skill-utf8/output/report.md",
+            "runs/app-native-r2-skill-utf8/output/verification-results.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final distinguish offline structure/package evidence from unrun AppInspect and runtime checks. Unknown target compatibility and effective permissions remain unverified; no vendor/runtime approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-utf8/output/report.md",
+            "runs/app-native-r2-skill-utf8/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, execution, context, transport, preservation history and target-operation/isolation acceptance are reserved to coordinator and were not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "fixture_sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "archive_bytes": 708,
+        "source_files": [
+          {
+            "path": "default/app.conf",
+            "bytes": 269,
+            "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+          },
+          {
+            "path": "default/data/ui/nav/default.xml",
+            "bytes": 111,
+            "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+          },
+          {
+            "path": "default/data/ui/views/home.xml",
+            "bytes": 440,
+            "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+          },
+          {
+            "path": "metadata/default.meta",
+            "bytes": 76,
+            "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+          }
+        ],
+        "raw_tar_headers": [
+          {
+            "name": "bench_delta/",
+            "type": "5",
+            "bytes": 0
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "type": "0",
+            "bytes": 269
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "type": "0",
+            "bytes": 111
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "type": "0",
+            "bytes": 440
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "type": "0",
+            "bytes": 76
+          }
+        ],
+        "archive_members": [
+          {
+            "name": "bench_delta",
+            "type": "directory",
+            "size": 0,
+            "mode": "0o755",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "type": "file",
+            "size": 269,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "type": "file",
+            "size": 111,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "type": "file",
+            "size": 440,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "type": "file",
+            "size": 76,
+            "mode": "0o644",
+            "mtime": 0
+          }
+        ],
+        "parsed_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_last_codepoint": "U+00C5",
+        "query_quote_count": 2,
+        "query_backslash_count": 0,
+        "stored_check_count": 13,
+        "independent_fact_checks": {
+          "app_conf_exact": true,
+          "metadata_roles_export_exact": true,
+          "xml_values_exact": true,
+          "native_shape_exact": true,
+          "navigation_exact": true,
+          "xml_no_doctype_entity": true,
+          "manifest_exact": true,
+          "app_tree_only_selected_and_manifest": true,
+          "selected_safe_regular_utf8": true,
+          "raw_tar_exact_headers": true,
+          "tar_no_post_end_data": true,
+          "tar_exact_selection": true,
+          "archive_bytes_equal_source": true,
+          "tar_normalized_metadata": true,
+          "gzip_normalized_metadata": true,
+          "digest_file_exact": true,
+          "report_exact_unicode_and_query": true,
+          "report_digest_exact": true,
+          "report_no_observed_mojibake": true,
+          "stored_check_count_matches": true,
+          "stored_xml_value_and_codepoints_exact": true,
+          "stored_configuration_details_exact": true,
+          "stored_metadata_details_exact": true,
+          "stored_archive_members_and_payload_exact": true,
+          "stored_archive_size_digest_exact": true,
+          "command_results_internal_consistency": true,
+          "authoring_values_exact": true,
+          "authoring_digest_exact": true,
+          "source_hash_fixture_exact": true,
+          "package_receipt_identity_selection_digest_exact": true,
+          "final_check_count_matches": true
+        },
+        "failed_fact_checks": [],
+        "prose_non_ascii_lines": [
+          {
+            "line": 13,
+            "text": "| Dashboard panel title | `Delta <Health> \u00c5` |",
+            "non_ascii": [
+              "U+00C5"
+            ]
+          },
+          {
+            "line": 22,
+            "text": "The verifier compared parsed XML Unicode text to these same decoded values. The title's final character is `U+00C5` (\u00c5); the search has 2 `U+0022` quotation marks and 0 `U+005C` backslashes. Ampersands and angle brackets were escaped in serialized XML and recovered unchanged after parsing. Full parsed values and code points are retained in [verification-results.json](verification-results.json).",
+            "non_ascii": [
+              "U+00C5"
+            ]
+          }
+        ],
+        "evidence_limits_prose": {
+          "report": {
+            "appinspect_mentioned": true,
+            "runtime_or_live_mentioned": true,
+            "unverified_or_unknown_mentioned": true
+          },
+          "final": {
+            "appinspect_mentioned": true,
+            "runtime_or_live_mentioned": true,
+            "unverified_or_unknown_mentioned": true
+          }
+        },
+        "trace_checks_not_reviewed": true,
+        "external_helper_resource_not_reviewed": true
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r2-skill-utf8/input/native.json",
+            "runs/app-native-r2-skill-utf8/output/report.md",
+            "runs/app-native-r2-skill-utf8/output/verification-results.json",
+            "runs/app-native-r2-skill-utf8/final.txt"
+          ],
+          "reason": "Inspectable report/check values, Unicode vectors, configuration, source/archive byte counts, hashes, selection and metadata agree with actual artifacts. Stored check count is 13, matching the report/final. Report prose retains actual U+00C5 with no observed mojibake. Execution and preservation assertions and inaccessible helper-dependent validation remain unreviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read actual entry input/output/final and existing task/receipt only within the authorized blind-review tree.",
+        "Did not inspect conditions, execution context, traces, history, candidate instructions or resources.",
+        "Did not execute supplied programs or helpers. Static entry-18 verifier inspection found no direct writes; imported helper behavior was not independently reviewed.",
+        "Only appended entries17/18 to the authorized reviewer receipt; earlier verdicts and original artifacts were not changed."
+      ]
+    },
+    "entry18": {
+      "entry_label": "entry18",
+      "directory_label": "entry-18",
+      "task_definition_path": "snapshots/app-native-task.json",
+      "reviewed_at_utc": "2026-10-03T22:58:56.215473+00:00",
+      "criteria": {
+        "app-values": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent full configuration, role and XML parsing matches the decoded fixture exactly, including U+00C5, ordinary quotes, XML-sensitive characters and time bounds.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-utf8/input/native.json",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta/default/app.conf",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta/metadata/default.meta",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta/default/data/ui/nav/default.xml",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta/default/data/ui/views/home.xml"
+          ]
+        },
+        "archive-selection": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual tar headers and members contain one app-root directory and exactly the four selected regular files. Archived and source bytes, actual SHA-256, sidecar and report agree, without extra headers, files or links.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-utf8/output/bench_delta/release-files.json",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta-0.2.1.tar.gz",
+            "runs/app-native-r2-baseline-utf8/output/bench_delta-0.2.1.tar.gz.sha256",
+            "runs/app-native-r2-baseline-utf8/output/report.md",
+            "runs/app-native-r2-baseline-utf8/output/verification-receipt.json"
+          ]
+        },
+        "evidence-limits": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Report and original final distinguish offline structure/package evidence from unrun AppInspect and runtime checks. Unknown target compatibility and effective permissions remain unverified; no vendor/runtime approval is claimed.",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-utf8/output/report.md",
+            "runs/app-native-r2-baseline-utf8/final.txt"
+          ]
+        },
+        "preservation": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, execution, context, transport, preservation history and target-operation/isolation acceptance are reserved to coordinator and were not independently reviewed.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "fixture_sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+        "archive_sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+        "archive_bytes": 708,
+        "source_files": [
+          {
+            "path": "default/app.conf",
+            "bytes": 269,
+            "sha256": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf"
+          },
+          {
+            "path": "default/data/ui/nav/default.xml",
+            "bytes": 111,
+            "sha256": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05"
+          },
+          {
+            "path": "default/data/ui/views/home.xml",
+            "bytes": 440,
+            "sha256": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4"
+          },
+          {
+            "path": "metadata/default.meta",
+            "bytes": 76,
+            "sha256": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+          }
+        ],
+        "raw_tar_headers": [
+          {
+            "name": "bench_delta/",
+            "type": "5",
+            "bytes": 0
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "type": "0",
+            "bytes": 269
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "type": "0",
+            "bytes": 111
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "type": "0",
+            "bytes": 440
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "type": "0",
+            "bytes": 76
+          }
+        ],
+        "archive_members": [
+          {
+            "name": "bench_delta",
+            "type": "directory",
+            "size": 0,
+            "mode": "0o755",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/app.conf",
+            "type": "file",
+            "size": 269,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/data/ui/nav/default.xml",
+            "type": "file",
+            "size": 111,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/default/data/ui/views/home.xml",
+            "type": "file",
+            "size": 440,
+            "mode": "0o644",
+            "mtime": 0
+          },
+          {
+            "name": "bench_delta/metadata/default.meta",
+            "type": "file",
+            "size": 76,
+            "mode": "0o644",
+            "mtime": 0
+          }
+        ],
+        "parsed_values": {
+          "app_label": "Delta & Readiness",
+          "title": "Delta <Health> \u00c5",
+          "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+          "earliest": "-12h",
+          "latest": "now"
+        },
+        "title_last_codepoint": "U+00C5",
+        "query_quote_count": 2,
+        "query_backslash_count": 0,
+        "stored_check_count": 19,
+        "independent_fact_checks": {
+          "app_conf_exact": true,
+          "metadata_roles_export_exact": true,
+          "xml_values_exact": true,
+          "native_shape_exact": true,
+          "navigation_exact": true,
+          "xml_no_doctype_entity": true,
+          "manifest_exact": true,
+          "app_tree_only_selected_and_manifest": true,
+          "selected_safe_regular_utf8": true,
+          "raw_tar_exact_headers": true,
+          "tar_no_post_end_data": true,
+          "tar_exact_selection": true,
+          "archive_bytes_equal_source": true,
+          "tar_normalized_metadata": true,
+          "gzip_normalized_metadata": true,
+          "digest_file_exact": true,
+          "report_exact_unicode_and_query": true,
+          "report_digest_exact": true,
+          "report_no_observed_mojibake": true,
+          "stored_check_count_matches": true,
+          "stored_xml_value_and_codepoints_exact": true,
+          "stored_source_size_hashes_exact": true,
+          "stored_archive_values_exact": true,
+          "stored_fixture_hash_exact": true,
+          "conventional_digest_receipt_consistent": true,
+          "read_only_verifier_no_direct_writes": true,
+          "package_receipt_identity_selection_digest_exact": true,
+          "final_check_count_matches": true
+        },
+        "failed_fact_checks": [],
+        "prose_non_ascii_lines": [
+          {
+            "line": 21,
+            "text": "| Dashboard panel title | `Delta <Health> \u00c5` |",
+            "non_ascii": [
+              "U+00C5"
+            ]
+          },
+          {
+            "line": 31,
+            "text": "The dashboard label, panel title, query, earliest and latest were compared as decoded Unicode strings against parsed XML text. Every equality assertion passed. XML escaping preserves ampersands and angle brackets as text. The title ends with U+00C5 (`\u00c5`); the query contains 2 U+0022 double quotes and 0 U+005C backslashes. These counts come from the same parsed values, not their JSON/tool display representations. Full code-point evidence is in [verification-receipt.json](verification-receipt.json).",
+            "non_ascii": [
+              "U+00C5"
+            ]
+          }
+        ],
+        "evidence_limits_prose": {
+          "report": {
+            "appinspect_mentioned": true,
+            "runtime_or_live_mentioned": true,
+            "unverified_or_unknown_mentioned": true
+          },
+          "final": {
+            "appinspect_mentioned": true,
+            "runtime_or_live_mentioned": true,
+            "unverified_or_unknown_mentioned": true
+          }
+        },
+        "trace_checks_not_reviewed": true,
+        "external_helper_resource_not_reviewed": true
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/app-native-r2-baseline-utf8/input/native.json",
+            "runs/app-native-r2-baseline-utf8/output/report.md",
+            "runs/app-native-r2-baseline-utf8/output/verification-receipt.json",
+            "runs/app-native-r2-baseline-utf8/final.txt"
+          ],
+          "reason": "Inspectable report/check values, Unicode vectors, configuration, source/archive byte counts, hashes, selection and metadata agree with actual artifacts. Stored check count is 19, matching the report/final. Report prose retains actual U+00C5 with no observed mojibake. Execution and preservation assertions and inaccessible helper-dependent validation remain unreviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "reported_offline_check_count_matches_stored_receipt": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read actual entry input/output/final and existing task/receipt only within the authorized blind-review tree.",
+        "Did not inspect conditions, execution context, traces, history, candidate instructions or resources.",
+        "Did not execute supplied programs or helpers. Static entry-18 verifier inspection found no direct writes; imported helper behavior was not independently reviewed.",
+        "Only appended entries17/18 to the authorized reviewer receipt; earlier verdicts and original artifacts were not changed."
+      ]
+    },
+    "entry19": {
+      "entry_label": "entry19",
+      "directory_label": "entry-19",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:00:50.023655+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hashes of supplied B candidate and A receipt agree with the record and review. Review correctly identifies the distinct recorded A subject digest; A artifact bytes are not supplied and not claimed independently checked.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline-utf8/input/candidate.bin",
+            "runs/release-changed-r1-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r1-baseline-utf8/input/record.json",
+            "runs/release-changed-r1-baseline-utf8/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review correctly distinguishes synthetic-revision-b from synthetic-revision-a and explains that the historical A package pass cannot establish a pass for changed B. Current decision is incomplete evidence, without inventing an observed B package failure.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline-utf8/input/record.json",
+            "runs/release-changed-r1-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r1-baseline-utf8/output/review.md",
+            "runs/release-changed-r1-baseline-utf8/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requests maintained checks and acceptance criteria for exact B, new B-bound source/artifact/receipt evidence, preserved historical A bindings and renewed consistency/semantic review. It forbids relabeling the old receipt as B evidence.",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline-utf8/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, preservation history and installation/connection/isolation acceptance remain coordinator responsibilities. Separately reviewed report/final readiness prose contains no unsupported readiness claim.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "output/review.md": "6072748c036ca40224238a2fea6b12cc69ea13ffd72903418f41cdfa791fb6cd",
+          "final.txt": "bb3b56fe5a5195229a4301b05263f537ae4bcbef49257181667fb961415aa442"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "output/review.md": 5931,
+          "final.txt": 256
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_B_observed_contents": "Synthetic candidate B changed bytes\n",
+        "receipt_observed_contents": "Synthetic package check for candidate A; not a vendor report.\n",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open; no observed B package failure",
+        "independent_fact_checks": {
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "report_B_and_recorded_A_hashes_exact": true,
+          "report_receipt_and_record_hashes_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "report_current_identity_exact": true,
+          "report_current_B_failure_not_inferred": true,
+          "next_check_requires_new_B_evidence": true,
+          "historical_A_not_relabelled": true,
+          "report_file_byte_counts_exact": true,
+          "report_final_UTF8_fidelity": true
+        },
+        "failed_fact_checks": [],
+        "report_binding_line_numbers": {
+          "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771": [
+            19,
+            56
+          ],
+          "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750": [
+            19
+          ],
+          "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257": [
+            27
+          ],
+          "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f": [
+            35
+          ],
+          "synthetic-revision-b": [
+            14,
+            56
+          ],
+          "synthetic-revision-a": [
+            14
+          ]
+        },
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [
+            "U+2014"
+          ],
+          "final.txt": [
+            "U+2019"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r1-baseline-utf8/input/record.json",
+            "runs/release-changed-r1-baseline-utf8/input/candidate.bin",
+            "runs/release-changed-r1-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r1-baseline-utf8/output/review.md",
+            "runs/release-changed-r1-baseline-utf8/final.txt"
+          ],
+          "reason": "Reported identity, revisions, candidate/receipt/record hashes, applicable byte counts and receipt contents match the supplied bytes. Correct present decision and exact-B next checks are stated. UTF-8 report/final retain valid U+2014 and U+2019 prose punctuation without observed mojibake. Helper execution and formal resource-contract assertions were not independently reviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry19/20 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, execution context or candidate resources/instructions.",
+        "Did not run supplied programs, helper or receipt text.",
+        "Only appended entries19/20 to the authorized receipt; earlier verdicts and original artifacts were not altered."
+      ]
+    },
+    "entry20": {
+      "entry_label": "entry20",
+      "directory_label": "entry-20",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:00:50.023735+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Independent hashes of supplied B candidate and A receipt agree with the record and review. Review correctly identifies the distinct recorded A subject digest; A artifact bytes are not supplied and not claimed independently checked.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill-utf8/input/candidate.bin",
+            "runs/release-changed-r1-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r1-skill-utf8/input/record.json",
+            "runs/release-changed-r1-skill-utf8/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review correctly distinguishes synthetic-revision-b from synthetic-revision-a and explains that the historical A package pass cannot establish a pass for changed B. Current decision is incomplete evidence, without inventing an observed B package failure.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill-utf8/input/record.json",
+            "runs/release-changed-r1-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r1-skill-utf8/output/review.md",
+            "runs/release-changed-r1-skill-utf8/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Review requests maintained checks and acceptance criteria for exact B, new B-bound source/artifact/receipt evidence, preserved historical A bindings and renewed consistency/semantic review. It forbids relabeling the old receipt as B evidence.",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill-utf8/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, preservation history and installation/connection/isolation acceptance remain coordinator responsibilities. Separately reviewed report/final readiness prose contains no unsupported readiness claim.",
+          "evidence_paths": []
+        }
+      },
+      "independent_artifact_observations": {
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "output/review.md": "7526650470db6e17dd9850451ac4c178e30f6e2ae05842111c36624b0352a6e8",
+          "final.txt": "66690d2ce960ebb74c2e20ca09a03fc3f524d7d6aa12fd1ad0e8fc43e87e6a44"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "output/review.md": 6513,
+          "final.txt": 303
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "candidate_B_observed_contents": "Synthetic candidate B changed bytes\n",
+        "receipt_observed_contents": "Synthetic package check for candidate A; not a vendor report.\n",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open; no observed B package failure",
+        "independent_fact_checks": {
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "report_B_and_recorded_A_hashes_exact": true,
+          "report_receipt_and_record_hashes_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "report_current_identity_exact": true,
+          "report_current_B_failure_not_inferred": true,
+          "next_check_requires_new_B_evidence": true,
+          "historical_A_not_relabelled": true,
+          "report_file_byte_counts_exact": true,
+          "report_final_UTF8_fidelity": true
+        },
+        "failed_fact_checks": [],
+        "report_binding_line_numbers": {
+          "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771": [
+            17,
+            30,
+            60
+          ],
+          "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750": [
+            17
+          ],
+          "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257": [
+            20,
+            31
+          ],
+          "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f": [
+            32
+          ],
+          "synthetic-revision-b": [
+            12,
+            59
+          ],
+          "synthetic-revision-a": [
+            12
+          ]
+        },
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [
+            "U+2014"
+          ],
+          "final.txt": [
+            "U+2019"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r1-skill-utf8/input/record.json",
+            "runs/release-changed-r1-skill-utf8/input/candidate.bin",
+            "runs/release-changed-r1-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r1-skill-utf8/output/review.md",
+            "runs/release-changed-r1-skill-utf8/final.txt"
+          ],
+          "reason": "Reported identity, revisions, candidate/receipt/record hashes, applicable byte counts and receipt contents match the supplied bytes. Correct present decision and exact-B next checks are stated. UTF-8 report/final retain valid U+2014 and U+2019 prose punctuation without observed mojibake. Helper execution and formal resource-contract assertions were not independently reviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry19/20 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, execution context or candidate resources/instructions.",
+        "Did not run supplied programs, helper or receipt text.",
+        "Only appended entries19/20 to the authorized receipt; earlier verdicts and original artifacts were not altered."
+      ]
+    },
+    "entry21": {
+      "entry_label": "entry21",
+      "directory_label": "entry-21",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:06:41.995982+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "fail",
+          "review": "reviewed",
+          "reason": "The requested output/review.md does not exist and the actual output directory is empty. Exact candidate B and recorded A digests appear only in final.txt; response text is not delivery of the required review artifact.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-utf8/output",
+            "runs/release-changed-r2-skill-utf8/output/review.md",
+            "runs/release-changed-r2-skill-utf8/input/record.json",
+            "runs/release-changed-r2-skill-utf8/input/candidate.bin",
+            "runs/release-changed-r2-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r2-skill-utf8/final.txt"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Semantic claim in the actual final response correctly distinguishes source revisions A and B and explains that A cannot qualify B. This verdict assesses the response claim only and does not establish report delivery or task completion.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-utf8/input/record.json",
+            "runs/release-changed-r2-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r2-skill-utf8/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual final response requests maintained package checks on exact B bytes/source, semantic results and a separate new B evidence record while preserving A historically. This semantic pass does not substitute for the missing report.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-utf8/final.txt"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, filesystem-restriction claim, preservation history and installation/connection/isolation acceptance are reserved to coordinator. Final readiness prose separately contains no unsupported approval claim.",
+          "evidence_paths": []
+        }
+      },
+      "requested_deliverable_review": {
+        "path": "runs/release-changed-r2-skill-utf8/output/review.md",
+        "exists": false,
+        "verdict": "fail",
+        "response_only_text_counts_as_delivery": false
+      },
+      "independent_artifact_observations": {
+        "requested_report_path": "runs/release-changed-r2-skill-utf8/output/review.md",
+        "requested_report_exists": false,
+        "output_file_inventory": [],
+        "requested_deliverable_delivered": false,
+        "response_only_review_not_report_delivery": true,
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "final.txt": "df98633c36d0724a6f008662db9b0ecfbaedbd0ccf914310ba1b83d54022ca30"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "final.txt": 2642
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open",
+        "available_prose_independent_fact_checks": {
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "available_prose_B_and_recorded_A_hashes_exact": true,
+          "available_prose_receipt_hash_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "available_prose_current_identity_exact": true,
+          "next_check_requires_maintained_exact_B_new_evidence": true,
+          "historical_A_evidence_preserved": true,
+          "report_final_UTF8_fidelity": true,
+          "response_file_sizes_exact": true,
+          "response_acknowledges_missing_deliverable": true
+        },
+        "failed_available_prose_fact_checks": [],
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [],
+          "final.txt": [
+            "U+2019",
+            "U+201C",
+            "U+201D"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "filesystem_restriction_claim_not_reviewed": true,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "requested-deliverable-missing",
+          "severity": "material",
+          "diagnostic_verdict": "fail",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-utf8/output",
+            "runs/release-changed-r2-skill-utf8/output/review.md",
+            "runs/release-changed-r2-skill-utf8/final.txt"
+          ],
+          "reason": "No output files were delivered; output/review.md is absent. The final response acknowledges the absence and contains review prose, which does not satisfy the requested file deliverable. The stated filesystem restriction is a trace claim and was not verified or used to excuse missing delivery."
+        },
+        {
+          "id": "response-semantic-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-utf8/input/record.json",
+            "runs/release-changed-r2-skill-utf8/input/candidate.bin",
+            "runs/release-changed-r2-skill-utf8/input/receipt.txt",
+            "runs/release-changed-r2-skill-utf8/final.txt"
+          ],
+          "reason": "Final response accurately gives the independently verified B/receipt hashes, recorded A digest and revisions, correct open-gate decision and maintained exact-B next checks. No readiness approval or mojibake was found. These semantic observations are separate from the failed artifact delivery."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "acknowledges_missing_report": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry21/22 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, runtime, execution context or candidate resources/instructions.",
+        "Did not run supplied programs, helper or receipt text; did not create a substitute report.",
+        "Only appended entries21/22 to the authorized receipt; earlier verdicts and original artifacts were not altered."
+      ]
+    },
+    "entry22": {
+      "entry_label": "entry22",
+      "directory_label": "entry-22",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:06:41.996064+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual report records the independently verified B candidate and receipt hashes and correctly treats the distinct A subject digest as recorded, not independently observed A bytes.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-utf8/input/candidate.bin",
+            "runs/release-changed-r2-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r2-baseline-utf8/input/record.json",
+            "runs/release-changed-r2-baseline-utf8/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual report correctly distinguishes synthetic-revision-b from synthetic-revision-a and explains that the historical A package pass cannot establish exact-B acceptance; the present B package gate remains open.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-utf8/input/record.json",
+            "runs/release-changed-r2-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r2-baseline-utf8/output/review.md",
+            "runs/release-changed-r2-baseline-utf8/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Actual report requires maintained checks and established criteria on exact B, fresh B-bound source/artifact/receipt evidence, preserved historical A results and renewed consistency/semantic review; relabeling stale evidence is rejected.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-utf8/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, preservation history and installation/connection/isolation acceptance remain coordinator responsibilities. Separately reviewed report/final readiness prose contains no unsupported approval claim.",
+          "evidence_paths": []
+        }
+      },
+      "requested_deliverable_review": {
+        "path": "runs/release-changed-r2-baseline-utf8/output/review.md",
+        "exists": true,
+        "verdict": "pass",
+        "response_only_text_counts_as_delivery": false
+      },
+      "independent_artifact_observations": {
+        "requested_report_path": "runs/release-changed-r2-baseline-utf8/output/review.md",
+        "requested_report_exists": true,
+        "output_file_inventory": [
+          "review.md"
+        ],
+        "requested_deliverable_delivered": true,
+        "response_only_review_not_report_delivery": false,
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "final.txt": "9ff56009f763b14724bc31718e308c473f391222f2c9cae8e88ae02f79689650",
+          "output/review.md": "abcd2e09baf7c512c04b09768bf81c688662742d000c3013d5c68fc1635e7bf1"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "final.txt": 355,
+          "output/review.md": 5568
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open",
+        "available_prose_independent_fact_checks": {
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "available_prose_B_and_recorded_A_hashes_exact": true,
+          "available_prose_receipt_hash_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "available_prose_current_identity_exact": true,
+          "next_check_requires_maintained_exact_B_new_evidence": true,
+          "historical_A_evidence_preserved": true,
+          "report_final_UTF8_fidelity": true,
+          "report_record_hash_exact": true,
+          "report_candidate_bytes_content_exact": true,
+          "report_forbids_stale_evidence_relabeling": true
+        },
+        "failed_available_prose_fact_checks": [],
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [],
+          "final.txt": [
+            "U+2019"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "filesystem_restriction_claim_not_reviewed": false,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-utf8/input/record.json",
+            "runs/release-changed-r2-baseline-utf8/input/candidate.bin",
+            "runs/release-changed-r2-baseline-utf8/input/receipt.txt",
+            "runs/release-changed-r2-baseline-utf8/output/review.md",
+            "runs/release-changed-r2-baseline-utf8/final.txt"
+          ],
+          "reason": "Delivered report identity, revisions, hashes, candidate byte count/content, receipt contents, decision and next checks agree with actual artifacts. Report/final UTF-8 fidelity is intact. Execution and resource-contract claims were not independently reviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "acknowledges_missing_report": false,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry21/22 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, runtime, execution context or candidate resources/instructions.",
+        "Did not run supplied programs, helper or receipt text; did not create a substitute report.",
+        "Only appended entries21/22 to the authorized receipt; earlier verdicts and original artifacts were not altered."
+      ]
+    },
+    "entry23": {
+      "entry_label": "entry23",
+      "directory_label": "entry-23",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:12:01.361215+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review records independently verified B candidate and receipt hashes and correctly identifies the distinct recorded A subject digest. It does not claim A artifact bytes were independently checked.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-write-clarified/input/candidate.bin",
+            "runs/release-changed-r2-skill-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-skill-write-clarified/input/record.json",
+            "runs/release-changed-r2-skill-write-clarified/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review correctly distinguishes synthetic-revision-b from synthetic-revision-a and explains that A package evidence cannot qualify changed B. Present decision is incomplete evidence with B required package gate still open.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-write-clarified/input/record.json",
+            "runs/release-changed-r2-skill-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-skill-write-clarified/output/review.md",
+            "runs/release-changed-r2-skill-write-clarified/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review requests maintained checks and acceptance criteria on exact B, fresh source/artifact/receipt bindings and semantic results, preserves historical A evidence and rejects relabeling stale subjects or source fields.",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-write-clarified/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, preservation history and installation/connection/isolation acceptance remain coordinator responsibilities. Separately reviewed report/final readiness prose contains no unsupported approval claim.",
+          "evidence_paths": []
+        }
+      },
+      "requested_deliverable_review": {
+        "path": "runs/release-changed-r2-skill-write-clarified/output/review.md",
+        "exists": true,
+        "verdict": "pass",
+        "response_only_text_counts_as_delivery": false
+      },
+      "independent_artifact_observations": {
+        "requested_report_path": "runs/release-changed-r2-skill-write-clarified/output/review.md",
+        "requested_report_exists": true,
+        "requested_deliverable_delivered": true,
+        "output_file_inventory": [
+          "review.md"
+        ],
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "output/review.md": "f78460787305470895a304285f0b76799c88262f1c05470c6bcc7851cce7ed08",
+          "final.txt": "7614bbd858109229805a91146707b1799febe315271df4e8794f270af57ac7d0"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "output/review.md": 4490,
+          "final.txt": 308
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open; no observed B verifier failure",
+        "independent_fact_checks": {
+          "required_report_delivered": true,
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "report_B_and_recorded_A_hashes_exact": true,
+          "report_receipt_and_record_hashes_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "report_current_identity_exact": true,
+          "report_candidate_bytes_content_exact": true,
+          "fresh_maintained_exact_B_evidence_required": true,
+          "A_artifact_independent_verification_absence_acknowledged": true,
+          "report_final_UTF8_fidelity": true,
+          "receipt_byte_count_exact": true,
+          "report_rejects_relabeling_old_receipt": true
+        },
+        "failed_fact_checks": [],
+        "report_binding_line_numbers": {
+          "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771": [
+            20
+          ],
+          "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750": [
+            21
+          ],
+          "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257": [
+            22
+          ],
+          "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f": [
+            7
+          ],
+          "synthetic-revision-b": [
+            12
+          ],
+          "synthetic-revision-a": [
+            12
+          ]
+        },
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [
+            "U+2014",
+            "U+201C",
+            "U+201D"
+          ],
+          "final.txt": [
+            "U+2019"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-skill-write-clarified/input/record.json",
+            "runs/release-changed-r2-skill-write-clarified/input/candidate.bin",
+            "runs/release-changed-r2-skill-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-skill-write-clarified/output/review.md",
+            "runs/release-changed-r2-skill-write-clarified/final.txt"
+          ],
+          "reason": "Report identity, revisions, exact candidate/receipt/record hashes, candidate and receipt byte counts/content, receipt wording, current decision and next checks match the supplied artifacts. Unicode prose is valid without observed mojibake. Helper execution, preservation history and formal resource-contract assertions remain unreviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "requested_report_creation_claim_matches_actual_delivery": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry23/24 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, runtime, execution context or candidate resources/instructions.",
+        "Did not execute supplied helper, programs or receipt text.",
+        "Only appended entries23/24 to the authorized receipt; all22 prior entries and original artifacts were preserved."
+      ]
+    },
+    "entry24": {
+      "entry_label": "entry24",
+      "directory_label": "entry-24",
+      "task_definition_path": "snapshots/release-changed-task.json",
+      "reviewed_at_utc": "2026-10-03T23:12:01.361302+00:00",
+      "criteria": {
+        "actual-digest": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review records independently verified B candidate and receipt hashes and correctly identifies the distinct recorded A subject digest. It does not claim A artifact bytes were independently checked.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-write-clarified/input/candidate.bin",
+            "runs/release-changed-r2-baseline-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+            "runs/release-changed-r2-baseline-write-clarified/output/review.md"
+          ]
+        },
+        "source-gap": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review correctly distinguishes synthetic-revision-b from synthetic-revision-a and explains that A package evidence cannot qualify changed B. Present decision is incomplete evidence with B required package gate still open.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+            "runs/release-changed-r2-baseline-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+            "runs/release-changed-r2-baseline-write-clarified/final.txt"
+          ]
+        },
+        "next-check": {
+          "verdict": "pass",
+          "review": "reviewed",
+          "reason": "Delivered review requests maintained checks and acceptance criteria on exact B, fresh source/artifact/receipt bindings and semantic results, preserves historical A evidence and rejects relabeling stale subjects or source fields.",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-write-clarified/output/review.md"
+          ]
+        },
+        "bounded-review": {
+          "verdict": "unknown",
+          "review": "not_reviewed",
+          "reason": "Trace, helper execution, preservation history and installation/connection/isolation acceptance remain coordinator responsibilities. Separately reviewed report/final readiness prose contains no unsupported approval claim.",
+          "evidence_paths": []
+        }
+      },
+      "requested_deliverable_review": {
+        "path": "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+        "exists": true,
+        "verdict": "pass",
+        "response_only_text_counts_as_delivery": false
+      },
+      "independent_artifact_observations": {
+        "requested_report_path": "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+        "requested_report_exists": true,
+        "requested_deliverable_delivered": true,
+        "output_file_inventory": [
+          "record-review.json",
+          "review.md"
+        ],
+        "observed_sha256": {
+          "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+          "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+          "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+          "output/review.md": "c7dc05d340e6bbf7b8c208dd5bf0f217ad63402bee987e50c012103d083f1dff",
+          "final.txt": "8fdfd226da06d665c2608d99e4512b39be41175f5fef96656a3874bbeef2576b",
+          "output/record-review.json": "07f3df889cd3a8037271bfcfc99ba3f3e0a91cbe7bab70b0660bc730658344d5"
+        },
+        "observed_bytes": {
+          "input/record.json": 1066,
+          "input/candidate.bin": 36,
+          "input/receipt.txt": 62,
+          "output/review.md": 4428,
+          "final.txt": 304,
+          "output/record-review.json": 1167
+        },
+        "candidate_B_source_revision": "synthetic-revision-b",
+        "recorded_A_check_source_revision": "synthetic-revision-a",
+        "candidate_B_actual_sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+        "recorded_A_subject_sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750",
+        "receipt_actual_sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+        "record_actual_sha256": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f",
+        "required_check_count": 1,
+        "recorded_package_status": "passed",
+        "present_B_decision": "incomplete evidence; required package gate open; no observed B verifier failure",
+        "independent_fact_checks": {
+          "required_report_delivered": true,
+          "actual_B_hash_matches_record": true,
+          "actual_receipt_hash_matches_record": true,
+          "report_B_and_recorded_A_hashes_exact": true,
+          "report_receipt_and_record_hashes_exact": true,
+          "source_A_B_revisions_reported_and_distinct": true,
+          "logical_artifact_subject_id_matches": true,
+          "one_required_package_check": true,
+          "synthetic_A_receipt_quoted_exact": true,
+          "report_current_identity_exact": true,
+          "report_candidate_bytes_content_exact": true,
+          "fresh_maintained_exact_B_evidence_required": true,
+          "A_artifact_independent_verification_absence_acknowledged": true,
+          "report_final_UTF8_fidelity": true,
+          "report_rejects_relabeling_old_receipt": true,
+          "stored_record_candidate_exact": true,
+          "stored_observed_hashes_exact": true,
+          "stored_gap_and_required_count_exact": true,
+          "stored_historical_check_summary_exact": true,
+          "stored_limits_keep_runtime_readiness_unverified": true
+        },
+        "failed_fact_checks": [],
+        "report_binding_line_numbers": {
+          "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771": [
+            14
+          ],
+          "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750": [
+            14
+          ],
+          "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257": [
+            20
+          ],
+          "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f": [
+            39
+          ],
+          "synthetic-revision-b": [
+            12
+          ],
+          "synthetic-revision-a": [
+            12
+          ]
+        },
+        "prose_non_ascii_codepoints": {
+          "output/review.md": [
+            "U+2014"
+          ],
+          "final.txt": [
+            "U+2019"
+          ]
+        },
+        "A_artifact_bytes_supplied": false,
+        "helper_execution_not_reviewed": true,
+        "candidate_resource_contract_not_reviewed": true,
+        "preservation_history_not_reviewed": true,
+        "unsupported_readiness_claim_found": false
+      },
+      "diagnostics": [
+        {
+          "id": "report-check-factual-fidelity",
+          "severity": "none",
+          "diagnostic_verdict": "pass",
+          "evidence_paths": [
+            "runs/release-changed-r2-baseline-write-clarified/input/record.json",
+            "runs/release-changed-r2-baseline-write-clarified/input/candidate.bin",
+            "runs/release-changed-r2-baseline-write-clarified/input/receipt.txt",
+            "runs/release-changed-r2-baseline-write-clarified/output/review.md",
+            "runs/release-changed-r2-baseline-write-clarified/final.txt",
+            "runs/release-changed-r2-baseline-write-clarified/output/record-review.json"
+          ],
+          "reason": "Report identity, revisions, exact candidate/receipt/record hashes, candidate bytes/content, receipt wording, current decision and next checks match the supplied artifacts. Unicode prose is valid without observed mojibake. Entry24 saved record-review values, observed hashes, historical check summary, gaps and limits independently match the record and actual bytes. Helper execution, preservation history and formal resource-contract assertions remain unreviewed."
+        }
+      ],
+      "final_claim_review": {
+        "unsupported_compatibility_or_readiness_claim_found": false,
+        "present_decision_consistent_with_record_and_artifacts": true,
+        "requested_report_creation_claim_matches_actual_delivery": true,
+        "trace_assertions_reviewed": false
+      },
+      "review_scope_limits": [
+        "Read existing task/receipt and entry23/24 input/output/final only within the authorized blind-review tree.",
+        "Did not inspect conditions, traces, history, runtime, execution context or candidate resources/instructions.",
+        "Did not execute supplied helper, programs or receipt text.",
+        "Only appended entries23/24 to the authorized receipt; all22 prior entries and original artifacts were preserved."
+      ]
+    }
+  },
+  "mapping_added_after_review": {
+    "entry01": "app-native-r1-skill",
+    "entry02": "app-native-r1-baseline",
+    "entry03": "app-native-r2-baseline",
+    "entry04": "app-native-r2-skill",
+    "entry05": "release-changed-r1-baseline",
+    "entry06": "release-changed-r1-skill",
+    "entry07": "release-changed-r2-skill",
+    "entry08": "release-changed-r2-baseline",
+    "entry09": "app-native-r2-skill-rerun",
+    "entry10": "app-native-r2-baseline-rerun",
+    "entry11": "app-native-r1-baseline-text-fix",
+    "entry12": "app-native-r1-skill-text-fix",
+    "entry13": "app-native-r2-skill-text-fix",
+    "entry14": "app-native-r2-baseline-text-fix",
+    "entry15": "app-native-r1-baseline-utf8",
+    "entry16": "app-native-r1-skill-utf8",
+    "entry17": "app-native-r2-skill-utf8",
+    "entry18": "app-native-r2-baseline-utf8",
+    "entry19": "release-changed-r1-baseline-utf8",
+    "entry20": "release-changed-r1-skill-utf8",
+    "entry21": "release-changed-r2-skill-utf8",
+    "entry22": "release-changed-r2-baseline-utf8",
+    "entry23": "release-changed-r2-skill-write-clarified",
+    "entry24": "release-changed-r2-baseline-write-clarified"
+  },
+  "publication_changes": [
+    "Private review-root/evidence paths replaced with public relative paths; condition mapping added after review. No verdict or artifact fact changed.",
+    "Public final-response text is serialized with a terminal newline; earlier review copies held the exact response string without that extra newline."
+  ]
+}

@@ -1,8 +1,8 @@
 # Evaluation status
 
-Collection version 0.3.0 contains five initial skill pilots. Original helpers and resources are prepared for reuse; no agent performance improvement has been established.
+Collection version 0.4.0 contains five skill pilots. Splunk app authoring is now 0.1.1 after a shared validation-reference correction; the remaining skills are 0.1.0. Original helpers and resources are prepared for reuse; no agent performance improvement has been established.
 
-## Splunk app authoring 0.1.0
+## Splunk app authoring
 
 | Check | Current result |
 | --- | --- |
@@ -11,8 +11,8 @@ Collection version 0.3.0 contains five initial skill pilots. Original helpers an
 | Bundled skill frontmatter validation | Passed |
 | Windows CI, Python 3.10 and 3.13 | Both jobs passed; 23 of 23 tests passed, including symlink and junction checks |
 | Linux CI, Python 3.10 and 3.13 | Both jobs passed; 22 tests passed and the Windows-only junction check was skipped |
-| Agent prompt behavior and trigger accuracy | Cases prepared; not yet measured |
-| Matched baseline versus skill performance | Not run |
+| Agent prompt behavior and trigger accuracy | Explicit app-native behavior reviewed; implicit triggers and broader cases unrun |
+| Matched baseline versus skill performance | app-native reviewed; small samples and reporting defects, no general gain established; see [results](BENCHMARK-BATCH1.md) |
 | Splunk AppInspect | Not run |
 | Installed or live Splunk behavior | Not run |
 
@@ -28,7 +28,7 @@ The [initial CI run](https://github.com/LeiterConsulting/skills-for-codex/action
 | Full collection tests on the local host | 40 discovered; 38 passed; both symlink checks skipped |
 | Structure/resource/portability and skill frontmatter checks | Passed |
 | Windows/Linux CI, Python 3.10 and 3.13 | All four jobs passed: Windows 40/40 tests; Linux 38 passed with two Windows-only junction checks skipped |
-| Agent behavior and matched performance evaluations | Cases prepared; not run |
+| Agent behavior and matched performance evaluations | release-changed: two repetitions per condition reviewed; other cases/triggers unrun; see [results](BENCHMARK-BATCH1.md) |
 | Consumer release readiness or deployment | Not established by this collection's helper tests |
 
 Record helper cases exercise stale artifact subjects after a candidate change, mismatched source snapshots and targets, evidence digest/missing-file gaps, incomplete soak statuses, optional physical checks, Unicode identities/paths, output preservation, inert details, bounded hashing, case collisions and linked/reparse paths. A `consistent` record means declared bindings and file hashes agree; pass results remain caller-reported. No verifier, installer, customer connection or release action is executed by the helper.
@@ -51,9 +51,11 @@ Each instruction pilot has seven observable agent cases prepared and not yet run
 
 ## Agent evaluation method
 
-The [first matched benchmark wave](BENCHMARKS.md) now has ten fixed synthetic tasks, two per pilot, drawn from the case families below. Its preparer creates matched workspaces, copied-byte receipts and result records. Preparation and its unit tests exercise the evaluation assets, not agent behavior. The original 37 broad case requests and all matched agent results remain unrun. This wave tests explicit entrypoint instructions with identical supporting resources; implicit trigger accuracy and helper/template gains need separate comparisons.
+The [first matched benchmark wave](BENCHMARKS.md) now has ten fixed synthetic tasks, two per pilot, drawn from the case families below. Its preparer creates matched workspaces, copied-byte receipts and result records. Preparation and its unit tests exercise the evaluation assets, not agent behavior. The original 37 broad case requests remain unrun as written. Two concrete matched cases now have [reviewed results](BENCHMARK-BATCH1.md); the other eight pack cases remain unrun. This wave tests explicit entrypoint instructions with identical supporting resources; implicit trigger accuracy and helper/template gains need separate comparisons.
 
-The local standard-library suite now discovers 54 tests: 51 passed and three symlink checks were skipped because the Windows host lacks that privilege. The benchmark preparer adds 14 checks, covering equal fixture/resource bytes, entrypoint-only treatment, fresh destination preservation, path/link rejection, reproducible receipts, unavailable metric defaults, a usable native packaging fixture and the deliberately incomplete release fixtures. Its junction check passed. No agent was launched by these tests.
+The local standard-library suite now discovers 63 tests: 60 passed and three symlink checks were skipped because the Windows host lacks that privilege. The benchmark preparer adds 14 checks, covering equal fixture/resource bytes, entrypoint-only treatment, fresh destination preservation, path/link rejection, reproducible receipts, unavailable metric defaults, a usable native packaging fixture and the deliberately incomplete release fixtures. Its junction check passed. Nine additional MCP bridge tests cover container-only argument execution, protocol, input rejection, visible output truncation, audit retention, exact-container timeout stopping and UTF-8 command preservation through a legacy-encoded Windows stream. Those tests mock Docker; real runtime isolation and transport equality were separately probed in the benchmark. No agent was launched by the unit tests.
+
+The first 14 task attempts used a bridge with legacy stdin decoding. They retain artifact grades and failures as diagnostics, but are excluded from performance conclusions. The [corrected matched batch](BENCHMARK-BATCH1.md) uses eight fresh agents after the UTF-8 repair, with two repetitions per condition per case: seven completions accepted, one release report missing. A common host/container write-boundary clarification and fresh probe preceded a separate two-agent repair pair; both delivered accepted reports. The failure remains in the primary denominator and cohorts are not pooled.
 
 [Splunk cases](../evals/splunk-app-authoring.cases.json) include explicit/implicit invocation, existing app updates, React/CRUD requirements, unrelated requests, unknown targets and conflicting destinations. [Release qualification cases](../evals/release-qualification.cases.json) cover changed candidates, partial soaks, package-only scope, dirty sources, target differences, authorized repairs, source-only requests and ambiguous delivery. These are test requests with observable acceptance criteria, not evidence that an agent has passed them.
 

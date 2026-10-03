@@ -1,0 +1,7 @@
+Created `output/bench_delta` with the exact supplied identity, roles, search, and time range.
+
+- [Release archive](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Validation report](/workspace/output/report.md)
+
+Structure, XML preservation, archive contents, and digest checks passed. Inputs were preserved. AppInspect, target compatibility, and live behavior remain unverified; no deployment was performed.

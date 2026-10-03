@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "product": "Synthetic release",
+    "version": "1.0.0",
+    "target": "Synthetic staging Y",
+    "source_revision": "synthetic-revision-b",
+    "working_tree": "clean",
+    "source_snapshot_sha256": null
+  },
+  "artifacts": [
+    {
+      "id": "candidate",
+      "path": "candidate.bin",
+      "sha256": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771"
+    }
+  ],
+  "checks": [
+    {
+      "id": "package",
+      "tier": "package",
+      "required": true,
+      "status": "passed",
+      "target": null,
+      "source_revision": "synthetic-revision-a",
+      "source_snapshot_sha256": null,
+      "subjects": [
+        {
+          "artifact_id": "candidate",
+          "sha256": "369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "receipt.txt",
+          "sha256": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+        }
+      ],
+      "details": "Reported package check applies to A."
+    }
+  ]
+}

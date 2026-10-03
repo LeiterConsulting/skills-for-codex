@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "evidence_type": "offline synthetic fixtures; no live target evidence",
+  "input": {
+    "path": "input/native.json",
+    "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+    "unchanged": true
+  },
+  "helper": {
+    "path": "candidate/scripts/splunk_app.py",
+    "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "app_id": "bench_delta",
+  "version": "0.2.1",
+  "checks": {
+    "supplied_helper_config_validation": "passed",
+    "supplied_helper_release_validation": "passed",
+    "exact_identity_and_install_state": "passed",
+    "exact_role_acl_and_export_none": "passed",
+    "navigation_and_single_table": "passed",
+    "xml_parse_escaping_and_unicode_round_trip": "passed",
+    "exact_supplied_query_and_time_bounds": "passed",
+    "explicit_regular_release_files_only": "passed",
+    "archive_membership_and_byte_comparison": "passed",
+    "normalized_archive_modes_ownership_and_timestamps": "passed",
+    "archive_sha256": "passed",
+    "input_fixture_unchanged": "passed",
+    "frontend_backend_build": "not_applicable_native_configuration_only",
+    "appinspect": "not_run",
+    "installation": "not_run",
+    "runtime": "not_run"
+  },
+  "release_files": {
+    "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+    "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+    "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+    "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+  },
+  "excluded_from_archive": [
+    "release-files.json",
+    "input fixtures",
+    "candidate resources",
+    "report and validation evidence"
+  ],
+  "archive": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "members": [
+      "bench_delta/",
+      "bench_delta/default/app.conf",
+      "bench_delta/default/data/ui/nav/default.xml",
+      "bench_delta/default/data/ui/views/home.xml",
+      "bench_delta/metadata/default.meta"
+    ]
+  },
+  "unresolved_inputs": [
+    "deployment target and type",
+    "Splunk version",
+    "target role existence and effective permissions",
+    "target-specific AppInspect/vetting requirements",
+    "runtime navigation, rendering and SPL results"
+  ]
+}

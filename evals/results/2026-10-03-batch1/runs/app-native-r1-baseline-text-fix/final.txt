@@ -1,0 +1,7 @@
+Created the app in `output/bench_delta` and completed 28 offline checks. Exact supplied values were preserved, and the archive digest was verified.
+
+- [Release archive](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Report and evidence limits](/workspace/output/report.md)
+
+No target was selected; AppInspect and live runtime checks remain unperformed.

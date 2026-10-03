@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "app_id": "bench_delta",
+  "app_label": "Delta & Readiness",
+  "author": "Synthetic evaluation team",
+  "version": "0.2.1",
+  "description": "Offline benchmark fixture",
+  "install_state": "disabled",
+  "read_roles": [
+    "bench_reader"
+  ],
+  "write_roles": [
+    "bench_editor"
+  ],
+  "dashboard": {
+    "title": "Delta <Health> \u00c5",
+    "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+    "earliest": "-12h",
+    "latest": "now"
+  }
+}

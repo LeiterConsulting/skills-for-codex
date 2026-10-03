@@ -1,0 +1,7 @@
+Created the app in `output/bench_delta`, preserving all supplied values.
+
+- [Release archive](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Validation report](/workspace/output/report.md)
+
+Structural validation, 16 independent checks, and checksum verification passed. AppInspect and live compatibility remain unverified; no deployment target was selected.

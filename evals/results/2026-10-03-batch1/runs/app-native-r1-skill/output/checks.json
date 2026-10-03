@@ -1,0 +1,176 @@
+{
+  "status": "passed",
+  "passed_check_count": 52,
+  "checks": [
+    "Preserved original bytes: AGENTS.md",
+    "Preserved original bytes: TASK.md",
+    "Preserved original bytes: input/native.json",
+    "Preserved original bytes: candidate/SKILL.md",
+    "Preserved original bytes: candidate/assets/authoring-inputs.example.json",
+    "Preserved original bytes: candidate/assets/native-app.example.json",
+    "Preserved original bytes: candidate/assets/native-app.schema.json",
+    "Preserved original bytes: candidate/references/architecture.md",
+    "Preserved original bytes: candidate/references/inputs.md",
+    "Preserved original bytes: candidate/references/validation.md",
+    "Preserved original bytes: candidate/scripts/splunk_app.py",
+    "Helper structural validation passed",
+    "Explicit release manifest selects exactly four intended runtime files",
+    "Exact supplied configuration: package.id",
+    "Exact supplied configuration: id.name",
+    "Exact supplied configuration: id.version",
+    "Exact supplied configuration: launcher.version",
+    "Exact supplied configuration: launcher.author",
+    "Exact supplied configuration: launcher.description",
+    "Exact supplied configuration: ui.label",
+    "Exact supplied configuration: install.state",
+    "App directory and identity agree",
+    "Visible app uses home as its default view",
+    "Native Simple XML 1.1 dashboard with a single table",
+    "Exactly one inline table search; no extra searches",
+    "XML label matches the supplied app label",
+    "XML title round-trips exactly to the decoded fixture title",
+    "Exact fixture search text/time: query",
+    "Exact fixture search text/time: earliest",
+    "Exact fixture search text/time: latest",
+    "XML safely escapes ampersand and angle brackets",
+    "Dashboard has no DTD or entity declarations",
+    "Default navigation resolves to the packaged home view",
+    "Exact supplied read/write role lists; app-local export = none",
+    "Independently computed SHA-256 agrees with package result",
+    "Archive size agrees with package result",
+    "Gzip header has a deterministic zero timestamp",
+    "Real archive has one app root and exactly the four selected files",
+    "Archive root is a directory with mode 0755",
+    "Normalized archive owner/time: bench_delta",
+    "Normalized archive owner/time: bench_delta/default/app.conf",
+    "Normalized archive owner/time: bench_delta/default/data/ui/nav/default.xml",
+    "Normalized archive owner/time: bench_delta/default/data/ui/views/home.xml",
+    "Normalized archive owner/time: bench_delta/metadata/default.meta",
+    "Regular archive member with mode 0644: bench_delta/default/app.conf",
+    "Archived bytes equal reviewed source bytes: default/app.conf",
+    "Regular archive member with mode 0644: bench_delta/default/data/ui/nav/default.xml",
+    "Archived bytes equal reviewed source bytes: default/data/ui/nav/default.xml",
+    "Regular archive member with mode 0644: bench_delta/default/data/ui/views/home.xml",
+    "Archived bytes equal reviewed source bytes: default/data/ui/views/home.xml",
+    "Regular archive member with mode 0644: bench_delta/metadata/default.meta",
+    "Archived bytes equal reviewed source bytes: metadata/default.meta"
+  ],
+  "fixture": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> \u00c5",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  },
+  "origins": {
+    "fixture_values": "input/native.json",
+    "operation_and_output_paths": "TASK.md",
+    "native_implementation": "candidate/scripts/splunk_app.py",
+    "release_selection": "Four generated native runtime files reviewed; release-files.json excluded from package"
+  },
+  "input_sha256": {
+    "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+    "TASK.md": "1eabcf0cee707988c0454021346bad7550e4b0e8b889d6cbb315b9f3e4546724",
+    "input/native.json": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249",
+    "candidate/SKILL.md": "b86d9e011f7c109f7e051e6324e96b2d765cfa4f88c430a2896125fbc1086ad2",
+    "candidate/assets/authoring-inputs.example.json": "9f9b6de510676f2533d151cd4f358ae8a61a588c2ccd40415fb1352413826bcb",
+    "candidate/assets/native-app.example.json": "246782ca52ced45b87591f0b8699067c28027cdee78bf7cf7c0320cea8f35180",
+    "candidate/assets/native-app.schema.json": "a2f00804896a9e5b1dfa1a8f9cdf92a54744277646159d932c7be4edc949660b",
+    "candidate/references/architecture.md": "f3bb7e59af17f1b86d0c4df4e56d6774b8f8ff08ba0ac49f66d8ab546ee5f21e",
+    "candidate/references/inputs.md": "8d7a7acf007744b5a8c8e6c9ae41983a48d0d945b578a166777f845a3c411db3",
+    "candidate/references/validation.md": "45e2eb5df3b5e8580b89e950c6c385d27471430c503ce2d0a9140e1605042182",
+    "candidate/scripts/splunk_app.py": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "helper_validation": {
+    "command": [
+      "python3",
+      "candidate/scripts/splunk_app.py",
+      "validate",
+      "--app",
+      "output/bench_delta",
+      "--files",
+      "output/bench_delta/release-files.json"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "app_id": "bench_delta",
+      "version": "0.2.1",
+      "selected_file_count": 4,
+      "structure": "passed",
+      "appinspect": "not_run",
+      "runtime": "not_run"
+    },
+    "stderr": ""
+  },
+  "schema_regex_probe": {
+    "version_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[+-][A-Za-z0-9]+)?$",
+    "supplied_version_matches": true,
+    "role_pattern": "^(?:\\*|[A-Za-z][A-Za-z0-9_-]{0,63})$",
+    "wildcard_matches": true,
+    "full_json_schema_validation": "not_run"
+  },
+  "archive": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "members": [
+      {
+        "name": "bench_delta",
+        "size": 0,
+        "mode": "0o755",
+        "type": "directory"
+      },
+      {
+        "name": "bench_delta/default/app.conf",
+        "size": 269,
+        "mode": "0o644",
+        "type": "file"
+      },
+      {
+        "name": "bench_delta/default/data/ui/nav/default.xml",
+        "size": 111,
+        "mode": "0o644",
+        "type": "file"
+      },
+      {
+        "name": "bench_delta/default/data/ui/views/home.xml",
+        "size": 440,
+        "mode": "0o644",
+        "type": "file"
+      },
+      {
+        "name": "bench_delta/metadata/default.meta",
+        "size": 76,
+        "mode": "0o644",
+        "type": "file"
+      }
+    ]
+  },
+  "evidence_limits": {
+    "build": "No frontend/backend compilation applicable to native configuration/XML",
+    "appinspect": "not_run",
+    "installed": "not_run",
+    "live": "not_run",
+    "deployment_target": null,
+    "splunk_version": null,
+    "edition_or_cloud_environment": null,
+    "target_role_existence_and_capabilities": "unverified",
+    "spl_execution_and_results": "unverified",
+    "browser_navigation_and_acl_enforcement": "unverified",
+    "performance": "not_measured"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "candidate_files": {
+    "SKILL.md": "36f041c627752bd462e60d08b829081ff3fe0b4ed910ff48d0de0a10d69c7761",
+    "assets/release-record.template.json": "923af8a176abd2760e984c6e91191e5fc3216aef4d58322dd689edee8ea2db01",
+    "references/contexts.md": "4db1baf618b0b7411dc99be993f71a0738d7c77ec86e4aa59064f4718c324435",
+    "references/record.md": "8437f654eee049973e2a3af4fdd324a353828934bf9e0565e05cbfcfea167d47",
+    "scripts/release_record.py": "0a33cff71a0b41d116bd8b2ba6b856852f5567b039e6937cd6f8435dad91bc30"
+  },
+  "case_id": "release-changed",
+  "common_files": {
+    "AGENTS.md": "b93d3ef3fac06196eeb40945b9094c5ec33c94ee75082406ed1f8277bbad2eee",
+    "TASK.md": "2cf978693d9a51324a3b6b1cc43cb3da7c904c3f2e9274e1d5c9a2189c0e1b8b",
+    "input/candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+    "input/receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257",
+    "input/record.json": "2572ba69e21ce1e7d15b31f5b4aaabd13eb46a7cb6398d3b1f0558d61d93233f"
+  },
+  "comparison": "explicit skill instructions; supporting resources available to both conditions",
+  "evaluation": "not_run",
+  "pack_sha256": "bd7242f5c0258accfd8d000bc87bcce48f2dcc8a05143f4a0ef845334ba5632f",
+  "pack_version": "0.1.0",
+  "resource_files": {
+    "assets/release-record.template.json": "923af8a176abd2760e984c6e91191e5fc3216aef4d58322dd689edee8ea2db01",
+    "references/contexts.md": "4db1baf618b0b7411dc99be993f71a0738d7c77ec86e4aa59064f4718c324435",
+    "references/record.md": "8437f654eee049973e2a3af4fdd324a353828934bf9e0565e05cbfcfea167d47",
+    "scripts/release_record.py": "0a33cff71a0b41d116bd8b2ba6b856852f5567b039e6937cd6f8435dad91bc30"
+  },
+  "schema_version": 1,
+  "skill": "release-qualification",
+  "source_revision": "5b609d4c518255009795f3eb3af185f321dfcac3"
+}

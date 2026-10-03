@@ -1,0 +1,103 @@
+{
+  "evidence_scope": "offline synthetic fixtures; no deployment target selected",
+  "input": {
+    "path": "input/native.json",
+    "sha256": "35313a2b28a98d43365c1e654fa6e9d590fcf08523da696be485974e5b888249"
+  },
+  "helper": {
+    "path": "candidate/scripts/splunk_app.py",
+    "sha256": "b747f2a60829b268aafd2cbd4d14a560525cbdb9bf07b97ba045ed28fb74dbda"
+  },
+  "structure": {
+    "app_id": "bench_delta",
+    "version": "0.2.1",
+    "selected_file_count": 4,
+    "structure": "passed",
+    "appinspect": "not_run",
+    "runtime": "not_run"
+  },
+  "checks": {
+    "helper_input_contract": "passed",
+    "fixture_fidelity": "passed",
+    "exact_acl_roles": "passed",
+    "xml_text_round_trip": "passed",
+    "release_selection": "passed",
+    "archive_membership": "passed",
+    "archive_source_bytes": "passed",
+    "normalized_archive_metadata": "passed",
+    "same_runtime_reproducibility": "passed",
+    "input_and_helper_hashes_preserved": "passed",
+    "appinspect": "not_run",
+    "spl_validation": "not_run",
+    "installed": "not_attempted",
+    "live": "not_run"
+  },
+  "archive": {
+    "path": "output/bench_delta-0.2.1.tar.gz",
+    "bytes": 708,
+    "sha256": "322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd",
+    "members": [
+      {
+        "name": "bench_delta",
+        "type": "directory",
+        "mode": "0o755",
+        "size": 0
+      },
+      {
+        "name": "bench_delta/default/app.conf",
+        "type": "file",
+        "mode": "0o644",
+        "size": 269
+      },
+      {
+        "name": "bench_delta/default/data/ui/nav/default.xml",
+        "type": "file",
+        "mode": "0o644",
+        "size": 111
+      },
+      {
+        "name": "bench_delta/default/data/ui/views/home.xml",
+        "type": "file",
+        "mode": "0o644",
+        "size": 440
+      },
+      {
+        "name": "bench_delta/metadata/default.meta",
+        "type": "file",
+        "mode": "0o644",
+        "size": 76
+      }
+    ]
+  },
+  "selected_file_sha256": {
+    "default/app.conf": "00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf",
+    "default/data/ui/nav/default.xml": "ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05",
+    "default/data/ui/views/home.xml": "0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4",
+    "metadata/default.meta": "84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89"
+  },
+  "unresolved_inputs": [
+    "Splunk target, deployment type and release",
+    "Target role existence and effective capabilities"
+  ],
+  "decoded_fixture": {
+    "schema_version": 1,
+    "app_id": "bench_delta",
+    "app_label": "Delta & Readiness",
+    "author": "Synthetic evaluation team",
+    "version": "0.2.1",
+    "description": "Offline benchmark fixture",
+    "install_state": "disabled",
+    "read_roles": [
+      "bench_reader"
+    ],
+    "write_roles": [
+      "bench_editor"
+    ],
+    "dashboard": {
+      "title": "Delta <Health> \u00c5",
+      "query": "| makeresults | eval status=\"A&B<ready>\" | table status",
+      "earliest": "-12h",
+      "latest": "now"
+    }
+  }
+}

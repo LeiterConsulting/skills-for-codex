@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "record_review": "incomplete",
+  "candidate": {
+    "product": "Synthetic release",
+    "version": "1.0.0",
+    "target": "Synthetic staging Y",
+    "source_revision": "synthetic-revision-b",
+    "working_tree": "clean",
+    "source_snapshot_sha256": null
+  },
+  "required_check_count": 1,
+  "gaps": [
+    "check package: source revision binding mismatch",
+    "check package: artifact subject digest mismatch"
+  ],
+  "observed_sha256": {
+    "candidate.bin": "5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771",
+    "receipt.txt": "e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257"
+  },
+  "checks": [
+    {
+      "id": "package",
+      "tier": "package",
+      "required": true,
+      "status": "passed",
+      "details": "Reported package check applies to A."
+    }
+  ],
+  "limits": {
+    "check_results": "caller_reported",
+    "source_checkout": "not_verified",
+    "target_environment": "caller_reported",
+    "criteria": "caller_selected",
+    "report_authenticity": "not_verified",
+    "gate_coverage": "not_assessed",
+    "behavior": "not_exercised",
+    "release_authorization": "not_assessed"
+  }
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "python",
+      "candidate/scripts/splunk_app.py",
+      "scaffold",
+      "--config",
+      "input/native.json",
+      "--output",
+      "output/bench_delta"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"created_files\": 5,\n  \"release_file_count\": 4,\n  \"installed\": false\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "candidate/scripts/splunk_app.py",
+      "validate",
+      "--app",
+      "output/bench_delta",
+      "--files",
+      "output/bench_delta/release-files.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "candidate/scripts/splunk_app.py",
+      "package",
+      "--app",
+      "output/bench_delta",
+      "--files",
+      "output/bench_delta/release-files.json",
+      "--output",
+      "output/bench_delta-0.2.1.tar.gz"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"app_id\": \"bench_delta\",\n  \"version\": \"0.2.1\",\n  \"selected_file_count\": 4,\n  \"structure\": \"passed\",\n  \"appinspect\": \"not_run\",\n  \"runtime\": \"not_run\",\n  \"archive_bytes\": 708,\n  \"sha256\": \"322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd\",\n  \"package\": \"created\",\n  \"selected_files\": [\n    \"default/app.conf\",\n    \"default/data/ui/nav/default.xml\",\n    \"default/data/ui/views/home.xml\",\n    \"metadata/default.meta\"\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "output/verify_release.py"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"passed\",\n  \"checks\": [\n    {\n      \"name\": \"Explicit release manifest selects exactly the four reviewed files\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"App root and release identity match the supplied input\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"All app.conf values preserve identity, author, version, description and disabled state\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Navigation resolves to the released home view\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Native Simple XML contains one table and one inline search\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"JSON-decoded label equals parsed XML label\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"JSON-decoded dashboard.title equals parsed XML text\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"JSON-decoded dashboard.query equals parsed XML text\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"JSON-decoded dashboard.earliest equals parsed XML text\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"JSON-decoded dashboard.latest equals parsed XML text\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"App metadata uses the default stanza\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Metadata ACL has explicit read and write lists\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Read and write roles exactly match the input\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Metadata export scope is none\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archive has exactly one app root and the selected release files\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archive contains regular files and the app root directory, with no links\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archive ownership, modes and timestamps are normalized\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archived bytes equal the reviewed source: default/app.conf\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archived bytes equal the reviewed source: default/data/ui/nav/default.xml\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archived bytes equal the reviewed source: default/data/ui/views/home.xml\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Archived bytes equal the reviewed source: metadata/default.meta\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"SHA-256 sidecar matches the actual archive\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Every original workspace file is unchanged\",\n      \"status\": \"passed\"\n    },\n    {\n      \"name\": \"Every new deliverable is confined to output/\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"parsed_values\": {\n    \"app_label\": \"Delta & Readiness\",\n    \"title\": \"Delta <Health> Å\",\n    \"query\": \"| makeresults | eval status=\\\"A&B<ready>\\\" | table status\",\n    \"earliest\": \"-12h\",\n    \"latest\": \"now\"\n  },\n  \"title_code_points\": [\n    \"U+0044\",\n    \"U+0065\",\n    \"U+006C\",\n    \"U+0074\",\n    \"U+0061\",\n    \"U+0020\",\n    \"U+003C\",\n    \"U+0048\",\n    \"U+0065\",\n    \"U+0061\",\n    \"U+006C\",\n    \"U+0074\",\n    \"U+0068\",\n    \"U+003E\",\n    \"U+0020\",\n    \"U+00C5\"\n  ],\n  \"query_code_points\": [\n    \"U+007C\",\n    \"U+0020\",\n    \"U+006D\",\n    \"U+0061\",\n    \"U+006B\",\n    \"U+0065\",\n    \"U+0072\",\n    \"U+0065\",\n    \"U+0073\",\n    \"U+0075\",\n    \"U+006C\",\n    \"U+0074\",\n    \"U+0073\",\n    \"U+0020\",\n    \"U+007C\",\n    \"U+0020\",\n    \"U+0065\",\n    \"U+0076\",\n    \"U+0061\",\n    \"U+006C\",\n    \"U+0020\",\n    \"U+0073\",\n    \"U+0074\",\n    \"U+0061\",\n    \"U+0074\",\n    \"U+0075\",\n    \"U+0073\",\n    \"U+003D\",\n    \"U+0022\",\n    \"U+0041\",\n    \"U+0026\",\n    \"U+0042\",\n    \"U+003C\",\n    \"U+0072\",\n    \"U+0065\",\n    \"U+0061\",\n    \"U+0064\",\n    \"U+0079\",\n    \"U+003E\",\n    \"U+0022\",\n    \"U+0020\",\n    \"U+007C\",\n    \"U+0020\",\n    \"U+0074\",\n    \"U+0061\",\n    \"U+0062\",\n    \"U+006C\",\n    \"U+0065\",\n    \"U+0020\",\n    \"U+0073\",\n    \"U+0074\",\n    \"U+0061\",\n    \"U+0074\",\n    \"U+0075\",\n    \"U+0073\"\n  ],\n  \"roles\": {\n    \"read\": [\n      \"bench_reader\"\n    ],\n    \"write\": [\n      \"bench_editor\"\n    ]\n  },\n  \"archive\": {\n    \"path\": \"output/bench_delta-0.2.1.tar.gz\",\n    \"bytes\": 708,\n    \"sha256\": \"322b37a1178f420d7b6853881a6f50d1984487f80656dfe8523a73292473d8fd\",\n    \"members\": [\n      \"bench_delta\",\n      \"bench_delta/default/app.conf\",\n      \"bench_delta/default/data/ui/nav/default.xml\",\n      \"bench_delta/default/data/ui/views/home.xml\",\n      \"bench_delta/metadata/default.meta\"\n    ]\n  },\n  \"selected_file_sha256\": {\n    \"default/app.conf\": \"00443390c065b47c53767e3572f22720bf29a5f52dd2ba3a7c6579106771b4bf\",\n    \"default/data/ui/nav/default.xml\": \"ac1b36dccc69734bf4b14590b1364818a1d93e20efea5217e7d8e1c96a70dd05\",\n    \"default/data/ui/views/home.xml\": \"0ed0aed44b5dff1b87d514d216b6c818625a5211476f8da2d14df25591cdf0f4\",\n    \"metadata/default.meta\": \"84e42421923038931260b66ac7fc1a8ff28bd28c89535381cd880fb8f0489b89\"\n  },\n  \"original_file_count\": 12\n}\n",
+    "stderr": ""
+  }
+]

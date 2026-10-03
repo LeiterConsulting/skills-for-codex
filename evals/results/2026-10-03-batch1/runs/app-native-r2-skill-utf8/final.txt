@@ -1,0 +1,7 @@
+Created the app and preserved all supplied settings and input files.
+
+- [Package](/workspace/output/bench_delta-0.2.1.tar.gz)
+- [SHA-256 digest](/workspace/output/bench_delta-0.2.1.tar.gz.sha256)
+- [Validation report](/workspace/output/report.md)
+
+All 13 offline checks passed. AppInspect and live testing were not run; target compatibility and effective permissions remain unverified.

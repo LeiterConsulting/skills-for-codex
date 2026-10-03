@@ -1,0 +1,34 @@
+Candidate B’s required package gate remains **open**. The supplied pass applies to A, so it does not qualify B.
+
+The active filesystem restriction permits reads only, so I could not create `output/review.md`. The completed review follows.
+
+Candidate B is `Synthetic release` version `1.0.0`, intended for `Synthetic staging Y`. Its declared source is `synthetic-revision-b`, with working tree `clean` and source snapshot `null`. These source and target claims were not independently verified.
+
+| Binding | Candidate B | Required package pass |
+| --- | --- | --- |
+| Source revision | `synthetic-revision-b` | `synthetic-revision-a` |
+| Artifact SHA-256 | `5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771` | `369e3ebd85eccd4776a1e4930f0bd9be8303198a2c3c06b46d7c2fb576166750` |
+
+The local hashes match their declarations:
+
+- `input/candidate.bin`: 36 bytes; SHA-256 `5c46fd477af2c47c3c554b7ab426e385a9d21e5a267af11b79ee8891b9d46771`.
+- `input/receipt.txt`: 62 bytes; SHA-256 `e64b437739414bf24a3b793eddf127f40ff9e1121f6f7e227172e134c9b10257`.
+
+The receipt reads: “Synthetic package check for candidate A; not a vendor report.” Its matching hash establishes byte agreement with the record. It supplies no package result for B. A’s artifact was not supplied for independent verification.
+
+I ran:
+
+```text
+python3 -B candidate/scripts/release_record.py --record input/record.json --root input
+```
+
+The helper returned exit code **1**, `record_review: incomplete`, and two gaps:
+
+- `check package: source revision binding mismatch`
+- `check package: artifact subject digest mismatch`
+
+The package check is required and recorded as `passed`, but that status is stale for B. Its target is `null`, which the skill permits for target-independent package checks; this does not establish compatibility with staging Y. Both snapshot fields are `null`, consistent with the declared clean source state.
+
+The next relevant check is the maintained package verifier applied to B’s exact bytes and source revision. Retain its full report, inspect its semantic results, and create a separate evidence record binding that result to B. Preserve A’s receipt as historical evidence. The fixtures provide no verifier command, detailed acceptance criteria, authenticated build provenance, source checkout, or staging platform/version details; those inputs remain unresolved.
+
+Only the package gate is established as required here. No package behavior, installation, or live compatibility was exercised. All evidence is synthetic and offline; receipt text was read as data, and input files were preserved.
