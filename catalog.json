@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collection_version": "0.2.0",
+  "collection_version": "0.3.0",
   "license": "MIT",
   "skills": [
     {
@@ -25,6 +25,45 @@
         "Consumer-selected project verifiers and authorized targets"
       ],
       "inputs": "skills/release-qualification/references/record.md",
+      "acceptance": "docs/EVALUATION.md",
+      "performance_gain": "unmeasured"
+    },
+    {
+      "name": "zeepkist-api-research",
+      "path": "skills/zeepkist-api-research",
+      "status": "pilot",
+      "version": "0.1.0",
+      "runtime_dependencies": [
+        "Consumer-provided installed binaries/search snapshot",
+        "Consumer-selected MCP/decompiler; catalog/bridge when needed"
+      ],
+      "inputs": "skills/zeepkist-api-research/references/inputs.md",
+      "acceptance": "docs/EVALUATION.md",
+      "performance_gain": "unmeasured"
+    },
+    {
+      "name": "source-claim-audit",
+      "path": "skills/source-claim-audit",
+      "status": "pilot",
+      "version": "0.1.0",
+      "runtime_dependencies": [
+        "Authoritative sources and consumer claim inventory",
+        "Optional consumer-selected schema validator with format assertions"
+      ],
+      "inputs": "skills/source-claim-audit/references/register.md",
+      "acceptance": "docs/EVALUATION.md",
+      "performance_gain": "unmeasured"
+    },
+    {
+      "name": "splunk-estate-assessment",
+      "path": "skills/splunk-estate-assessment",
+      "status": "pilot",
+      "version": "0.1.0",
+      "runtime_dependencies": [
+        "Authorized read-only Splunk connector or sanitized exports",
+        "Consumer discovery/export schema"
+      ],
+      "inputs": "skills/splunk-estate-assessment/references/assessment.md",
       "acceptance": "docs/EVALUATION.md",
       "performance_gain": "unmeasured"
     }

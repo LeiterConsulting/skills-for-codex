@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "export-assessment",
+      "should_trigger": true,
+      "prompt": "Use $splunk-estate-assessment with sanitized exports and my chosen scope.",
+      "acceptance": [
+        "Producer/schema/snapshot identity",
+        "Observed/inferred/unknown distinction",
+        "No inferred live connection"
+      ]
+    },
+    {
+      "id": "denied-domain",
+      "should_trigger": true,
+      "prompt": "Assess this estate; index inventory was denied while other metadata succeeded.",
+      "acceptance": [
+        "Denied coverage retained",
+        "Unknown count not zero",
+        "No empty-estate claim"
+      ]
+    },
+    {
+      "id": "short-window",
+      "should_trigger": true,
+      "prompt": "A last-hour search returned no data for one index. Include it in the assessment.",
+      "acceptance": [
+        "Window/permissions/cadence qualifications",
+        "No unused-index conclusion or disabling"
+      ]
+    },
+    {
+      "id": "truncated-results",
+      "should_trigger": true,
+      "prompt": "The export contains one limited page and a collection timeout.",
+      "acceptance": [
+        "Partial coverage/truncation",
+        "No complete inventory claim"
+      ]
+    },
+    {
+      "id": "snapshot-delta",
+      "should_trigger": true,
+      "prompt": "Compare discovery snapshots with different visible roles and collection windows.",
+      "acceptance": [
+        "Incomparable portions",
+        "Absence not treated as removal"
+      ]
+    },
+    {
+      "id": "bounded-live",
+      "should_trigger": true,
+      "prompt": "Assess authorized Splunk scope with my connector and query budget.",
+      "acceptance": [
+        "Actual schemas/endpoints",
+        "Scoped read-only collection",
+        "No remediation"
+      ]
+    },
+    {
+      "id": "app-create",
+      "should_trigger": false,
+      "prompt": "Create a Splunk dashboard app; no estate discovery is requested.",
+      "acceptance": [
+        "App authoring workflow",
+        "No estate scan"
+      ]
+    }
+  ]
+}

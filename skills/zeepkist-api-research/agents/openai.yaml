@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zeepkist API Research"
+  short_description: "Verify installed game symbols and separate evidence tiers"
+  default_prompt: "Use $zeepkist-api-research to establish the installed contract for the feature I am investigating."

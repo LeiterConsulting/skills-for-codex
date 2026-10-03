@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Claim Audit"
+  short_description: "Verify scoped claims and preserve source conflicts"
+  default_prompt: "Use $source-claim-audit to review affected claims against authoritative sources and report unresolved evidence."

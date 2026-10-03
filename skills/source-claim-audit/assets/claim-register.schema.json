@@ -1,0 +1,405 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "audit_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purpose": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 8192
+        },
+        "product": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 8192
+        },
+        "versions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "environments": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "review_mode": {
+          "enum": [
+            null,
+            "change-monitor",
+            "affected-claims",
+            "full-audit"
+          ]
+        },
+        "budget": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 8192
+        },
+        "input_origins": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "purpose",
+        "product",
+        "versions",
+        "environments",
+        "review_mode",
+        "budget",
+        "input_origins"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "section": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "retrieved_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "content_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          },
+          "availability": {
+            "enum": [
+              "unreviewed",
+              "available",
+              "unavailable"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "section",
+          "published_at",
+          "retrieved_at",
+          "content_sha256",
+          "availability"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "availability": {
+                  "const": "available"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "section": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"
+          },
+          "statement": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "scope": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "product": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "version": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "environment": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              "qualifications": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "product",
+              "version",
+              "environment",
+              "qualifications"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "assertion",
+              "inference"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"
+            }
+          },
+          "outcome": {
+            "enum": [
+              "unreviewed",
+              "supported",
+              "contradicted",
+              "conflicting",
+              "unavailable"
+            ]
+          },
+          "reviewed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "rationale": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 8192
+          }
+        },
+        "required": [
+          "id",
+          "statement",
+          "scope",
+          "kind",
+          "source_ids",
+          "outcome",
+          "reviewed_at",
+          "rationale"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "enum": [
+                    "supported",
+                    "contradicted",
+                    "conflicting",
+                    "unavailable"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reviewed_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "outcome": {
+                  "enum": [
+                    "supported",
+                    "contradicted",
+                    "conflicting"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "source_ids": {
+                  "minItems": 1
+                },
+                "scope": {
+                  "properties": {
+                    "product": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "environment": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "backlog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "priority": {
+            "enum": [
+              null,
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        },
+        "required": [
+          "claim_id",
+          "reason",
+          "priority"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "audit_scope",
+    "sources",
+    "claims",
+    "backlog"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scoped claim and source register",
+  "$comment": "Structure only. Validate ID relationships, source sections, timestamps and factual evidence separately."
+}

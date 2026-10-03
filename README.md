@@ -8,10 +8,15 @@ Reusable skills and original helper assets for agents and users. Project-specifi
 | --- | --- | --- |
 | [splunk-app-authoring](skills/splunk-app-authoring/SKILL.md) | Choose a Splunk app approach, resolve inputs, author an app and qualify its package | Initial pilot; bundled native scaffold and packaging helper |
 | [release-qualification](skills/release-qualification/SKILL.md) | Assess a candidate against chosen targets/gates and keep evidence bound to the tested source/artifacts | Initial pilot; read-only evidence record helper |
+| [zeepkist-api-research](skills/zeepkist-api-research/SKILL.md) | Establish installed symbol contracts while separating code, catalogs and live evidence | Instruction pilot; consumer-provided runtime/tools |
+| [source-claim-audit](skills/source-claim-audit/SKILL.md) | Verify scoped claims, source mappings and unresolved conflicts | Instruction pilot; original claim register/schema |
+| [splunk-estate-assessment](skills/splunk-estate-assessment/SKILL.md) | Assess authorized estate evidence with explicit inventory coverage | Instruction pilot; consumer connector or sanitized export |
 
 The authoring skill supports existing projects and user-selected starters. The bundled helper creates a minimal native Simple XML dashboard app and packages an explicit file list. React and REST/CRUD implementations require an appropriate target project or starter and task-specific implementation.
 
 Release qualification uses the consumer's maintained checks and acceptance policy. Its helper verifies selected hashes and recorded bindings; it neither executes the checks nor establishes release approval. [The record contract](skills/release-qualification/references/record.md) describes explicit target, artifact and evidence inputs.
+
+The remaining skills provide focused instructions, references and unresolved input templates. They do not bundle game binaries, decompiled code, Splunk discovery engines, customer exports or source inventories. Resolve paths, targets, tool providers, audit scopes and budgets from the consumer's task.
 
 ## Use a skill
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Splunk Estate Assessment"
+  short_description: "Assess authorized estate evidence with explicit coverage"
+  default_prompt: "Use $splunk-estate-assessment to assess my chosen Splunk scope from authorized queries or sanitized exports."

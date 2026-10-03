@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "affected-claims",
+      "should_trigger": true,
+      "prompt": "Use $source-claim-audit for claims affected by these changed official sources.",
+      "acceptance": [
+        "Affected claim mapping",
+        "Real scoped review dates",
+        "Remaining backlog"
+      ]
+    },
+    {
+      "id": "edition-boundary",
+      "should_trigger": true,
+      "prompt": "Audit feature availability for this edition and managed deployment.",
+      "acceptance": [
+        "Exact qualifications",
+        "No version-to-entitlement inference"
+      ]
+    },
+    {
+      "id": "source-conflict",
+      "should_trigger": true,
+      "prompt": "Two official sections contradict each other about an upgrade requirement.",
+      "acceptance": [
+        "Both sections retained",
+        "Conflict explicit",
+        "No unsupported reconciliation"
+      ]
+    },
+    {
+      "id": "partial-monitor",
+      "should_trigger": true,
+      "prompt": "Check sources for changes within this budget; older claims remain outside this run.",
+      "acceptance": [
+        "Change detection distinct from claim review",
+        "No blanket verification date",
+        "Finite backlog"
+      ]
+    },
+    {
+      "id": "unavailable-source",
+      "should_trigger": true,
+      "prompt": "Audit this guidance when the primary source is inaccessible.",
+      "acceptance": [
+        "Unavailable evidence",
+        "No fabricated outcome/date"
+      ]
+    },
+    {
+      "id": "publication-boundary",
+      "should_trigger": true,
+      "prompt": "Review facts only; do not publish or alter schedules.",
+      "acceptance": [
+        "Local findings only",
+        "Project operational rules preserved"
+      ]
+    },
+    {
+      "id": "rewrite-only",
+      "should_trigger": false,
+      "prompt": "Rewrite an approved paragraph for brevity without a factual audit.",
+      "acceptance": [
+        "Narrow rewrite",
+        "No audit imposed"
+      ]
+    }
+  ]
+}

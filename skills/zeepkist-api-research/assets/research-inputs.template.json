@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "research_question": null,
+  "game_install": null,
+  "research_workspace": null,
+  "output_path": null,
+  "installed_version": null,
+  "assemblies": [],
+  "loader_version": null,
+  "sdk_versions": [],
+  "tool_provider": null,
+  "tool_schema_revision": null,
+  "requested_symbols": [],
+  "source_snapshot": null,
+  "asset_catalog": null,
+  "live_scope": null,
+  "input_origins": {}
+}

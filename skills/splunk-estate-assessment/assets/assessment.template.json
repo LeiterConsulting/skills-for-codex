@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "deployment": null,
+    "splunk_version": null,
+    "estate_scope": null,
+    "connector": null,
+    "export_paths": [],
+    "index_app_host_scope": null,
+    "role_visibility": null,
+    "time_range": null,
+    "query_result_time_budgets": null,
+    "data_handling_policy": null,
+    "output_path": null,
+    "input_origins": {}
+  },
+  "snapshot": {
+    "producer": null,
+    "schema": null,
+    "captured_at": null,
+    "sha256": null
+  },
+  "inventory": [],
+  "coverage": [],
+  "findings": [],
+  "next_steps": []
+}

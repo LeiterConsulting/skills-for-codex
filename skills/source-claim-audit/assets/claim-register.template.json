@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "audit_scope": {
+    "purpose": null,
+    "product": null,
+    "versions": [],
+    "environments": [],
+    "review_mode": null,
+    "budget": null,
+    "input_origins": {}
+  },
+  "sources": [
+    {
+      "id": "source_one",
+      "url": null,
+      "section": null,
+      "published_at": null,
+      "retrieved_at": null,
+      "content_sha256": null,
+      "availability": "unreviewed"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim_one",
+      "statement": null,
+      "scope": {
+        "product": null,
+        "version": null,
+        "environment": null,
+        "qualifications": []
+      },
+      "kind": "assertion",
+      "source_ids": [],
+      "outcome": "unreviewed",
+      "reviewed_at": null,
+      "rationale": null
+    }
+  ],
+  "backlog": [
+    {
+      "claim_id": "claim_one",
+      "reason": null,
+      "priority": null
+    }
+  ]
+}

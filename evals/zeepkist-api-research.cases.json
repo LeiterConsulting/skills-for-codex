@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "installed-symbol",
+      "should_trigger": true,
+      "prompt": "Use $zeepkist-api-research to establish this member signature from my installed game assemblies.",
+      "acceptance": [
+        "Installed digest/snapshot identity",
+        "Declaring type and field/property/method distinction",
+        "No invented signature"
+      ]
+    },
+    {
+      "id": "parser-null",
+      "should_trigger": true,
+      "prompt": "My class-info tool returns null, but the type may be present. Investigate using my available search tools.",
+      "acceptance": [
+        "Bounded search fallback",
+        "Parser limitation distinct from symbol absence"
+      ]
+    },
+    {
+      "id": "stale-source",
+      "should_trigger": true,
+      "prompt": "Check the API after a game update; the cached source came from an older assembly.",
+      "acceptance": [
+        "Snapshot currency",
+        "Relevant refresh or explicitly stale result",
+        "No installation"
+      ]
+    },
+    {
+      "id": "asset-missing",
+      "should_trigger": true,
+      "prompt": "Refreshed code has the feature but my catalog cannot find its asset ID.",
+      "acceptance": [
+        "Separate catalog/capture evidence",
+        "No claim code refresh updated assets"
+      ]
+    },
+    {
+      "id": "bridge-unavailable",
+      "should_trigger": true,
+      "prompt": "Research a gameplay contract offline; no live game session is available.",
+      "acceptance": [
+        "Useful offline result",
+        "No live claim or required game launch"
+      ]
+    },
+    {
+      "id": "active-editor",
+      "should_trigger": true,
+      "prompt": "Inspect this API without disturbing my open editor work.",
+      "acceptance": [
+        "Session preserved",
+        "No level load or mutation"
+      ]
+    },
+    {
+      "id": "gameplay-idea",
+      "should_trigger": false,
+      "prompt": "Suggest a fun racing level theme without investigating APIs.",
+      "acceptance": [
+        "No API research imposed"
+      ]
+    }
+  ]
+}

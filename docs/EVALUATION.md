@@ -1,6 +1,6 @@
 # Evaluation status
 
-Collection version 0.2.0 contains two initial skill pilots. Original helpers and resources are prepared for reuse; no agent performance improvement has been established.
+Collection version 0.3.0 contains five initial skill pilots. Original helpers and resources are prepared for reuse; no agent performance improvement has been established.
 
 ## Splunk app authoring 0.1.0
 
@@ -35,7 +35,19 @@ Record helper cases exercise stale artifact subjects after a candidate change, m
 
 The [second pilot CI run](https://github.com/LeiterConsulting/skills-for-codex/actions/runs/37141382266) passed for implementation commit `167d29b32edab2a6e8f10c480693f4e891dfefe8` on October 3, 2026. It exercised both helpers and collection validation on all four platform/Python combinations. Symlink checks passed in both Windows and Linux CI.
 
-## Agent evaluation cases
+## Research and assessment instruction pilots
+
+The Zeepkist API research, source claim audit and Splunk estate assessment pilots have focused entrypoints, consumer input templates and references. Skill/frontmatter, JSON syntax and collection resource/portability checks passed locally. The claim register's Draft 2020-12 schema definition passed; two valid synthetic fixtures were accepted and six invalid fixtures rejected in a local validator with URI/date/date-time assertions active. These eight schema checks are local checks, outside the standard-library CI suite.
+
+No new executable helper is included in these three pilots. The existing 40 helper tests retain their prior scope. Live game/MCP research, consumer Splunk access/exports, real factual audits, trigger behavior and performance improvement have not been qualified by these structural checks. The collection does not provide missing runtime access.
+
+Windows/Linux CI for the five-skill catalog is pending publication. Each instruction pilot has seven observable agent cases prepared and not yet run:
+
+- [Zeepkist API research cases](../evals/zeepkist-api-research.cases.json)
+- [Source claim audit cases](../evals/source-claim-audit.cases.json)
+- [Splunk estate assessment cases](../evals/splunk-estate-assessment.cases.json)
+
+## Agent evaluation method
 
 [Splunk cases](../evals/splunk-app-authoring.cases.json) include explicit/implicit invocation, existing app updates, React/CRUD requirements, unrelated requests, unknown targets and conflicting destinations. [Release qualification cases](../evals/release-qualification.cases.json) cover changed candidates, partial soaks, package-only scope, dirty sources, target differences, authorized repairs, source-only requests and ambiguous delivery. These are test requests with observable acceptance criteria, not evidence that an agent has passed them.
 
